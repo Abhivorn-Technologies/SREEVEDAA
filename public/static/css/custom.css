@@ -39,10 +39,10 @@
 /************************************/	
 
 :root{
-	--primary-color			: #192324;
-	--secondery-color		: #F8F8F8;
-	--text-color			: #283132;
-	--accent-color			: #7C877F;
+	--primary-color			: #800000;
+	--secondery-color		: #FFFFFF;
+	--text-color			: #333333;
+	--accent-color			: #FF8C00;
 	--white-color			: #FFFFFF;
 	--divider-color			: #EAF0EC;
 	--dark-divider-color	: #FFFFFF1A;
