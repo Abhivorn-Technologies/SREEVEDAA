@@ -7,7 +7,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-slate-50">
       
       {/* 1. Stunning Hero Section */}
-      <section className="relative h-[calc(100vh-80px)] min-h-[600px] flex items-center bg-white overflow-hidden">
+      <section className="relative min-h-[calc(100vh-80px)] pt-32 pb-16 lg:pt-0 lg:pb-0 flex items-center bg-white overflow-hidden">
         <div className="page-shell relative z-10 w-full">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 text-center lg:text-left z-20">
@@ -26,7 +26,7 @@ export default function AboutPage() {
               </ScrollReveal>
             </div>
             
-            <ScrollReveal animation="blur-in" delay={1200} className="flex-1 w-full relative h-[40vh] md:h-[50vh] lg:h-[75vh] max-h-[800px] flex items-center justify-center">
+            <ScrollReveal animation="blur-in" delay={200} className="flex-1 w-full relative aspect-[4/3] md:aspect-video lg:aspect-auto lg:h-[75vh] max-h-[800px] flex items-center justify-center mt-6 lg:mt-0">
               <div className="relative w-full h-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden shadow-2xl group">
                 <Image
                   src="/images/about_hero.png"

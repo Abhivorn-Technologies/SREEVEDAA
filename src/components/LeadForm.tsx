@@ -127,7 +127,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <div>
           <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
-            Your Name <span className="text-red-500">*</span>
+            Your Name <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
           </label>
           <input 
             type="text" 
@@ -142,7 +142,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
 
         <div>
           <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
-            Mobile Number <span className="text-red-500">*</span>
+            Mobile Number <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
           </label>
           <div className={`flex items-center w-full px-3 py-3 rounded-xl border focus-within:border-maroon-800 focus-within:ring-1 focus-within:ring-maroon-800 text-slate-900 bg-slate-50 focus-within:bg-white transition-all shadow-sm ${errors.phone ? 'border-red-500' : 'border-slate-200'}`}>
             <span className="text-slate-500 font-medium pr-2 border-r border-slate-300 mr-2 text-sm shrink-0">+91</span>
@@ -161,7 +161,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
 
       <div className="mb-5">
         <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
-          Email Address <span className="text-red-500">*</span>
+          Email Address <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
         </label>
         <input 
           type="email" 
@@ -195,6 +195,11 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
       <button type="submit" className="w-full bg-maroon-900 hover:bg-maroon-800 !text-white font-medium tracking-widest uppercase text-[11px] py-4 rounded-xl transition-all duration-300 shadow-[0_10px_30px_rgba(128,0,0,0.25)] hover:shadow-[0_15px_40px_rgba(128,0,0,0.4)] hover:-translate-y-1">
         Submit Request
       </button>
+      <div className="mt-5 text-center">
+        <p className="text-[10px] text-slate-400 font-light">
+          By submitting this form, you agree to our Terms of Service and Privacy Policy.
+        </p>
+      </div>
     </form>
   );
 }

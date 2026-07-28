@@ -6,109 +6,101 @@ export default function ContactPage() {
     <main className="min-h-screen bg-slate-50 pt-24 pb-12 flex flex-col justify-center">
       <div className="page-shell flex flex-col gap-10">
         
-        {/* Top Section: Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        {/* Top Banner Section */}
+        <div className="text-center animate-fade-in-up max-w-3xl mx-auto mb-4 md:mb-8">
+          <span className="inline-block mb-3 text-maroon-800 font-semibold tracking-[0.2em] uppercase text-[10px] md:text-xs">
+            Contact Us
+          </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900 font-serif leading-tight">
+            Let's Start Your <span className="italic font-light text-maroon-900">Design Journey</span>
+          </h1>
+          <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base max-w-xl mx-auto">
+            Ready to transform your physical spaces? Schedule a free site visit or design consultation.
+          </p>
+        </div>
+
+        {/* Middle Section: Split Layout (Map & Form) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
           
-          {/* Left Column: Text & Map */}
-          <div className="flex flex-col space-y-10">
-            {/* Header Text */}
-            <div className="animate-fade-in-up">
-              <span className="inline-block mb-2 text-maroon-800 font-semibold tracking-[0.2em] uppercase text-[10px]">
-                Contact Us
-              </span>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-slate-900 font-serif leading-tight">
-                Let's Start Your <span className="italic font-light text-maroon-900">Design Journey</span>
-              </h1>
-              <p className="text-slate-500 font-light leading-relaxed text-sm max-w-md">
-                Ready to transform your physical spaces? Schedule a free site visit or design consultation.
-              </p>
-            </div>
-
-            {/* Location / Map Card - Interactive Embed with Floating Info */}
-            <div className="relative w-full h-[380px] lg:h-[420px] rounded-3xl overflow-hidden shadow-md border border-slate-200 animate-fade-in-up delay-100">
-              {/* Google Maps iframe */}
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121822.42767223041!2d78.36166035035222!3d17.41249767664327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={false} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0"
-              ></iframe>
+          {/* Left Column: Map */}
+          <div className="relative w-full h-[400px] lg:h-full rounded-3xl overflow-hidden shadow-xl border border-slate-100 animate-fade-in-up delay-100">
+            {/* Google Maps iframe */}
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121822.42767223041!2d78.36166035035222!3d17.41249767664327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0"
+            ></iframe>
+            
+            {/* Floating Info Card */}
+            <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:w-[280px] bg-white rounded-2xl shadow-2xl p-5 border border-slate-100/50 backdrop-blur-sm">
               
-              {/* Floating Info Card */}
-              <div className="absolute bottom-3 left-3 right-3 sm:right-auto sm:w-[260px] bg-white rounded-xl shadow-xl p-3.5 border border-slate-100">
-                
-                {/* Header */}
-                <div className="flex items-center gap-2 mb-3 border-b border-slate-50 pb-2.5">
-                  <div className="w-8 h-8 bg-maroon-800 rounded-full flex items-center justify-center text-white shrink-0 shadow-sm shadow-maroon-900/20">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-xs">SK Design Studio</h3>
-                    <p className="text-[9px] text-slate-500">Hyderabad, India</p>
-                  </div>
-                </div>
-                
-                {/* Details */}
-                <div className="space-y-2 mb-3">
-                  <div className="flex items-start gap-1.5">
-                    <svg className="w-3 h-3 text-maroon-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
-                    <div>
-                      <p className="text-[9px] text-slate-500 mb-0.5">Address:</p>
-                      <p className="text-[10px] text-slate-800 font-medium leading-tight">
-                        Hyderabad, Telangana, India
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.89-1.29-5.28-3.68-6.57-6.57l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                    </svg>
-                    <p className="text-[10px] text-slate-500">Phone: <span className="text-slate-800 font-medium">+91 97033 19319</span></p>
-                  </div>
-                  
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
-                    <p className="text-[10px] text-slate-500 truncate">Email: <span className="text-slate-800 font-medium truncate">skdesignsstudio.info@gmail.com</span></p>
-                  </div>
-                </div>
-
-                {/* Action Button */}
-                <a 
-                  href="https://maps.google.com/?q=Hyderabad,Telangana,India" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-maroon-800 text-white px-4 py-2 rounded-lg font-semibold hover:bg-maroon-900 transition-colors flex items-center justify-center gap-1.5 text-[11px] shadow-sm shadow-maroon-900/20"
-                >
-                  Get Directions
-                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              {/* Header */}
+              <div className="flex items-center gap-3 mb-4 border-b border-slate-100 pb-3">
+                <div className="w-10 h-10 bg-maroon-800 rounded-full flex items-center justify-center text-white shrink-0 shadow-sm shadow-maroon-900/20">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
-                </a>
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 text-sm">SK Design Studio</h3>
+                  <p className="text-[10px] text-slate-500">Hyderabad, India</p>
+                </div>
               </div>
+              
+              {/* Details */}
+              <div className="space-y-3 mb-5">
+                <div className="flex items-start gap-2">
+                  <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                  <div>
+                    <p className="text-[10px] text-slate-500 mb-0.5">Address:</p>
+                    <p className="text-xs text-slate-800 font-medium leading-tight">
+                      Hyderabad, Telangana, India
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.89-1.29-5.28-3.68-6.57-6.57l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
+                  <p className="text-[11px] text-slate-500">Phone: <span className="text-slate-800 font-medium">+91 97033 19319</span></p>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                  <p className="text-[11px] text-slate-500 truncate">Email: <span className="text-slate-800 font-medium truncate">skdesignsstudio.info@gmail.com</span></p>
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <a 
+                href="https://maps.google.com/?q=Hyderabad,Telangana,India" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-maroon-900 text-white px-4 py-3 rounded-xl font-semibold hover:bg-maroon-800 transition-all flex items-center justify-center gap-2 text-[11px] uppercase tracking-widest shadow-md shadow-maroon-900/20"
+              >
+                Get Directions
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+              </a>
             </div>
           </div>
 
           {/* Right Column: Form */}
-          <div className="w-full relative lg:sticky lg:top-24 animate-fade-in-up delay-200">
+          <div className="w-full h-full animate-fade-in-up delay-200 flex flex-col">
             <LeadForm title="Book a Consultation" hasMessage={true} />
-            <div className="mt-4 text-center">
-              <p className="text-[10px] text-slate-400 font-light">
-                By submitting this form, you agree to our Terms of Service and Privacy Policy.
-              </p>
-            </div>
           </div>
 
         </div>

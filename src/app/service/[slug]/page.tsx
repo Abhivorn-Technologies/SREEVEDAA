@@ -21,12 +21,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   return (
     <main className="min-h-screen bg-white">
       {/* SECTION 1: Editorial Hero */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] min-h-[500px]">
+      <section className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-auto md:h-[80vh] md:min-h-[500px]">
         <Image 
           src={service.image} 
           alt={service.title} 
           fill 
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
@@ -78,12 +78,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </ScrollReveal>
 
             <ScrollReveal animation="fade-in-up" delay={400}>
-              <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative w-full aspect-[4/3] md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 <Image 
                   src={service.image} 
                   alt={`${service.title} Detail`} 
                   fill 
-                  className="object-cover scale-110 object-right"
+                  className="object-cover object-center"
                 />
               </div>
             </ScrollReveal>

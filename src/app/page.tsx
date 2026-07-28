@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* 1. HERO SECTION - Ultra Modern Editorial */}
-      <section className="relative h-[calc(100vh-80px)] min-h-[600px] flex items-center py-0 overflow-hidden bg-[#FAFAFA]">
+      <section className="relative min-h-[calc(100vh-80px)] lg:h-[calc(100vh-80px)] flex items-center pt-24 pb-12 lg:py-0 overflow-hidden bg-[#FAFAFA]">
         <div className="absolute inset-0 bg-white/40 z-0"></div>
         <div className="page-shell relative z-10 w-full h-full flex flex-col justify-center">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 h-full py-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 h-full">
             <div className="flex-1 text-center lg:text-left z-20 flex flex-col justify-center px-4 md:px-0">
               <ScrollReveal animation="fade-in-up" delay={0}>
                 <div className="inline-flex items-center gap-4 mb-4 mx-auto lg:mx-0">
@@ -43,7 +43,7 @@ export default function Home() {
               </div>
             </div>
             
-            <ScrollReveal animation="blur-in" delay={1200} className="flex-1 w-full relative h-[45vh] md:h-[60vh] lg:h-[80%] mt-8 lg:mt-0 flex items-center justify-center px-4 md:px-0">
+            <ScrollReveal animation="blur-in" delay={1200} className="w-full lg:flex-1 relative aspect-[4/3] md:aspect-video lg:aspect-auto lg:h-[80%] mt-8 lg:mt-0 flex items-center justify-center px-4 md:px-0">
               <div className="relative w-full h-full max-w-[600px] ml-auto rounded-xl lg:rounded-sm overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] group">
                 <div className="absolute inset-0 bg-black/5 z-10 transition-opacity duration-500 group-hover:opacity-0"></div>
                 <Image
@@ -130,10 +130,10 @@ export default function Home() {
       <ServicesSection />
 
       {/* 4. STRATEGY SECTION - Modern Clean Image */}
-      <section className="py-16 md:py-32 bg-slate-50 overflow-hidden">
+      <section className="py-10 lg:py-32 bg-slate-50 overflow-hidden">
         <div className="page-shell">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
-            <div className="flex-1 order-2 lg:order-1">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
+            <div className="hidden lg:block flex-1 order-2 lg:order-1">
               <div className="relative">
                 <div className="absolute top-6 -left-6 md:top-10 md:-left-10 w-full h-full bg-slate-200 rounded-sm z-0"></div>
                 <div className="relative z-10 w-full h-[350px] md:h-[600px] rounded-sm overflow-hidden group">
@@ -143,24 +143,24 @@ export default function Home() {
               </div>
             </div>
             
-            <ScrollReveal animation="fade-in-up" delay={200} className="flex-1 order-1 lg:order-2 px-4 md:px-0">
+            <ScrollReveal animation="fade-in-up" delay={200} className="flex-1 order-1 lg:order-2 px-4 md:px-0 w-full">
               <span className="text-maroon-800 font-sans font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 md:mb-6 inline-block border-b border-maroon-800 pb-1">Our Philosophy</span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-slate-900 font-serif leading-tight">
                 <SlowText text="Data-Backed Design Strategy" />
               </h2>
-              <p className="text-slate-500 text-sm md:text-lg mb-10 md:mb-12 font-light leading-relaxed max-w-lg">
+              <p className="text-slate-500 text-sm md:text-lg mb-8 md:mb-12 font-light leading-relaxed max-w-lg">
                 We do not just decorate rooms; we conduct comprehensive space audits, ergonomic analyses, and lifestyle roadmaps. By blending classic architecture with behavioral science, we create layouts that dramatically improve how you live and work.
               </p>
               
-              <div className="space-y-12">
-                <div className="flex gap-8 items-start group">
-                  <div className="w-12 h-12 border border-slate-300 group-hover:border-maroon-800 text-slate-400 group-hover:text-maroon-800 flex items-center justify-center shrink-0 font-serif text-xl transition-colors duration-500 rounded-sm">I</div>
+              <div className="space-y-8 md:space-y-12">
+                <div className="flex gap-6 md:gap-8 items-start group">
+                  <div className="w-10 h-10 md:w-12 md:h-12 border border-slate-300 group-hover:border-maroon-800 text-slate-400 group-hover:text-maroon-800 flex items-center justify-center shrink-0 font-serif text-lg md:text-xl transition-colors duration-500 rounded-sm">I</div>
                   <div>
-                    <h4 className="text-xl font-bold text-slate-900 mb-2 font-serif">Space Growth Audits</h4>
-                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-md">In-depth analysis of your floor plan, natural lighting, and daily workflow ecosystem.</p>
+                    <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2 font-serif">Space Growth Audits</h4>
+                    <p className="text-slate-500 font-light text-xs md:text-sm leading-relaxed max-w-md">In-depth analysis of your floor plan, natural lighting, and daily workflow ecosystem.</p>
                   </div>
                 </div>
-                <ScrollReveal animation="fade-in-up" delay={600} className="flex gap-6 md:gap-8 items-start group">
+                <ScrollReveal animation="fade-in-up" delay={200} className="flex gap-6 md:gap-8 items-start group">
                   <div className="w-10 h-10 md:w-12 md:h-12 border border-slate-300 group-hover:border-maroon-800 text-slate-400 group-hover:text-maroon-800 flex items-center justify-center shrink-0 font-serif text-lg md:text-xl transition-colors duration-500 rounded-sm">II</div>
                   <div>
                     <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2 font-serif">Material Roadmaps</h4>
@@ -174,9 +174,9 @@ export default function Home() {
       </section>
 
       {/* 5. METHODOLOGY */}
-      <section className="py-16 md:py-20 bg-white px-4">
+      <section className="py-12 lg:py-20 bg-white px-4">
         <div className="page-shell">
-          <ScrollReveal animation="fade-in-up" className="text-center mb-16 md:mb-24">
+          <ScrollReveal animation="fade-in-up" className="text-center mb-12 md:mb-24">
             <span className="text-maroon-800 font-sans font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">The Process</span>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-slate-900 font-serif">
               <SlowText text="From Vision to Reality" />
@@ -229,9 +229,9 @@ export default function Home() {
             </ScrollReveal>
             
             {/* Right Side: Form */}
-            <ScrollReveal animation="blur-in" delay={300} className="flex-1 w-full max-w-[500px] mx-auto lg:mx-0 lg:ml-auto px-4 md:px-0">
-              <div className="bg-white p-8 md:p-10 rounded-sm shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100">
-                <LeadForm title="Request an Audit" />
+            <ScrollReveal animation="blur-in" delay={300} className="flex-1 w-full mx-auto lg:mx-0 px-4 md:px-0">
+              <div className="w-full">
+                <LeadForm title="Request an Audit" hasMessage={true} />
               </div>
             </ScrollReveal>
             

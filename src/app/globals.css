@@ -61,9 +61,27 @@ img {
 }
 
 .page-shell {
-  max-width: 1240px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-shell {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .page-shell {
+    padding: 0 6rem;
+  }
 }
 
 .glass {

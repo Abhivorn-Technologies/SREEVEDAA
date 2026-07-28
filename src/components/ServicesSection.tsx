@@ -9,9 +9,9 @@ export function ServicesSection() {
 
   const smallCards = [
     {
-      title: "SEO & GEO",
-      desc: "Full-stack SEO and GEO engine combining...",
-      actionText: "SCALE TRAFFIC ➔",
+      title: "Master Planning",
+      desc: "Comprehensive strategy and layout design for large-scale properties...",
+      actionText: "LEARN MORE ➔",
       image: "/images/service_ceilings.png", 
       icon: (
         <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -20,9 +20,9 @@ export function ServicesSection() {
       )
     },
     {
-      title: "Paid Ads",
-      desc: "Precision-targeted campaigns across...",
-      actionText: "GET LEADS ➔",
+      title: "Space Layouts",
+      desc: "Optimizing flow, functionality, and aesthetic balance in every room...",
+      actionText: "LEARN MORE ➔",
       image: "/images/service_woodwork.png",
       icon: (
         <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,9 +34,9 @@ export function ServicesSection() {
 
   const services = [
     {
-      title: "Global Consulting",
-      desc: "Expand your brand internationally with localised strategies and multi-channel growth.",
-      actionText: "GO GLOBAL ➔",
+      title: "Turnkey Execution",
+      desc: "From raw concept to fully furnished reality, we handle every detail of the build.",
+      actionText: "EXPLORE ➔",
       image: "/images/service_ceilings.png", 
       icon: (
         <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,9 +45,9 @@ export function ServicesSection() {
       )
     },
     {
-      title: "Email & WhatsApp",
-      desc: "Nurture relationships through personalised messaging and high-converting workflows.",
-      actionText: "CONNECT ➔",
+      title: "Custom Furniture",
+      desc: "Bespoke woodwork and furniture pieces designed exclusively for your space.",
+      actionText: "EXPLORE ➔",
       image: "/images/service_woodwork.png",
       icon: (
         <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,9 +56,9 @@ export function ServicesSection() {
       )
     },
     {
-      title: "Influencer Marketing",
-      desc: "Connect with authentic voices your audience trusts to grow your brand globally.",
-      actionText: "COLLABORATE ➔",
+      title: "Material Curation",
+      desc: "Sourcing the world's finest stones, woods, and fabrics for unparalleled luxury.",
+      actionText: "EXPLORE ➔",
       image: "/images/painting.jpg",
       icon: (
         <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,9 +67,9 @@ export function ServicesSection() {
       )
     },
     {
-      title: "Data & Analytics",
-      desc: "Transform data into actionable insights with advanced analytics and performance tracking.",
-      actionText: "OPTIMIZE ➔",
+      title: "3D Visualisation",
+      desc: "Photorealistic 3D renders that allow you to walk through your space before it's built.",
+      actionText: "EXPLORE ➔",
       image: "/images/hero_luxury_interior.png",
       icon: (
         <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -91,11 +91,11 @@ export function ServicesSection() {
             <span className="text-maroon-800 font-sans font-bold tracking-wider uppercase text-sm mb-4 block">Our Services</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 font-sans tracking-tight leading-[1.1]">
               Transform Your <br className="hidden md:block" />
-              Digital Presence <br className="hidden md:block" />
-              <span className="text-maroon-800 italic font-serif font-light">Into Revenue</span>
+              Physical Spaces <br className="hidden md:block" />
+              <span className="text-maroon-800 italic font-serif font-light">Into Masterpieces</span>
             </h2>
             <p className="mt-6 text-slate-500 text-base md:text-lg leading-relaxed max-w-xl">
-              Accelerate content velocity, increase brand visibility across LLMs, Search, and Social. Supercharge organic growth. Scale now Digital combines world-class strategy, technology, and creative talent in one powerful growth engine to help you win the AI age.
+              Elevate your living and working environments with world-class interior architecture, meticulous spatial planning, and breathtaking material selection. We seamlessly integrate cutting-edge design trends with functional everyday luxury to bring your ultimate vision to life.
             </p>
           </div>
 
@@ -105,33 +105,34 @@ export function ServicesSection() {
               {smallCards.map((service, idx) => (
                 <div 
                   key={idx} 
-                  className="relative w-[280px] shrink-0 snap-center bg-[#111315] rounded-3xl overflow-hidden flex flex-col h-[420px] group transition-all duration-[800ms] hover:-translate-y-4 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(128,0,0,0.3)] border border-[#2A2E33]"
+                  className="relative w-[280px] shrink-0 snap-center bg-white rounded-3xl overflow-hidden flex flex-col h-[420px] group transition-all duration-500 hover:-translate-y-2 shadow-md hover:shadow-xl border border-slate-200"
                 >
                   {/* Card Image Area */}
-                  <div className="relative h-[45%] w-full overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#111315] z-10"></div>
+                  <div className="relative h-[45%] w-full overflow-hidden bg-slate-100">
                     <Image 
                       src={service.image} 
                       alt={service.title} 
                       fill 
-                      className="object-cover opacity-60 group-hover:opacity-80 transition-all duration-[2000ms] group-hover:scale-110 ease-out" 
+                      className="object-cover transition-transform duration-[2000ms] group-hover:scale-105 ease-out" 
                     />
                   </div>
 
                   {/* Card Content Area */}
-                  <div className="relative z-20 flex-1 flex flex-col justify-end p-5 pb-6 bg-[#111315]">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-lg bg-[#2A2E33] flex items-center justify-center shrink-0">
-                        {service.icon}
+                  <div className="relative z-20 flex-1 flex flex-col justify-between p-5 pb-6 bg-white">
+                    <div>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 shadow-sm">
+                          {service.icon}
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-900 font-serif">{service.title}</h3>
                       </div>
-                      <h3 className="text-xl font-bold text-white font-sans">{service.title}</h3>
+                      <p className="text-slate-500 text-[13px] leading-relaxed">
+                        {service.desc}
+                      </p>
                     </div>
-                    <p className="text-slate-400 text-[13px] mb-6 leading-snug">
-                      {service.desc}
-                    </p>
                     <button 
                       onClick={() => setIsModalOpen(true)}
-                      className="w-full py-3.5 bg-maroon-900 hover:bg-maroon-800 text-white font-bold rounded-2xl text-xs tracking-widest uppercase transition-all shadow-[0_4px_20px_0_rgba(128,0,0,0.4)] hover:shadow-[0_6px_25px_0_rgba(128,0,0,0.6)]"
+                      className="w-full py-3 bg-white border border-maroon-900/30 text-maroon-900 hover:bg-maroon-900 hover:text-white font-bold rounded-xl text-xs tracking-widest uppercase transition-colors mt-4"
                     >
                       {service.actionText}
                     </button>
@@ -147,33 +148,34 @@ export function ServicesSection() {
           {services.map((service, idx) => (
             <div 
               key={idx} 
-              className="relative w-[300px] md:w-auto shrink-0 snap-center bg-[#1A1E23] rounded-[32px] overflow-hidden flex flex-col h-[500px] group transition-all duration-[800ms] hover:-translate-y-4 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(128,0,0,0.3)] border border-[#2A2E33]"
+              className="relative w-[300px] md:w-auto shrink-0 snap-center bg-white rounded-3xl overflow-hidden flex flex-col h-[500px] group transition-all duration-500 hover:-translate-y-2 shadow-md hover:shadow-2xl border border-slate-200"
             >
               {/* Card Image Area */}
-              <div className="relative h-1/2 w-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A1E23] z-10"></div>
+              <div className="relative h-1/2 w-full overflow-hidden bg-slate-100">
                 <Image 
                   src={service.image} 
                   alt={service.title} 
                   fill 
-                  className="object-cover opacity-60 group-hover:opacity-80 transition-all duration-[2000ms] group-hover:scale-110 ease-out" 
+                  className="object-cover transition-transform duration-[2000ms] group-hover:scale-105 ease-out" 
                 />
               </div>
 
               {/* Card Content Area */}
-              <div className="relative z-20 flex-1 flex flex-col justify-end p-6 pb-8 bg-gradient-to-b from-transparent to-black/50">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#2A2E33] flex items-center justify-center shrink-0">
-                    {service.icon}
+              <div className="relative z-20 flex-1 flex flex-col justify-between p-6 pb-8 bg-white">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0 border border-slate-100 shadow-sm">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 font-serif">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-white font-sans">{service.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">
+                    {service.desc}
+                  </p>
                 </div>
-                <p className="text-slate-400 text-sm mb-8 leading-relaxed">
-                  {service.desc}
-                </p>
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full py-4 bg-maroon-900 hover:bg-maroon-800 text-white font-bold rounded-2xl text-xs tracking-widest uppercase transition-all shadow-[0_4px_20px_0_rgba(128,0,0,0.4)] hover:shadow-[0_6px_25px_0_rgba(128,0,0,0.6)]"
+                  className="w-full py-4 bg-maroon-900 text-white hover:bg-maroon-800 font-bold rounded-xl text-xs tracking-widest uppercase transition-all shadow-md mt-4"
                 >
                   {service.actionText}
                 </button>
