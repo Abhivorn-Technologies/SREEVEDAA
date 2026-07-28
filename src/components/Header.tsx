@@ -22,7 +22,7 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm transition-all border-b border-slate-100">
-        <div className="page-shell flex items-center justify-between py-4 md:py-6 lg:py-8">
+        <div className="page-shell flex items-center justify-between py-6 md:py-8 lg:py-10">
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
               <Image src="/images/logo.png" alt="SK Design Studio" width={160} height={50} className="h-8 md:h-10 lg:h-12 w-auto" priority />
