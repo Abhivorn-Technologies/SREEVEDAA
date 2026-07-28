@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://skdesignstudio.info"),
+  metadataBase: new URL("https://sreevedaa.com"),
   title: {
     template: "%s | Sreeveda",
     default: "Sreeveda – Interior designers & architects in Hyderabad",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://skdesignstudio.info",
+    url: "https://sreevedaa.com",
     title: "Sreeveda",
     description: "Full-stack interior design studio delivering thoughtful homes, workplaces, and commercial spaces.",
     siteName: "Sreeveda",

@@ -1,6 +1,7 @@
 import { blogs, services } from "@/data/siteContent";
+import { MetadataRoute } from "next";
 
-const baseUrl = "https://skdesignstudio.info";
+const baseUrl = "https://sreevedaa.com";
 
 export default function sitemap() {
   const staticPages = ["", "/about", "/service", "/gallery", "/blog", "/contact"].map((path) => ({

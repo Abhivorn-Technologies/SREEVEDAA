@@ -69,7 +69,7 @@ export function ContactForm() {
             required
             pattern="^[+0-9\\s\\-]{7,15}$"
             className="w-full rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-slate-100 outline-none focus:border-amber-300/70"
-            placeholder="+91 97033 19319"
+            placeholder="+91 70365 92351"
           />
         </label>
         <label className="space-y-1 text-sm text-slate-200">

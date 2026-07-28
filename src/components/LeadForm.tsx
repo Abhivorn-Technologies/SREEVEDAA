@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -112,7 +112,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
     }
 
     // Prepare WhatsApp Message
-    const text = `*New Lead from Website*%0A*Name:* ${formData.name.trim()}%0A*Phone:* +91 ${formData.phone}%0A*Email:* ${formData.email}${
+    const text = `*New Consultation Request for Sreevedaa Interiors*%0A*Name:* ${formData.name.trim()}%0A*Phone:* +91 ${formData.phone}%0A*Email:* ${formData.email}${
       hasMessage && formData.message ? `%0A*Message:* ${formData.message.trim()}` : ""
     }`;
     

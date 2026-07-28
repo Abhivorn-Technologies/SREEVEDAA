@@ -265,9 +265,9 @@ export const blogs: BlogPost[] = [
 ];
 
 export const contactChannels = {
-  phone: "+91 97033 19319",
-  email: "skdesignsstudio.info@gmail.com",
-  address: "Hyderabad, Telangana — serving India-wide projects.",
+  phone: "+91 70365 92351",
+  email: "contact@sreevedaa.com",
+  address: "India — Serving High-End Residential & Commercial Projects Nationwide.",
 };
 
 export function getExcerpt(html: string, words = 32) {
