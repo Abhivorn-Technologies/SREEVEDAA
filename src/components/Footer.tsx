@@ -88,11 +88,11 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500 font-light pb-4">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-700 font-light pb-4">
           <div className="text-center md:text-left">
             <span>&copy; {new Date().getFullYear()} SK Design Studio. All rights reserved.</span>
           </div>
-          <div className="text-center md:text-right text-slate-500">
+          <div className="text-center md:text-right text-slate-700">
             <span>
               Developed by <a href="https://www.abhivorn.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">Abhivorn Technologies</a> & <a href="https://www.digilevelup.in/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">Digi Level Up</a>
             </span>

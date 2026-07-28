@@ -20,7 +20,7 @@ export default function AboutPage() {
                 <SlowText text="Architecting Lifestyles" delay={200} />
               </h1>
               <ScrollReveal animation="fade-in-up" delay={800}>
-                <p className="text-sm md:text-lg mb-8 max-w-xl text-slate-500 font-light mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
+                <p className="text-sm md:text-lg mb-8 max-w-xl text-slate-700 font-light mx-auto lg:mx-0 leading-relaxed px-4 lg:px-0">
                   We don't just design spaces—we architect lifestyles. Our integrated approach combines cutting-edge materials, spatial planning, and creative excellence to deliver stunning environments that elevate your daily living.
                 </p>
               </ScrollReveal>
@@ -59,13 +59,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <div className="border-t border-maroon-800/20 pt-4">
               <h3 className="text-sm font-sans font-bold text-maroon-900 mb-2 tracking-widest uppercase">Our Mission</h3>
-              <p className="text-slate-500 font-light text-sm leading-relaxed">
+              <p className="text-slate-700 font-light text-sm leading-relaxed">
                 To bridge the gap between extravagant aesthetic desires and rigorous functional reality, creating deeply personal narratives in every space we touch.
               </p>
             </div>
             <div className="border-t border-maroon-800/20 pt-4">
               <h3 className="text-sm font-sans font-bold text-maroon-900 mb-2 tracking-widest uppercase">Our Vision</h3>
-              <p className="text-slate-500 font-light text-sm leading-relaxed">
+              <p className="text-slate-700 font-light text-sm leading-relaxed">
                 To be the global standard for integrated architectural excellence where bold design and flawless execution converge to create unprecedented living environments.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function AboutPage() {
               <ScrollReveal key={i} animation="fade-in-up" delay={i * 100}>
                 <div className="group h-full bg-white p-6 md:p-8 lg:p-10 rounded-xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-500 border border-slate-100 flex flex-col justify-start text-left">
                   <h3 className="text-lg md:text-xl font-serif text-maroon-900 mb-3 md:mb-4">{value.title}</h3>
-                  <p className="text-slate-500 font-light text-xs md:text-sm leading-relaxed flex-1">{value.desc}</p>
+                  <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed flex-1">{value.desc}</p>
                   <div className="mt-6 md:mt-8 w-0 h-[2px] bg-maroon-800/60 group-hover:w-16 transition-all duration-700 ease-out"></div>
                 </div>
               </ScrollReveal>
@@ -121,11 +121,11 @@ export default function AboutPage() {
               <h3 className="text-xl md:text-2xl font-sans font-semibold text-[#1a2b3c] mb-1">
                 G.V.A Sai Nikhil
               </h3>
-              <p className="text-sm md:text-base font-sans text-slate-500 mb-6">
+              <p className="text-sm md:text-base font-sans text-slate-700 mb-6">
                 Founder & Principal Designer
               </p>
               
-              <div className="text-sm text-slate-500 font-light leading-relaxed space-y-4 max-w-md">
+              <div className="text-sm text-slate-700 font-light leading-relaxed space-y-4 max-w-md">
                 <p>
                   With over a decade of experience in architectural harmony, Nikhil founded SK Design Studio to bridge the gap between extravagant desires and functional reality.
                 </p>

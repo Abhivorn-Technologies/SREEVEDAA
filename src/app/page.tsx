@@ -27,7 +27,7 @@ export default function Home() {
                 <SlowText text="Designing your dream spaces, one room at a time." />
               </h1>
               <ScrollReveal animation="fade-in-up" delay={800}>
-                <p className="text-sm md:text-lg mb-8 max-w-lg text-slate-500 font-light mx-auto lg:mx-0 leading-relaxed">
+                <p className="text-sm md:text-lg mb-8 max-w-lg text-slate-700 font-light mx-auto lg:mx-0 leading-relaxed">
                   Transform your spaces into physical masterpieces with our bespoke interior design and architectural services.
                 </p>
               </ScrollReveal>
@@ -65,7 +65,7 @@ export default function Home() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-slate-900 mb-3 md:mb-4 tracking-tight">
             <SlowText text="Our notable clients" />
           </h3>
-          <p className="text-slate-500 text-sm md:text-base font-light max-w-2xl mx-auto">Industry leaders, properties, and developers we are proud to serve.</p>
+          <p className="text-slate-700 text-sm md:text-base font-light max-w-2xl mx-auto">Industry leaders, properties, and developers we are proud to serve.</p>
         </ScrollReveal>
         
         {/* Row 1 - Scrolling Left */}
@@ -91,7 +91,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="font-bold text-slate-800 font-serif text-[16px] group-hover:text-maroon-900 transition-colors leading-tight mb-1">{client.name}</h4>
-                <p className="text-xs text-slate-500 font-light leading-tight">{client.desc}</p>
+                <p className="text-xs text-slate-700 font-light leading-tight">{client.desc}</p>
               </div>
             </div>
           ))}
@@ -120,7 +120,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="font-bold text-slate-800 font-serif text-[16px] group-hover:text-maroon-900 transition-colors leading-tight mb-1">{client.name}</h4>
-                <p className="text-xs text-slate-500 font-light leading-tight">{client.desc}</p>
+                <p className="text-xs text-slate-700 font-light leading-tight">{client.desc}</p>
               </div>
             </div>
           ))}
@@ -148,7 +148,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-slate-900 font-serif leading-tight">
                 <SlowText text="Data-Backed Design Strategy" />
               </h2>
-              <p className="text-slate-500 text-sm md:text-lg mb-8 md:mb-12 font-light leading-relaxed max-w-lg">
+              <p className="text-slate-700 text-sm md:text-lg mb-8 md:mb-12 font-light leading-relaxed max-w-lg">
                 We do not just decorate rooms; we conduct comprehensive space audits, ergonomic analyses, and lifestyle roadmaps. By blending classic architecture with behavioral science, we create layouts that dramatically improve how you live and work.
               </p>
               
@@ -157,14 +157,14 @@ export default function Home() {
                   <div className="w-10 h-10 md:w-12 md:h-12 border border-slate-300 group-hover:border-maroon-800 text-slate-400 group-hover:text-maroon-800 flex items-center justify-center shrink-0 font-serif text-lg md:text-xl transition-colors duration-500 rounded-sm">I</div>
                   <div>
                     <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2 font-serif">Space Growth Audits</h4>
-                    <p className="text-slate-500 font-light text-xs md:text-sm leading-relaxed max-w-md">In-depth analysis of your floor plan, natural lighting, and daily workflow ecosystem.</p>
+                    <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed max-w-md">In-depth analysis of your floor plan, natural lighting, and daily workflow ecosystem.</p>
                   </div>
                 </div>
                 <ScrollReveal animation="fade-in-up" delay={200} className="flex gap-6 md:gap-8 items-start group">
                   <div className="w-10 h-10 md:w-12 md:h-12 border border-slate-300 group-hover:border-maroon-800 text-slate-400 group-hover:text-maroon-800 flex items-center justify-center shrink-0 font-serif text-lg md:text-xl transition-colors duration-500 rounded-sm">II</div>
                   <div>
                     <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2 font-serif">Material Roadmaps</h4>
-                    <p className="text-slate-500 font-light text-xs md:text-sm leading-relaxed max-w-md">Tailored material sourcing strategies balancing extreme durability with timeless aesthetics.</p>
+                    <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed max-w-md">Tailored material sourcing strategies balancing extreme durability with timeless aesthetics.</p>
                   </div>
                 </ScrollReveal>
               </div>
@@ -181,7 +181,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-slate-900 font-serif">
               <SlowText text="From Vision to Reality" />
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-lg font-light">A proven, classic framework that turns conceptual sketches into physical spaces with unmatched execution speed.</p>
+            <p className="text-slate-700 max-w-2xl mx-auto text-sm md:text-lg font-light">A proven, classic framework that turns conceptual sketches into physical spaces with unmatched execution speed.</p>
           </ScrollReveal>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -198,7 +198,7 @@ export default function Home() {
                   </div>
                   <div className="relative z-10">
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4 font-serif group-hover:text-maroon-900 transition-colors">{step.title}</h3>
-                    <p className="text-slate-500 font-light text-xs md:text-sm leading-relaxed">{step.desc}</p>
+                    <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -223,7 +223,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 text-slate-900 font-serif leading-[1.05] tracking-tight">
                 <SlowText text="Ready to Elevate Your Living?" />
               </h2>
-              <p className="text-sm md:text-xl text-slate-500 mb-0 font-light max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              <p className="text-sm md:text-xl text-slate-700 mb-0 font-light max-w-lg mx-auto lg:mx-0 leading-relaxed">
                 Book a private design consultation and discover how we can refine your home or workspace into a timeless masterpiece.
               </p>
             </ScrollReveal>

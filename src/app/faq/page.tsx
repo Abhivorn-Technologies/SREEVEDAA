@@ -109,7 +109,7 @@ export default function FAQPage() {
                   <div 
                     className={`px-6 md:px-8 overflow-hidden transition-all duration-[600ms] ease-in-out ${openIndex === idx ? 'max-h-[500px] pb-6 md:pb-8 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'}`}
                   >
-                    <p className="text-slate-500 font-light leading-relaxed text-[0.95rem] md:text-[1.1rem]">
+                    <p className="text-slate-700 font-light leading-relaxed text-[0.95rem] md:text-[1.1rem]">
                       {faq.answer}
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function FAQPage() {
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 font-serif text-slate-900">
             <SlowText text="Still have questions?" />
           </h2>
-          <p className="text-slate-500 mb-8 md:mb-10 max-w-xl mx-auto font-light text-sm md:text-lg">
+          <p className="text-slate-700 mb-8 md:mb-10 max-w-xl mx-auto font-light text-sm md:text-lg">
             Our team is ready to help you understand our process and how we can transform your space.
           </p>
           <a href="/contact" className="inline-flex items-center justify-center bg-maroon-900 text-white font-medium tracking-[0.2em] uppercase text-[10px] md:text-sm px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(128,0,0,0.2)]">

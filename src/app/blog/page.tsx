@@ -62,10 +62,10 @@ export default function BlogPage() {
                     <div className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-maroon-800 mb-3 md:mb-5 flex gap-3 items-center">
                       <span>{post.category}</span>
                       <span className="w-4 md:w-6 h-[1px] bg-maroon-300"></span>
-                      <span className="text-slate-400 font-light">{post.date}</span>
+                      <span className="text-slate-500 font-light">{post.date}</span>
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-5 leading-snug font-serif group-hover:text-maroon-800 transition-colors min-h-[4rem] md:min-h-[4.5rem] line-clamp-2">{post.title}</h3>
-                    <p className="text-slate-500 text-sm md:text-base font-light mb-6 md:mb-8 leading-relaxed flex-1 line-clamp-3 md:line-clamp-2">{post.desc}</p>
+                    <p className="text-slate-700 text-sm md:text-base font-light mb-6 md:mb-8 leading-relaxed flex-1 line-clamp-3 md:line-clamp-2">{post.desc}</p>
                     <Link href="#" className="flex items-center gap-2 md:gap-3 text-maroon-800 font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs hover:text-maroon-600 transition-colors w-max group/link mt-auto">
                       Explore Article
                       <svg className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover/link:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

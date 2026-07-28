@@ -49,7 +49,7 @@ export default function NotFound() {
             Page not found
           </h3>
           
-          <p className="text-slate-500 font-light mb-6 text-xs md:text-sm max-w-sm mx-auto">
+          <p className="text-slate-700 font-light mb-6 text-xs md:text-sm max-w-sm mx-auto">
             We searched every blueprint and floor plan, but it seems this space hasn't been built yet.
           </p>
           

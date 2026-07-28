@@ -126,7 +126,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <div>
-          <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
+          <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-700 mb-2">
             Your Name <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
           </label>
           <input 
@@ -141,11 +141,11 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
         </div>
 
         <div>
-          <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
+          <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-700 mb-2">
             Mobile Number <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
           </label>
           <div className={`flex items-center w-full px-3 py-3 rounded-xl border focus-within:border-maroon-800 focus-within:ring-1 focus-within:ring-maroon-800 text-slate-900 bg-slate-50 focus-within:bg-white transition-all shadow-sm ${errors.phone ? 'border-red-500' : 'border-slate-200'}`}>
-            <span className="text-slate-500 font-medium pr-2 border-r border-slate-300 mr-2 text-sm shrink-0">+91</span>
+            <span className="text-slate-700 font-medium pr-2 border-r border-slate-300 mr-2 text-sm shrink-0">+91</span>
             <input 
               type="tel" 
               value={formData.phone}
@@ -160,7 +160,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
       </div>
 
       <div className="mb-5">
-        <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
+        <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-700 mb-2">
           Email Address <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
         </label>
         <input 
@@ -179,7 +179,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
 
       {hasMessage && (
         <div className="mb-6">
-          <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-500 mb-2">
+          <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-700 mb-2">
             Your Message
           </label>
           <textarea 

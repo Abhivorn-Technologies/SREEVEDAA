@@ -117,7 +117,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <h3 className="text-xl font-serif font-bold text-slate-900 group-hover:text-maroon-900 transition-colors">
                     {feat}
                   </h3>
-                  <p className="mt-4 text-slate-500 font-light text-sm leading-relaxed">
+                  <p className="mt-4 text-slate-700 font-light text-sm leading-relaxed">
                     Expertly executed to elevate the final outcome of your project.
                   </p>
                 </div>
@@ -134,7 +134,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
               Ready to begin your {service.title.toLowerCase()} project?
             </h2>
-            <p className="text-slate-500 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
+            <p className="text-slate-700 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
               Partner with SK Design Studio to bring your vision to life with uncompromising quality and precision.
             </p>
             <a 

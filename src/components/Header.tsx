@@ -87,7 +87,7 @@ export function Header() {
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-colors"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-800 transition-colors"
               aria-label="Close navigation"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -18,7 +18,7 @@ export default function ServicesPage() {
             <SlowText text="Transform Your Spaces Into Masterpieces" delay={200} />
           </h1>
           <ScrollReveal animation="fade-in-up" delay={800}>
-            <p className="text-sm md:text-lg text-slate-500 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-sm md:text-lg text-slate-700 font-light leading-relaxed max-w-2xl mx-auto">
               We don't just offer services—we architect growth and comfort. Our integrated approach combines cutting-edge materials, functional insights, and creative excellence to deliver measurable results.
             </p>
           </ScrollReveal>
@@ -64,7 +64,7 @@ export default function ServicesPage() {
       <section className="py-12 md:py-16 bg-white border-t border-slate-100 text-center px-4">
         <ScrollReveal animation="fade-in-up" className="page-shell">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 font-serif text-slate-900">Ready to Transform Your Space?</h2>
-          <p className="text-slate-500 mb-8 md:mb-10 max-w-2xl mx-auto font-light text-sm md:text-xl">
+          <p className="text-slate-700 mb-8 md:mb-10 max-w-2xl mx-auto font-light text-sm md:text-xl">
             Schedule a free consultation and discover how our integrated approach can drive stunning results for your project.
           </p>
           <a href="/contact" className="inline-flex items-center justify-center bg-maroon-900 text-white font-medium tracking-[0.2em] uppercase text-[10px] md:text-sm px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(128,0,0,0.2)]">

@@ -14,7 +14,7 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900 font-serif leading-tight">
             Let's Start Your <span className="italic font-light text-maroon-900">Design Journey</span>
           </h1>
-          <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base max-w-xl mx-auto">
+          <p className="text-slate-700 font-light leading-relaxed text-sm md:text-base max-w-xl mx-auto">
             Ready to transform your physical spaces? Schedule a free site visit or design consultation.
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 text-sm">SK Design Studio</h3>
-                  <p className="text-[10px] text-slate-500">Hyderabad, India</p>
+                  <p className="text-[10px] text-slate-700">Hyderabad, India</p>
                 </div>
               </div>
               
@@ -61,7 +61,7 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                   <div>
-                    <p className="text-[10px] text-slate-500 mb-0.5">Address:</p>
+                    <p className="text-[10px] text-slate-700 mb-0.5">Address:</p>
                     <p className="text-xs text-slate-800 font-medium leading-tight">
                       Hyderabad, Telangana, India
                     </p>
@@ -72,14 +72,14 @@ export default function ContactPage() {
                   <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.89-1.29-5.28-3.68-6.57-6.57l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
-                  <p className="text-[11px] text-slate-500">Phone: <span className="text-slate-800 font-medium">+91 97033 19319</span></p>
+                  <p className="text-[11px] text-slate-700">Phone: <span className="text-slate-800 font-medium">+91 97033 19319</span></p>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
-                  <p className="text-[11px] text-slate-500 truncate">Email: <span className="text-slate-800 font-medium truncate">skdesignsstudio.info@gmail.com</span></p>
+                  <p className="text-[11px] text-slate-700 truncate">Email: <span className="text-slate-800 font-medium truncate">skdesignsstudio.info@gmail.com</span></p>
                 </div>
               </div>
 
@@ -116,7 +116,7 @@ export default function ContactPage() {
             </div>
             <div className="overflow-hidden">
               <h3 className="font-bold text-slate-900 mb-1 text-base">Email</h3>
-              <p className="text-xs text-slate-500 font-light truncate">skdesignsstudio.info@gmail.com</p>
+              <p className="text-xs text-slate-700 font-light truncate">skdesignsstudio.info@gmail.com</p>
             </div>
           </a>
 
@@ -129,7 +129,7 @@ export default function ContactPage() {
             </div>
             <div className="overflow-hidden">
               <h3 className="font-bold text-slate-900 mb-1 text-base">Phone</h3>
-              <p className="text-xs text-slate-500 font-light truncate">+91 97033 19319</p>
+              <p className="text-xs text-slate-700 font-light truncate">+91 97033 19319</p>
             </div>
           </a>
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
             </div>
             <div className="overflow-hidden">
               <h3 className="font-bold text-slate-900 mb-1 text-base">WhatsApp</h3>
-              <p className="text-xs text-slate-500 font-light truncate">+91 97033 19319</p>
+              <p className="text-xs text-slate-700 font-light truncate">+91 97033 19319</p>
             </div>
           </a>
         </div>

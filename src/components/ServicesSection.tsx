@@ -94,7 +94,7 @@ export function ServicesSection() {
               Physical Spaces <br className="hidden md:block" />
               <span className="text-maroon-800 italic font-serif font-light">Into Masterpieces</span>
             </h2>
-            <p className="mt-6 text-slate-500 text-base md:text-lg leading-relaxed max-w-xl">
+            <p className="mt-6 text-slate-700 text-base md:text-lg leading-relaxed max-w-xl">
               Elevate your living and working environments with world-class interior architecture, meticulous spatial planning, and breathtaking material selection. We seamlessly integrate cutting-edge design trends with functional everyday luxury to bring your ultimate vision to life.
             </p>
           </div>
@@ -126,7 +126,7 @@ export function ServicesSection() {
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 font-serif">{service.title}</h3>
                       </div>
-                      <p className="text-slate-500 text-[13px] leading-relaxed">
+                      <p className="text-slate-700 text-[13px] leading-relaxed">
                         {service.desc}
                       </p>
                     </div>
@@ -169,7 +169,7 @@ export function ServicesSection() {
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 font-serif">{service.title}</h3>
                   </div>
-                  <p className="text-slate-500 text-sm leading-relaxed">
+                  <p className="text-slate-700 text-sm leading-relaxed">
                     {service.desc}
                   </p>
                 </div>

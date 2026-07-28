@@ -97,7 +97,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
         <div className="mb-4">
           <h3 className="text-xl font-bold text-slate-900 font-sans tracking-tight mb-0.5">Book Free Consultation</h3>
-          <p className="text-xs text-slate-500 font-light">See how SK Design Studio can transform your space.</p>
+          <p className="text-xs text-slate-700 font-light">See how SK Design Studio can transform your space.</p>
         </div>
 
         {isSubmitted ? (
@@ -108,7 +108,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </svg>
             </div>
             <h4 className="text-base font-bold text-slate-900 mb-1">Request Submitted!</h4>
-            <p className="text-slate-500 text-xs">We will get back to you shortly.</p>
+            <p className="text-slate-700 text-xs">We will get back to you shortly.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-3">
