@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -26,7 +26,7 @@ export default function GalleryPage() {
             Our Portfolio
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 font-serif leading-[1.1]">
-            Project <span className="text-maroon-800 italic font-light">Gallery</span>
+            Project <span className="text-theme-gradient italic font-light">Gallery</span>
           </h1>
           <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed">
             Explore a curated selection of our finest architectural and interior design transformations.

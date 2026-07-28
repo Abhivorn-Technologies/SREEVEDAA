@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 export default function NotFound() {
@@ -32,7 +32,7 @@ export default function NotFound() {
           <Link href="/" className="mb-1 hover:opacity-80 transition-opacity inline-block">
             <Image 
               src="/images/logo.png" 
-              alt="SK Design Studio" 
+              alt="Sreeveda" 
               width={180} 
               height={50} 
               className="h-10 md:h-14 w-auto object-contain" 
@@ -55,14 +55,14 @@ export default function NotFound() {
           
           <Link 
             href="/" 
-            className="inline-block bg-maroon-800 text-white hover:bg-maroon-900 transition-all duration-300 px-8 py-3 rounded text-xs font-medium shadow-md shadow-maroon-900/20 mb-6"
+            className="inline-block bg-maroon-800 text-white hover:bg-theme-gradient transition-all duration-300 px-8 py-3 rounded text-xs font-medium shadow-md shadow-maroon-900/20 mb-6"
           >
             Back to Home
           </Link>
 
           {/* Footer text tightly grouped below the button */}
           <p className="text-slate-400 text-[10px]">
-            © {new Date().getFullYear()} SK Design Studio. All rights reserved.
+            © {new Date().getFullYear()} Sreeveda. All rights reserved.
           </p>
 
         </div>

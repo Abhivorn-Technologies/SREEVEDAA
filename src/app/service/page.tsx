@@ -10,11 +10,11 @@ export default function ServicesPage() {
       <section className="pt-12 pb-16 bg-white border-b border-slate-100 overflow-hidden">
         <div className="page-shell text-center max-w-5xl mx-auto px-4">
           <ScrollReveal animation="fade-in-up" delay={0}>
-            <span className="inline-block mb-4 md:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-maroon-800 to-maroon-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-sm">
+            <span className="inline-block mb-4 md:mb-6 text-theme-gradient font-bold tracking-[0.4em] uppercase text-[10px] md:text-sm">
               Our Expertise
             </span>
           </ScrollReveal>
-          <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-maroon-900 mb-6 md:mb-8 font-serif leading-[1.2]">
+          <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-slate-900 mb-6 md:mb-8 font-serif leading-[1.2]">
             <SlowText text="Transform Your Spaces Into Masterpieces" delay={200} />
           </h1>
           <ScrollReveal animation="fade-in-up" delay={800}>
@@ -41,13 +41,13 @@ export default function ServicesPage() {
                     />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500"></div>
                   </div>
-                  <h2 className="text-2xl font-serif font-bold text-slate-900 mb-3 group-hover:text-maroon-800 transition-colors">
+                  <h2 className="text-2xl font-serif font-bold text-slate-900 mb-3 group-hover:text-theme-gradient transition-colors">
                     {service.title}
                   </h2>
                   <p className="text-slate-600 font-light leading-relaxed line-clamp-2">
                     {service.desc}
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-maroon-800 font-medium text-sm tracking-wide group-hover:translate-x-2 transition-transform duration-300">
+                  <div className="mt-4 flex items-center gap-2 text-theme-gradient font-medium text-sm tracking-wide group-hover:translate-x-2 transition-transform duration-300">
                     <span>Explore Service</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -67,7 +67,7 @@ export default function ServicesPage() {
           <p className="text-slate-700 mb-8 md:mb-10 max-w-2xl mx-auto font-light text-sm md:text-xl">
             Schedule a free consultation and discover how our integrated approach can drive stunning results for your project.
           </p>
-          <a href="/contact" className="inline-flex items-center justify-center bg-maroon-900 text-white font-medium tracking-[0.2em] uppercase text-[10px] md:text-sm px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(128,0,0,0.2)]">
+          <a href="/contact" className="inline-flex items-center justify-center bg-theme-gradient text-white font-medium tracking-[0.2em] uppercase text-[10px] md:text-sm px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(128,0,0,0.2)]">
             Book Free Consultation
           </a>
         </ScrollReveal>

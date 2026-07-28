@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SlowText } from "@/components/SlowText";
 
@@ -12,8 +12,8 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="flex-1 text-center lg:text-left z-20">
               <ScrollReveal animation="fade-in-up" delay={0}>
-                <span className="inline-block mb-4 text-transparent bg-clip-text bg-gradient-to-r from-maroon-800 to-maroon-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs w-max mx-auto lg:mx-0">
-                  About SK Design Studio
+                <span className="inline-block mb-4 text-theme-gradient font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs w-max mx-auto lg:mx-0">
+                  About Sreeveda
                 </span>
               </ScrollReveal>
               <h1 className="text-4xl md:text-6xl lg:text-[4.5rem] xl:text-[5rem] font-bold mb-4 md:mb-6 text-slate-900 leading-[1.1] font-serif">
@@ -30,12 +30,12 @@ export default function AboutPage() {
               <div className="relative w-full h-full rounded-[2rem] lg:rounded-[2.5rem] overflow-hidden shadow-2xl group">
                 <Image
                   src="/images/about_hero.png"
-                  alt="About SK Design Studio"
+                  alt="About Sreeveda"
                   fill
                   className="object-cover transition-transform duration-[2000ms] group-hover:scale-105"
                   priority
                 />
-                <div className="absolute inset-0 bg-maroon-900/10 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-theme-gradient/10 mix-blend-multiply"></div>
               </div>
               {/* Floating aesthetic element */}
               <div className="absolute -bottom-10 -left-10 w-32 h-32 md:w-40 md:h-40 bg-orange-100/60 rounded-full blur-3xl -z-10"></div>
@@ -47,7 +47,7 @@ export default function AboutPage() {
       {/* 2. Ultra-Classic Editorial Story */}
       <section className="pt-16 pb-12 lg:pt-20 lg:pb-12 bg-white border-t border-slate-100 flex items-center justify-center">
         <ScrollReveal animation="fade-in-up" className="page-shell max-w-4xl mx-auto text-center px-4">
-          <span className="inline-block mb-6 text-maroon-800 font-sans font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs border-b border-maroon-800/30 pb-2">
+          <span className="inline-block mb-6 text-theme-gradient font-sans font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs border-b border-orange-500/30 pb-2">
             The Legacy
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-slate-900 mb-6 md:mb-8 leading-[1.2]">
@@ -57,14 +57,14 @@ export default function AboutPage() {
             We don't believe in one-size-fits-all solutions. Our mission is to empower clients through innovative, detail-driven strategies that connect breathtaking aesthetics with daily functionality across every single room.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-            <div className="border-t border-maroon-800/20 pt-4">
-              <h3 className="text-sm font-sans font-bold text-maroon-900 mb-2 tracking-widest uppercase">Our Mission</h3>
+            <div className="border-t border-orange-500/20 pt-4">
+              <h3 className="text-sm font-sans font-bold text-theme-gradient mb-2 tracking-widest uppercase">Our Mission</h3>
               <p className="text-slate-700 font-light text-sm leading-relaxed">
                 To bridge the gap between extravagant aesthetic desires and rigorous functional reality, creating deeply personal narratives in every space we touch.
               </p>
             </div>
-            <div className="border-t border-maroon-800/20 pt-4">
-              <h3 className="text-sm font-sans font-bold text-maroon-900 mb-2 tracking-widest uppercase">Our Vision</h3>
+            <div className="border-t border-orange-500/20 pt-4">
+              <h3 className="text-sm font-sans font-bold text-theme-gradient mb-2 tracking-widest uppercase">Our Vision</h3>
               <p className="text-slate-700 font-light text-sm leading-relaxed">
                 To be the global standard for integrated architectural excellence where bold design and flawless execution converge to create unprecedented living environments.
               </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             ].map((value, i) => (
               <ScrollReveal key={i} animation="fade-in-up" delay={i * 100}>
                 <div className="group h-full bg-white p-6 md:p-8 lg:p-10 rounded-xl shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-500 border border-slate-100 flex flex-col justify-start text-left">
-                  <h3 className="text-lg md:text-xl font-serif text-maroon-900 mb-3 md:mb-4">{value.title}</h3>
+                  <h3 className="text-lg md:text-xl font-serif text-theme-gradient mb-3 md:mb-4">{value.title}</h3>
                   <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed flex-1">{value.desc}</p>
                   <div className="mt-6 md:mt-8 w-0 h-[2px] bg-maroon-800/60 group-hover:w-16 transition-all duration-700 ease-out"></div>
                 </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               
               <div className="text-sm text-slate-700 font-light leading-relaxed space-y-4 max-w-md">
                 <p>
-                  With over a decade of experience in architectural harmony, Nikhil founded SK Design Studio to bridge the gap between extravagant desires and functional reality.
+                  With over a decade of experience in architectural harmony, Nikhil founded Sreeveda to bridge the gap between extravagant desires and functional reality.
                 </p>
                 <p>
                   He believes every structure possesses a latent soul, and the architect's ultimate job is to give that soul a breathtaking voice. True luxury is never loud; it is found in the seamless integration of design into everyday life.

@@ -115,7 +115,7 @@ img {
   gap: 0.5rem;
   padding: 0.85rem 1.75rem;
   border-radius: 999px;
-  background: var(--accent-2);
+  background: linear-gradient(135deg, var(--color-orange-500) 0%, var(--color-maroon-800) 100%);
   color: #ffffff;
   font-weight: 600;
   transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1), background 200ms ease;
@@ -125,7 +125,7 @@ img {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(128, 0, 0, 0.4);
-  background: #990000;
+  background: linear-gradient(135deg, var(--color-orange-600) 0%, var(--color-maroon-900) 100%);
 }
 
 .btn-ghost {
@@ -235,4 +235,16 @@ img {
 
 @keyframes marquee-reverse { 0% { transform: translateX(-50%); } 100% { transform: translateX(0%); } }
 .animate-marquee-reverse { animation: marquee-reverse 30s linear infinite; }
+
+.bg-theme-gradient {
+  background: linear-gradient(135deg, var(--color-orange-500) 0%, var(--color-maroon-800) 100%);
+}
+
+.text-theme-gradient {
+  background: linear-gradient(135deg, var(--color-orange-500) 0%, var(--color-maroon-800) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 

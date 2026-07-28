@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -58,7 +58,7 @@ export default function FAQPage() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/contact_hero.png"
-            alt="FAQ SK Design Studio"
+            alt="FAQ Sreeveda"
             fill
             className="object-cover opacity-40 mix-blend-overlay"
             priority
@@ -96,10 +96,10 @@ export default function FAQPage() {
                     className="w-full text-left px-6 py-6 md:px-8 md:py-8 flex items-center justify-between focus:outline-none group"
                     onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                   >
-                    <span className={`text-[1.05rem] md:text-[1.25rem] font-serif pr-4 md:pr-8 transition-colors duration-300 ${openIndex === idx ? 'text-maroon-900 font-semibold' : 'text-slate-800 group-hover:text-maroon-800'}`}>
+                    <span className={`text-[1.05rem] md:text-[1.25rem] font-serif pr-4 md:pr-8 transition-colors duration-300 ${openIndex === idx ? 'text-theme-gradient font-semibold' : 'text-slate-800 group-hover:text-theme-gradient'}`}>
                       {faq.question}
                     </span>
-                    <span className={`shrink-0 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border transition-all duration-[600ms] ease-out ${openIndex === idx ? 'border-maroon-800 bg-maroon-800 text-white rotate-[135deg]' : 'border-slate-200 text-slate-400 group-hover:border-maroon-300 group-hover:text-maroon-800 bg-slate-50 group-hover:bg-maroon-50 group-hover:rotate-90'}`}>
+                    <span className={`shrink-0 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border transition-all duration-[600ms] ease-out ${openIndex === idx ? 'border-orange-500 bg-maroon-800 text-white rotate-[135deg]' : 'border-slate-200 text-slate-400 group-hover:border-maroon-300 group-hover:text-theme-gradient bg-slate-50 group-hover:bg-maroon-50 group-hover:rotate-90'}`}>
                       <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
                       </svg>
@@ -129,7 +129,7 @@ export default function FAQPage() {
           <p className="text-slate-700 mb-8 md:mb-10 max-w-xl mx-auto font-light text-sm md:text-lg">
             Our team is ready to help you understand our process and how we can transform your space.
           </p>
-          <a href="/contact" className="inline-flex items-center justify-center bg-maroon-900 text-white font-medium tracking-[0.2em] uppercase text-[10px] md:text-sm px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(128,0,0,0.2)]">
+          <a href="/contact" className="inline-flex items-center justify-center bg-theme-gradient text-white font-medium tracking-[0.2em] uppercase text-[10px] md:text-sm px-8 py-4 md:px-10 md:py-5 rounded-full hover:bg-maroon-800 transition-all hover:-translate-y-1 shadow-[0_10px_20px_rgba(128,0,0,0.2)]">
             Contact Our Team
           </a>
         </ScrollReveal>

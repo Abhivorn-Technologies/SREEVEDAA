@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/service", label: "Services" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "Q/A" },
   { href: "/contact", label: "Contact" },
 ];
@@ -25,18 +24,18 @@ export function Header() {
         <div className="page-shell w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-              <Image src="/images/logo.png" alt="SK Design Studio" width={170} height={55} className="h-9 md:h-11 lg:h-14 w-auto" priority />
+              <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={180} height={92} className="w-28 md:w-32 lg:w-36 h-auto object-contain" priority />
             </Link>
           </div>
 
-          <nav className="hidden items-center gap-2 lg:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => {
               const active = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 text-sm font-semibold transition-all border-b-2 ${active ? "border-maroon-800 text-maroon-800" : "border-transparent text-slate-600 hover:text-maroon-800"
+                  className={`py-2 text-[15px] font-medium tracking-wide transition-all border-b-2 ${active ? "border-orange-500 text-theme-gradient" : "border-transparent text-slate-800 hover:text-theme-gradient"
                     }`}
                 >
                   {link.label}
@@ -81,23 +80,23 @@ export function Header() {
             }`}
         >
           {/* Drawer Header */}
-          <div className="flex items-center justify-between px-6 py-6 border-b border-slate-100">
-            <Link href="/" onClick={() => setOpen(false)}>
-              <Image src="/images/logo.png" alt="SK Design Studio" width={140} height={40} className="h-8 w-auto" />
+          <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+            <Link href="/" onClick={() => setOpen(false)} className="block shrink-0">
+              <img src="/images/favicon_cropped.png" alt="Sreeveda" className="w-24 h-auto object-contain" />
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-800 transition-colors"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-800 transition-colors"
               aria-label="Close navigation"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
           {/* Drawer Links */}
-          <div className="flex-1 overflow-y-auto px-6 py-8 flex flex-col gap-1 bg-white">
+          <div className="flex-1 overflow-y-auto px-4 py-3 flex flex-col gap-0.5 bg-white">
             {navLinks.map((link) => {
               const active = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
               return (
@@ -105,7 +104,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={`rounded-xl px-5 py-4 text-[15px] font-medium transition-all ${active ? "bg-slate-50 text-slate-900" : "text-slate-600 hover:text-maroon-800 hover:bg-slate-50/50"
+                  className={`rounded-lg px-4 py-3 text-[14px] font-medium transition-all ${active ? "bg-slate-50 text-slate-900" : "text-slate-600 hover:text-theme-gradient hover:bg-slate-50/50"
                     }`}
                 >
                   {link.label}
@@ -117,7 +116,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="w-full flex items-center justify-center bg-maroon-900 text-white font-medium py-4 rounded-xl text-sm hover:bg-maroon-800 transition-colors shadow-md"
+                className="w-full flex items-center justify-center bg-theme-gradient text-white font-medium py-4 rounded-xl text-sm hover:bg-maroon-800 transition-colors shadow-md"
               >
                 Book a Consultation
               </Link>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -14,7 +14,7 @@ export function ServicesSection() {
       actionText: "LEARN MORE ➔",
       image: "/images/service_ceilings.png", 
       icon: (
-        <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       )
@@ -25,7 +25,7 @@ export function ServicesSection() {
       actionText: "LEARN MORE ➔",
       image: "/images/service_woodwork.png",
       icon: (
-        <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       )
@@ -39,7 +39,7 @@ export function ServicesSection() {
       actionText: "EXPLORE ➔",
       image: "/images/service_ceilings.png", 
       icon: (
-        <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
         </svg>
       )
@@ -50,7 +50,7 @@ export function ServicesSection() {
       actionText: "EXPLORE ➔",
       image: "/images/service_woodwork.png",
       icon: (
-        <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       )
@@ -61,7 +61,7 @@ export function ServicesSection() {
       actionText: "EXPLORE ➔",
       image: "/images/painting.jpg",
       icon: (
-        <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       )
@@ -72,7 +72,7 @@ export function ServicesSection() {
       actionText: "EXPLORE ➔",
       image: "/images/hero_luxury_interior.png",
       icon: (
-        <svg className="w-5 h-5 text-maroon-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       )
@@ -88,11 +88,11 @@ export function ServicesSection() {
           
           {/* Left Side: Text Content */}
           <div className="xl:w-[45%] flex flex-col justify-center">
-            <span className="text-maroon-800 font-sans font-bold tracking-wider uppercase text-sm mb-4 block">Our Services</span>
+            <span className="text-theme-gradient font-sans font-bold tracking-wider uppercase text-sm mb-4 block">Our Services</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 font-sans tracking-tight leading-[1.1]">
               Transform Your <br className="hidden md:block" />
               Physical Spaces <br className="hidden md:block" />
-              <span className="text-maroon-800 italic font-serif font-light">Into Masterpieces</span>
+              <span className="text-theme-gradient italic font-serif font-light">Into Masterpieces</span>
             </h2>
             <p className="mt-6 text-slate-700 text-base md:text-lg leading-relaxed max-w-xl">
               Elevate your living and working environments with world-class interior architecture, meticulous spatial planning, and breathtaking material selection. We seamlessly integrate cutting-edge design trends with functional everyday luxury to bring your ultimate vision to life.
@@ -132,7 +132,7 @@ export function ServicesSection() {
                     </div>
                     <button 
                       onClick={() => setIsModalOpen(true)}
-                      className="w-full py-3 bg-white border border-maroon-900/30 text-maroon-900 hover:bg-maroon-900 hover:text-white font-bold rounded-xl text-xs tracking-widest uppercase transition-colors mt-4"
+                      className="w-full py-3 bg-white border border-maroon-900/30 text-theme-gradient hover:bg-theme-gradient hover:text-white font-bold rounded-xl text-xs tracking-widest uppercase transition-colors mt-4"
                     >
                       {service.actionText}
                     </button>
@@ -175,7 +175,7 @@ export function ServicesSection() {
                 </div>
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full py-4 bg-maroon-900 text-white hover:bg-maroon-800 font-bold rounded-xl text-xs tracking-widest uppercase transition-all shadow-md mt-4"
+                  className="w-full py-4 bg-theme-gradient text-white hover:bg-maroon-800 font-bold rounded-xl text-xs tracking-widest uppercase transition-all shadow-md mt-4"
                 >
                   {service.actionText}
                 </button>

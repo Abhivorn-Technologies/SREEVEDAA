@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -134,7 +134,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
             value={formData.name}
             onChange={handleNameChange}
             onBlur={handleNameBlur}
-            className={`w-full px-4 py-3 text-sm rounded-xl border focus:outline-none focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800 text-slate-900 bg-slate-50 focus:bg-white transition-all shadow-sm ${errors.name ? 'border-red-500' : 'border-slate-200'}`} 
+            className={`w-full px-4 py-3 text-sm rounded-xl border focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-maroon-800 text-slate-900 bg-slate-50 focus:bg-white transition-all shadow-sm ${errors.name ? 'border-red-500' : 'border-slate-200'}`} 
             placeholder="John Doe" 
           />
           {errors.name && <p className="text-red-500 text-xs mt-1.5">{errors.name}</p>}
@@ -144,7 +144,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
           <label className="block text-[10px] font-semibold tracking-widest uppercase text-slate-700 mb-2">
             Mobile Number <span className="text-red-500 text-sm ml-0.5 leading-none">*</span>
           </label>
-          <div className={`flex items-center w-full px-3 py-3 rounded-xl border focus-within:border-maroon-800 focus-within:ring-1 focus-within:ring-maroon-800 text-slate-900 bg-slate-50 focus-within:bg-white transition-all shadow-sm ${errors.phone ? 'border-red-500' : 'border-slate-200'}`}>
+          <div className={`flex items-center w-full px-3 py-3 rounded-xl border focus-within:border-orange-500 focus-within:ring-1 focus-within:ring-maroon-800 text-slate-900 bg-slate-50 focus-within:bg-white transition-all shadow-sm ${errors.phone ? 'border-red-500' : 'border-slate-200'}`}>
             <span className="text-slate-700 font-medium pr-2 border-r border-slate-300 mr-2 text-sm shrink-0">+91</span>
             <input 
               type="tel" 
@@ -171,7 +171,7 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
             if (errors.email) setErrors(prev => ({ ...prev, email: validateEmail(e.target.value) }));
           }}
           onBlur={() => setErrors(prev => ({ ...prev, email: validateEmail(formData.email) }))}
-          className={`w-full px-4 py-3 text-sm rounded-xl border focus:outline-none focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800 text-slate-900 bg-slate-50 focus:bg-white transition-all shadow-sm ${errors.email ? 'border-red-500' : 'border-slate-200'}`} 
+          className={`w-full px-4 py-3 text-sm rounded-xl border focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-maroon-800 text-slate-900 bg-slate-50 focus:bg-white transition-all shadow-sm ${errors.email ? 'border-red-500' : 'border-slate-200'}`} 
           placeholder="john@company.com" 
         />
         {errors.email && <p className="text-red-500 text-xs mt-1.5">{errors.email}</p>}
@@ -186,13 +186,13 @@ export function LeadForm({ title = "Request an Audit", hasMessage = false }) {
             rows={2} 
             value={formData.message}
             onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-            className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:outline-none focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800 text-slate-900 bg-slate-50 focus:bg-white transition-all shadow-sm resize-none"
+            className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-maroon-800 text-slate-900 bg-slate-50 focus:bg-white transition-all shadow-sm resize-none"
             placeholder="Tell us about your project, location, and goals..."
           ></textarea>
         </div>
       )}
 
-      <button type="submit" className="w-full bg-maroon-900 hover:bg-maroon-800 !text-white font-medium tracking-widest uppercase text-[11px] py-4 rounded-xl transition-all duration-300 shadow-[0_10px_30px_rgba(128,0,0,0.25)] hover:shadow-[0_15px_40px_rgba(128,0,0,0.4)] hover:-translate-y-1">
+      <button type="submit" className="w-full bg-theme-gradient hover:opacity-90 !text-white font-medium tracking-widest uppercase text-[11px] py-4 rounded-xl transition-all duration-300 shadow-[0_10px_30px_rgba(128,0,0,0.25)] hover:shadow-[0_15px_40px_rgba(128,0,0,0.4)] hover:-translate-y-1">
         Submit Request
       </button>
       <div className="mt-5 text-center">

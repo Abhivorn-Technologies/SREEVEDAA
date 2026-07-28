@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -32,7 +32,7 @@ export function FloatingActions() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`w-12 h-12 rounded-full bg-maroon-900 hover:bg-maroon-800 text-white shadow-[0_10px_20px_rgba(128,0,0,0.3)] flex items-center justify-center transition-all duration-300 transform mb-2 ${
+        className={`w-12 h-12 rounded-full bg-theme-gradient hover:opacity-90 text-white shadow-[0_10px_20px_rgba(128,0,0,0.3)] flex items-center justify-center transition-all duration-300 transform mb-2 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
         }`}
         aria-label="Scroll to top"

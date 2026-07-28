@@ -20,27 +20,27 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://skdesignstudio.info"),
   title: {
-    template: "%s | SK Design Studio",
-    default: "SK Design Studio – Interior designers & architects in Hyderabad",
+    template: "%s | Sreeveda",
+    default: "Sreeveda – Interior designers & architects in Hyderabad",
   },
   description:
     "Full-stack interior design studio delivering thoughtful homes, workplaces, and commercial spaces across Hyderabad & India.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/favicon_letterboxed.png",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://skdesignstudio.info",
-    title: "SK Design Studio",
+    title: "Sreeveda",
     description: "Full-stack interior design studio delivering thoughtful homes, workplaces, and commercial spaces.",
-    siteName: "SK Design Studio",
+    siteName: "Sreeveda",
     images: [
       {
         url: "/images/og-image.jpg", // We'll add this placeholder
         width: 1200,
         height: 630,
-        alt: "SK Design Studio",
+        alt: "Sreeveda",
       },
     ],
   },
