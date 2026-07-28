@@ -139,7 +139,7 @@ export default function AboutPage() {
             <ScrollReveal animation="scale-up" delay={300} className="w-full lg:w-6/12 relative">
               <div className="relative w-full max-w-[500px] ml-auto aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border-[12px] border-white bg-white z-10">
                 <Image 
-                  src="/images/about-img-2.jpg" 
+                  src="/images/founder_ai.png" 
                   alt="G.V.A SAI NIKHIL" 
                   fill 
                   className="object-cover object-center" 
