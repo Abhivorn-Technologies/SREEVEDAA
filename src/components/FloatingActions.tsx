@@ -32,7 +32,7 @@ export function FloatingActions() {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className={`w-12 h-12 rounded-full bg-maroon-900 hover:bg-maroon-800 text-white shadow-[0_10px_20px_rgba(128,0,0,0.3)] flex items-center justify-center transition-all duration-300 transform mb-2 ${
+        className={`w-12 h-12 rounded-full bg-theme-gradient hover:opacity-90 text-white shadow-[0_10px_20px_rgba(128,0,0,0.3)] flex items-center justify-center transition-all duration-300 transform mb-2 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
         }`}
         aria-label="Scroll to top"
@@ -56,7 +56,7 @@ export function FloatingActions() {
         </a> 
         */}
         <a
-          href="https://wa.me/917036592351"
+          href="https://wa.me/917036592351?text=Hello%20Sreevedaa%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20your%20design%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white shadow-[0_8px_16px_rgba(37,211,102,0.3)] flex items-center justify-center transition-all duration-300 hover:scale-110 animate-vibrate"

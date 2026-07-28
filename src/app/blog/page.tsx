@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SlowText } from "@/components/SlowText";
@@ -10,7 +10,7 @@ export default function BlogPage() {
       <section className="pt-24 pb-12 bg-white">
         <div className="page-shell text-center max-w-3xl mx-auto px-4">
           <ScrollReveal animation="fade-in-up" delay={0}>
-            <span className="inline-block mb-3 text-maroon-800 font-semibold tracking-[0.2em] uppercase text-xs md:text-sm">
+            <span className="inline-block mb-3 text-theme-gradient font-semibold tracking-[0.2em] uppercase text-xs md:text-sm">
               Design Insights
             </span>
           </ScrollReveal>
@@ -59,14 +59,14 @@ export default function BlogPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   <div className="p-6 md:p-10 flex flex-col flex-1">
-                    <div className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-maroon-800 mb-3 md:mb-5 flex gap-3 items-center">
+                    <div className="text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-theme-gradient mb-3 md:mb-5 flex gap-3 items-center">
                       <span>{post.category}</span>
                       <span className="w-4 md:w-6 h-[1px] bg-maroon-300"></span>
                       <span className="text-slate-500 font-light">{post.date}</span>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-5 leading-snug font-serif group-hover:text-maroon-800 transition-colors min-h-[4rem] md:min-h-[4.5rem] line-clamp-2">{post.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-5 leading-snug font-serif group-hover:text-theme-gradient transition-colors min-h-[4rem] md:min-h-[4.5rem] line-clamp-2">{post.title}</h3>
                     <p className="text-slate-700 text-sm md:text-base font-light mb-6 md:mb-8 leading-relaxed flex-1 line-clamp-3 md:line-clamp-2">{post.desc}</p>
-                    <Link href="#" className="flex items-center gap-2 md:gap-3 text-maroon-800 font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs hover:text-maroon-600 transition-colors w-max group/link mt-auto">
+                    <Link href="#" className="flex items-center gap-2 md:gap-3 text-theme-gradient font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs hover:text-maroon-600 transition-colors w-max group/link mt-auto">
                       Explore Article
                       <svg className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover/link:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

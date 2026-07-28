@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -97,7 +97,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
         <div className="mb-4">
           <h3 className="text-xl font-bold text-slate-900 font-sans tracking-tight mb-0.5">Book Free Consultation</h3>
-          <p className="text-xs text-slate-700 font-light">See how SK Design Studio can transform your space.</p>
+          <p className="text-xs text-slate-700 font-light">See how Sreeveda can transform your space.</p>
         </div>
 
         {isSubmitted ? (
@@ -127,7 +127,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   onChange={handleChange}
                   placeholder="Your Name"
                   maxLength={50}
-                  className={`w-full pl-9 pr-3 py-2 border ${errors.name ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
+                  className={`w-full pl-9 pr-3 py-2 border ${errors.name ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
                 />
               </div>
               {errors.name && <p className="mt-0.5 text-[10px] text-red-500">{errors.name}</p>}
@@ -148,7 +148,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   onChange={handleChange}
                   placeholder="work@email.com"
                   maxLength={100}
-                  className={`w-full pl-9 pr-3 py-2 border ${errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
+                  className={`w-full pl-9 pr-3 py-2 border ${errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
                 />
               </div>
               {errors.email && <p className="mt-0.5 text-[10px] text-red-500">{errors.email}</p>}
@@ -169,7 +169,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   onChange={handleChange}
                   placeholder="+91 99999 99999"
                   maxLength={15}
-                  className={`w-full pl-9 pr-3 py-2 border ${errors.mobile ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
+                  className={`w-full pl-9 pr-3 py-2 border ${errors.mobile ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
                 />
               </div>
               {errors.mobile && <p className="mt-0.5 text-[10px] text-red-500">{errors.mobile}</p>}
@@ -190,14 +190,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   placeholder="Any specific requirements?"
                   rows={2}
                   maxLength={500}
-                  className="w-full pl-9 pr-3 py-2 border border-slate-200 focus:border-maroon-800 focus:ring-1 focus:ring-maroon-800 rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white resize-none"
+                  className="w-full pl-9 pr-3 py-2 border border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800 rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white resize-none"
                 ></textarea>
               </div>
             </div>
 
             <button
               type="submit"
-              className="w-full py-2.5 bg-maroon-900 hover:bg-maroon-800 text-white font-bold rounded-lg transition-colors mt-2 text-sm shadow-[0_4px_14px_0_rgba(128,0,0,0.39)]"
+              className="w-full py-2.5 bg-theme-gradient hover:opacity-90 text-white font-bold rounded-lg transition-colors mt-2 text-sm shadow-[0_4px_14px_0_rgba(128,0,0,0.39)]"
             >
               Book Demo
             </button>

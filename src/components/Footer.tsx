@@ -10,6 +10,8 @@ const footerLinks = [
       { href: "/service", label: "Services" },
       { href: "/gallery", label: "Gallery" },
       { href: "/blog", label: "Blog" },
+      { href: "/faq", label: "Q/A" },
+      { href: "/contact", label: "Contact" },
     ],
   },
   {
@@ -35,16 +37,16 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] pt-10 pb-6 relative overflow-hidden text-slate-300">
+    <footer className="bg-[#0a0a0a] pt-10 pb-6 relative overflow-hidden text-white/70">
       <div className="page-shell">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           
           {/* Brand & Mission Column */}
           <div className="lg:col-span-4 flex flex-col">
-            <div className="mb-8">
-              <Image src="/images/logo.png" alt="SK Design Studio" width={180} height={70} className="h-14 w-auto object-contain" />
+            <div className="mb-6">
+              <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={160} height={82} className="w-32 md:w-40 h-auto object-contain" />
             </div>
-            <p className="text-base text-slate-400 font-light leading-relaxed max-w-sm">
+            <p className="text-base text-white/70 font-light leading-relaxed max-w-sm">
               Homes, workplaces, and hospitality spaces crafted with equal parts creativity and engineering discipline. We architect lifestyles, not just spaces.
             </p>
           </div>
@@ -54,7 +56,7 @@ export function Footer() {
             {footerLinks.map((group) => (
               <div key={group.heading} className="space-y-6">
                 <h4 className="text-sm uppercase tracking-widest text-white font-semibold">{group.heading}</h4>
-                <ul className="space-y-4 text-[15px] text-slate-400 font-light">
+                <ul className="space-y-4 text-[15px] text-white/70 font-light">
                   {group.items.map((item) => (
                     <li key={item.label}>
                       <Link className="hover:text-white transition-colors duration-300 block" href={item.href}>
@@ -68,7 +70,7 @@ export function Footer() {
 
             <div className="space-y-6 sm:col-span-2 md:col-span-1">
               <h4 className="text-sm uppercase tracking-widest text-white font-semibold">Contact Us</h4>
-              <div className="text-[15px] text-slate-400 font-light space-y-4">
+              <div className="text-[15px] text-white/70 font-light space-y-4">
                 <p className="leading-relaxed">
                   {contactChannels.address}
                 </p>
@@ -88,13 +90,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-700 font-light pb-4">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50 font-light pb-4">
           <div className="text-center md:text-left">
-            <span>&copy; {new Date().getFullYear()} SK Design Studio. All rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} Sreeveda. All rights reserved.</span>
           </div>
-          <div className="text-center md:text-right text-slate-700">
+          <div className="text-center md:text-right text-white/50">
             <span>
-              Developed by <a href="https://www.abhivorn.com/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">Abhivorn Technologies</a> & <a href="https://www.digilevelup.in/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">Digi Level Up</a>
+              Developed by <a href="https://www.abhivorn.com/" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-white transition-colors">Abhivorn Technologies</a> & <a href="https://www.digilevelup.in/" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-white transition-colors">Digi Level Up</a>
             </span>
           </div>
         </div>
@@ -102,3 +104,4 @@ export function Footer() {
     </footer>
   );
 }
+

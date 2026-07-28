@@ -8,11 +8,11 @@ export default function ContactPage() {
         
         {/* Top Banner Section */}
         <div className="text-center animate-fade-in-up max-w-3xl mx-auto mb-4 md:mb-8">
-          <span className="inline-block mb-3 text-maroon-800 font-semibold tracking-[0.2em] uppercase text-[10px] md:text-xs">
+          <span className="inline-block mb-3 text-theme-gradient font-semibold tracking-[0.2em] uppercase text-[10px] md:text-xs">
             Contact Us
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900 font-serif leading-tight">
-            Let's Start Your <span className="italic font-light text-maroon-900">Design Journey</span>
+            Let's Start Your <span className="italic font-light text-theme-gradient">Design Journey</span>
           </h1>
           <p className="text-slate-700 font-light leading-relaxed text-sm md:text-base max-w-xl mx-auto">
             Ready to transform your physical spaces? Schedule a free site visit or design consultation.
@@ -48,47 +48,47 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 text-sm">SK Design Studio</h3>
-                  <p className="text-[10px] text-slate-700">Hyderabad, India</p>
+                  <h3 className="font-bold text-slate-900 text-sm">Sreeveda</h3>
+                  <p className="text-[10px] text-slate-700">India</p>
                 </div>
               </div>
               
               {/* Details */}
               <div className="space-y-3 mb-5">
                 <div className="flex items-start gap-2">
-                  <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-3.5 h-3.5 text-orange-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                   <div>
                     <p className="text-[10px] text-slate-700 mb-0.5">Address:</p>
                     <p className="text-xs text-slate-800 font-medium leading-tight">
-                      Hyderabad, Telangana, India
+                      Pan-India Operations, India
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.89-1.29-5.28-3.68-6.57-6.57l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
-                  <p className="text-[11px] text-slate-700">Phone: <span className="text-slate-800 font-medium">+91 97033 19319</span></p>
+                  <p className="text-[11px] text-slate-700">Phone: <span className="text-slate-800 font-medium">+91 70365 92351</span></p>
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <svg className="w-3.5 h-3.5 text-maroon-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <svg className="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
-                  <p className="text-[11px] text-slate-700 truncate">Email: <span className="text-slate-800 font-medium truncate">skdesignsstudio.info@gmail.com</span></p>
+                  <p className="text-[11px] text-slate-700 truncate">Email: <span className="text-slate-800 font-medium truncate">contact@sreevedaa.com</span></p>
                 </div>
               </div>
 
               {/* Action Button */}
               <a 
-                href="https://maps.google.com/?q=Hyderabad,Telangana,India" 
+                href="https://maps.google.com/?q=India" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-maroon-900 text-white px-4 py-3 rounded-xl font-semibold hover:bg-maroon-800 transition-all flex items-center justify-center gap-2 text-[11px] uppercase tracking-widest shadow-md shadow-maroon-900/20"
+                className="w-full bg-theme-gradient text-white px-4 py-3 rounded-xl font-semibold hover:bg-maroon-800 transition-all flex items-center justify-center gap-2 text-[11px] uppercase tracking-widest shadow-md shadow-maroon-900/20"
               >
                 Get Directions
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -108,41 +108,41 @@ export default function ContactPage() {
         {/* Bottom Section: Contact Cards Row-Wise */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full animate-fade-in-up delay-300">
           {/* Email Card */}
-          <a href="mailto:skdesignsstudio.info@gmail.com" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-maroon-800 shrink-0 group-hover:scale-110 transition-transform">
+          <a href="mailto:contact@sreevedaa.com" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
+            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
             <div className="overflow-hidden">
               <h3 className="font-bold text-slate-900 mb-1 text-base">Email</h3>
-              <p className="text-xs text-slate-700 font-light truncate">skdesignsstudio.info@gmail.com</p>
+              <p className="text-xs text-slate-700 font-light truncate">contact@sreevedaa.com</p>
             </div>
           </a>
 
           {/* Phone Card */}
-          <a href="tel:+919703319319" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-maroon-800 shrink-0 group-hover:scale-110 transition-transform">
+          <a href="tel:+917036592351" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
+            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
             </div>
             <div className="overflow-hidden">
               <h3 className="font-bold text-slate-900 mb-1 text-base">Phone</h3>
-              <p className="text-xs text-slate-700 font-light truncate">+91 97033 19319</p>
+              <p className="text-xs text-slate-700 font-light truncate">+91 70365 92351</p>
             </div>
           </a>
 
           {/* WhatsApp Card */}
-          <a href="https://wa.me/919703319319" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-maroon-800 shrink-0 group-hover:scale-110 transition-transform">
+          <a href="https://wa.me/917036592351?text=Hello%20Sreevedaa%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20your%20design%20services." className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
+            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
               </svg>
             </div>
             <div className="overflow-hidden">
               <h3 className="font-bold text-slate-900 mb-1 text-base">WhatsApp</h3>
-              <p className="text-xs text-slate-700 font-light truncate">+91 97033 19319</p>
+              <p className="text-xs text-slate-700 font-light truncate">+91 70365 92351</p>
             </div>
           </a>
         </div>
