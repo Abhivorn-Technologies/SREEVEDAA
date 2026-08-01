@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -99,7 +99,7 @@ export default function FAQPage() {
                     <span className={`text-[1.05rem] md:text-[1.25rem] font-serif pr-4 md:pr-8 transition-colors duration-300 ${openIndex === idx ? 'text-theme-gradient font-semibold' : 'text-slate-800 group-hover:text-theme-gradient'}`}>
                       {faq.question}
                     </span>
-                    <span className={`shrink-0 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full border transition-all duration-[600ms] ease-out ${openIndex === idx ? 'border-orange-500 bg-maroon-800 text-white rotate-[135deg]' : 'border-slate-200 text-slate-400 group-hover:border-maroon-300 group-hover:text-theme-gradient bg-slate-50 group-hover:bg-maroon-50 group-hover:rotate-90'}`}>
+                    <span className={`shrink-0 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full transition-all duration-[600ms] ease-out shadow-sm bg-theme-gradient text-white ${openIndex === idx ? 'rotate-[135deg] shadow-md' : 'group-hover:shadow-md group-hover:scale-110'}`}>
                       <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
                       </svg>

@@ -59,73 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. CLIENTS SECTION - Double Card Marquee */}
-      <section className="py-20 bg-[#FAFAFA] border-b border-slate-100 overflow-hidden relative flex flex-col justify-center">
-        <ScrollReveal animation="fade-in-up" className="text-center mb-10 md:mb-12 px-4">
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-slate-900 mb-3 md:mb-4 tracking-tight">
-            <SlowText text="Our notable clients" />
-          </h3>
-          <p className="text-slate-700 text-sm md:text-base font-light max-w-2xl mx-auto">Industry leaders, properties, and developers we are proud to serve.</p>
-        </ScrollReveal>
-        
-        {/* Row 1 - Scrolling Left */}
-        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-3 mb-6">
-          {[
-            { name: 'Lodha Group', desc: 'Luxury Real Estate', initial: 'L' },
-            { name: 'Prestige Estates', desc: 'Commercial & Residential', initial: 'P' },
-            { name: 'Abhivorn Technologies', desc: 'Digital Partner', initial: 'A' },
-            { name: 'Godrej Properties', desc: 'Sustainable Development', initial: 'G' },
-            { name: 'DLF', desc: 'Urban Infrastructure', initial: 'D' },
-            { name: 'Sreeveda', desc: 'Architecture', initial: 'S' },
-            // Duplicate for seamless loop
-            { name: 'Lodha Group', desc: 'Luxury Real Estate', initial: 'L' },
-            { name: 'Prestige Estates', desc: 'Commercial & Residential', initial: 'P' },
-            { name: 'Abhivorn Technologies', desc: 'Digital Partner', initial: 'A' },
-            { name: 'Godrej Properties', desc: 'Sustainable Development', initial: 'G' },
-            { name: 'DLF', desc: 'Urban Infrastructure', initial: 'D' },
-            { name: 'Sreeveda', desc: 'Architecture', initial: 'S' }
-          ].map((client, i) => (
-            <div key={i} className="flex items-center gap-4 bg-white px-6 py-5 rounded-xl border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] w-[320px] shrink-0 group hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-maroon-100 transition-all cursor-pointer">
-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xl font-bold font-serif text-theme-gradient shrink-0 group-hover:bg-maroon-50 group-hover:scale-110 transition-all duration-300">
-                {client.initial}
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-800 font-serif text-[16px] group-hover:text-theme-gradient transition-colors leading-tight mb-1">{client.name}</h4>
-                <p className="text-xs text-slate-700 font-light leading-tight">{client.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Row 2 - Scrolling Right */}
-        <div className="flex w-max animate-marquee-reverse hover:[animation-play-state:paused] gap-6 px-3">
-          {[
-            { name: 'Brigade Group', desc: 'Property Development', initial: 'B' },
-            { name: 'Sobha Limited', desc: 'Premium Housing', initial: 'S' },
-            { name: 'Oberoi Realty', desc: 'High-End Residential', initial: 'O' },
-            { name: 'Mahindra Lifespaces', desc: 'Sustainable Cities', initial: 'M' },
-            { name: 'Puravankara', desc: 'Urban Developers', initial: 'P' },
-            { name: 'Tata Housing', desc: 'Real Estate Projects', initial: 'T' },
-            // Duplicate for seamless loop
-            { name: 'Brigade Group', desc: 'Property Development', initial: 'B' },
-            { name: 'Sobha Limited', desc: 'Premium Housing', initial: 'S' },
-            { name: 'Oberoi Realty', desc: 'High-End Residential', initial: 'O' },
-            { name: 'Mahindra Lifespaces', desc: 'Sustainable Cities', initial: 'M' },
-            { name: 'Puravankara', desc: 'Urban Developers', initial: 'P' },
-            { name: 'Tata Housing', desc: 'Real Estate Projects', initial: 'T' }
-          ].map((client, i) => (
-            <div key={i} className="flex items-center gap-4 bg-white px-6 py-5 rounded-xl border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] w-[320px] shrink-0 group hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-maroon-100 transition-all cursor-pointer">
-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xl font-bold font-serif text-theme-gradient shrink-0 group-hover:bg-maroon-50 group-hover:scale-110 transition-all duration-300">
-                {client.initial}
-              </div>
-              <div>
-                <h4 className="font-bold text-slate-800 font-serif text-[16px] group-hover:text-theme-gradient transition-colors leading-tight mb-1">{client.name}</h4>
-                <p className="text-xs text-slate-700 font-light leading-tight">{client.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <ServicesSection />
 
@@ -265,8 +199,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 6. CLIENTS SECTION - Single Marquee */}
+      <section className="py-20 bg-[#FAFAFA] border-t border-slate-100 overflow-hidden relative flex flex-col justify-center">
+        <ScrollReveal animation="fade-in-up" className="text-center mb-10 md:mb-12 px-4">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-slate-900 mb-3 md:mb-4 tracking-tight">
+            <SlowText text="Our notable clients" />
+          </h3>
+          <p className="text-slate-700 text-sm md:text-base font-light max-w-2xl mx-auto">Industry leaders, properties, and developers we are proud to serve.</p>
+        </ScrollReveal>
+        
+        {/* Single Row - Scrolling Left */}
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-3">
+          {[
+            { name: 'Lodha Group', desc: 'Luxury Real Estate', initial: 'L' },
+            { name: 'Prestige Estates', desc: 'Commercial & Residential', initial: 'P' },
+            { name: 'Abhivorn Technologies', desc: 'Digital Partner', initial: 'A' },
+            { name: 'Godrej Properties', desc: 'Sustainable Development', initial: 'G' },
+            { name: 'DLF', desc: 'Urban Infrastructure', initial: 'D' },
+            { name: 'Sreeveda', desc: 'Architecture', initial: 'S' },
+            { name: 'Brigade Group', desc: 'Property Development', initial: 'B' },
+            { name: 'Sobha Limited', desc: 'Premium Housing', initial: 'S' },
+            { name: 'Oberoi Realty', desc: 'High-End Residential', initial: 'O' },
+            { name: 'Mahindra Lifespaces', desc: 'Sustainable Cities', initial: 'M' },
+            { name: 'Puravankara', desc: 'Urban Developers', initial: 'P' },
+            { name: 'Tata Housing', desc: 'Real Estate Projects', initial: 'T' },
+            // Duplicate for seamless loop
+            { name: 'Lodha Group', desc: 'Luxury Real Estate', initial: 'L' },
+            { name: 'Prestige Estates', desc: 'Commercial & Residential', initial: 'P' },
+            { name: 'Abhivorn Technologies', desc: 'Digital Partner', initial: 'A' },
+            { name: 'Godrej Properties', desc: 'Sustainable Development', initial: 'G' },
+            { name: 'DLF', desc: 'Urban Infrastructure', initial: 'D' },
+            { name: 'Sreeveda', desc: 'Architecture', initial: 'S' },
+            { name: 'Brigade Group', desc: 'Property Development', initial: 'B' },
+            { name: 'Sobha Limited', desc: 'Premium Housing', initial: 'S' },
+            { name: 'Oberoi Realty', desc: 'High-End Residential', initial: 'O' },
+            { name: 'Mahindra Lifespaces', desc: 'Sustainable Cities', initial: 'M' },
+            { name: 'Puravankara', desc: 'Urban Developers', initial: 'P' },
+            { name: 'Tata Housing', desc: 'Real Estate Projects', initial: 'T' }
+          ].map((client, i) => (
+            <div key={i} className="flex items-center gap-4 bg-white px-6 py-5 rounded-xl border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] w-[320px] shrink-0 group hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-maroon-100 transition-all cursor-pointer">
+              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xl font-bold font-serif text-theme-gradient shrink-0 group-hover:bg-maroon-50 group-hover:scale-110 transition-all duration-300">
+                {client.initial}
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-800 font-serif text-[16px] group-hover:text-theme-gradient transition-colors leading-tight mb-1">{client.name}</h4>
+                <p className="text-xs text-slate-700 font-light leading-tight">{client.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* 6. CTA SECTION */}
+      {/* 7. CTA SECTION */}
       <section className="relative flex items-center bg-[#FAFAFA] overflow-hidden py-16 md:py-20">
         <div className="page-shell relative z-10 w-full">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">

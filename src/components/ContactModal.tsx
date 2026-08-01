@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -57,16 +57,22 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
     // Strict input filtering and length limits
     if (name === "name") {
-      // Only alphabets and spaces
-      newValue = value.replace(/[^a-zA-Z\s]/g, "").slice(0, 50);
+      // Only alphabets and spaces, prevent leading spaces, collapse multiple spaces
+      newValue = value.replace(/[^a-zA-Z\s]/g, "").replace(/^\s+/, "").replace(/\s{2,}/g, " ").slice(0, 50);
     } else if (name === "mobile") {
-      // Only digits, spaces, and + 
-      newValue = value.replace(/[^\d\s+]/g, "").slice(0, 15);
+      // Only digits, strictly no spaces
+      newValue = value.replace(/\D/g, "");
+      // Never allow phone number to start with 0,1,2,3,4,5
+      if (newValue.length > 0 && /^[0-5]/.test(newValue)) {
+        newValue = newValue.slice(1);
+      }
+      newValue = newValue.slice(0, 10);
     } else if (name === "email") {
-      // No spaces
-      newValue = value.replace(/[\s]/g, "").slice(0, 100);
+      // No spaces, allow only valid email characters (strip out special characters)
+      newValue = value.replace(/[\s#$%\^&*()+=\[\]{}|\\\/<>,~`!?"']/g, "").slice(0, 100);
     } else if (name === "message") {
-      newValue = value.slice(0, 500);
+      // Prevent crazy special characters and leading spaces
+      newValue = value.replace(/[#$%\^&*()+=\[\]{}|\\\/<>,~`!?"']/g, "").replace(/^\s+/, "").slice(0, 500);
     }
 
     setFormData({ ...formData, [name]: newValue });
@@ -111,9 +117,9 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <p className="text-slate-700 text-xs">We will get back to you shortly.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form onSubmit={handleSubmit} noValidate className="space-y-3">
             <div>
-              <label className="block text-[10px] font-bold text-slate-700 mb-1 uppercase tracking-wider">Name</label>
+              <label className="block text-[10px] font-bold text-slate-700 mb-1 uppercase tracking-wider">Name <span className="text-red-500 text-base ml-0.5 leading-none">*</span></label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,6 +133,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   onChange={handleChange}
                   placeholder="Your Name"
                   maxLength={50}
+                  required
                   className={`w-full pl-9 pr-3 py-2 border ${errors.name ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
                 />
               </div>
@@ -134,7 +141,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
 
             <div>
-              <label className="block text-[10px] font-bold text-slate-700 mb-1 uppercase tracking-wider">Email</label>
+              <label className="block text-[10px] font-bold text-slate-700 mb-1 uppercase tracking-wider">Email <span className="text-red-500 text-base ml-0.5 leading-none">*</span></label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -148,6 +155,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   onChange={handleChange}
                   placeholder="work@email.com"
                   maxLength={100}
+                  required
                   className={`w-full pl-9 pr-3 py-2 border ${errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
                 />
               </div>
@@ -155,7 +163,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
 
             <div>
-              <label className="block text-[10px] font-bold text-slate-700 mb-1 uppercase tracking-wider">Mobile Number</label>
+              <label className="block text-[10px] font-bold text-slate-700 mb-1 uppercase tracking-wider">Mobile Number <span className="text-red-500 text-base ml-0.5 leading-none">*</span></label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -168,7 +176,8 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   value={formData.mobile}
                   onChange={handleChange}
                   placeholder="+91 99999 99999"
-                  maxLength={15}
+                  maxLength={10}
+                  required
                   className={`w-full pl-9 pr-3 py-2 border ${errors.mobile ? 'border-red-500 ring-1 ring-red-500' : 'border-slate-200 focus:border-orange-500 focus:ring-1 focus:ring-maroon-800'} rounded-lg text-sm transition-all outline-none bg-slate-50 focus:bg-white`}
                 />
               </div>

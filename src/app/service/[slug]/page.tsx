@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { services } from "@/data/services";
 import { SlowText } from "@/components/SlowText";
@@ -20,8 +20,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return (
     <main className="min-h-screen bg-white">
-      {/* SECTION 1: Editorial Hero */}
-      <section className="relative w-full aspect-[4/3] sm:aspect-video md:aspect-auto md:h-[80vh] md:min-h-[500px]">
+      {/* SECTION 1: HD Premium Hero Banner */}
+      <section className="relative w-full h-[70vh] md:h-[85vh] flex items-center justify-center">
         <Image 
           src={service.image} 
           alt={service.title} 
@@ -29,96 +29,104 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80"></div>
-        <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-24">
-          <div className="page-shell max-w-7xl mx-auto px-4 w-full">
-            <ScrollReveal animation="fade-in-up" delay={0}>
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-                <h1 className="text-4xl md:text-6xl lg:text-[5.5rem] font-serif font-bold text-white leading-[1.1] max-w-4xl tracking-tight">
-                  <SlowText text={service.title} />
-                </h1>
-                <div className="w-full md:w-1/3 hidden md:block">
-                  <p className="text-white/80 font-light text-lg border-l border-maroon-500 pl-6">
-                    Elevating your space through precision, luxury, and timeless design.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="relative z-10 page-shell max-w-7xl mx-auto px-4 w-full">
+          <ScrollReveal animation="fade-in-up" delay={0}>
+            <div className="flex flex-col items-center text-center gap-6 max-w-5xl mx-auto">
+              <span className="inline-flex items-center justify-center bg-black/30 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full text-orange-400 font-sans font-bold tracking-[0.3em] uppercase text-xs md:text-sm shadow-2xl">
+                Premium Service
+              </span>
+              <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-serif font-bold text-white leading-[1.05] tracking-tight drop-shadow-2xl">
+                <SlowText text={service.title} />
+              </h1>
+              <p className="text-white/90 font-light text-lg md:text-2xl max-w-3xl mt-4 leading-relaxed mx-auto drop-shadow-lg">
+                {service.desc}
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* SECTION 2: Overview & Vision */}
-      <section className="py-20 md:py-32 bg-white">
+      {/* SECTION 2: 3D Groove Grid Gallery & Overview */}
+      <section className="pt-20 md:pt-32 pb-8 md:pb-12 bg-white">
         <div className="page-shell max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <ScrollReveal animation="fade-in-up" delay={200}>
-              <div className="flex flex-col gap-6">
-                <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-sm">
-                  Project Overview
-                </span>
+          
+          <ScrollReveal animation="fade-in-up">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+              <div className="max-w-2xl">
                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
-                  A Strategic Approach to <br className="hidden md:block" /> {service.title}
+                  Uncompromising Quality. <br className="hidden md:block" /> Precision Execution.
                 </h2>
-                <p className="text-lg md:text-xl text-slate-600 font-light leading-relaxed mt-4">
-                  {service.desc}
-                </p>
-                <div className="mt-8">
-                  <a 
-                    href={`/contact?service=${service.slug}`}
-                    className="inline-flex items-center gap-3 text-theme-gradient hover:text-maroon-700 font-sans font-bold uppercase tracking-widest text-sm transition-colors group"
-                  >
-                    <span className="border-b border-transparent group-hover:border-maroon-700 transition-colors pb-1">Discuss This Service</span>
-                    <svg className="w-5 h-5 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </a>
+              </div>
+              <a 
+                href={`/contact?service=${service.slug}`}
+                className="inline-flex shrink-0 items-center gap-3 text-white bg-theme-gradient hover:opacity-90 px-8 py-4 rounded-full font-sans font-bold uppercase tracking-widest text-[10px] md:text-xs transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+              >
+                Discuss This Project
+              </a>
+            </div>
+          </ScrollReveal>
+
+          {/* The 3D Groove Grid Gallery */}
+          <ScrollReveal animation="fade-in-up" delay={200}>
+            <div className="flex flex-col gap-4 md:gap-6">
+              {/* Top Large Feature Image */}
+              <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200/60 group bg-slate-100">
+                <Image src={service.gallery[0]} fill alt={`${service.title} View 1`} className="object-cover group-hover:scale-105 transition-transform duration-[1500ms] ease-out" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              
+              {/* Bottom Row: 3 Images */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="relative aspect-[4/3] md:aspect-auto md:h-[350px] rounded-[2rem] overflow-hidden shadow-xl border border-slate-200/60 group bg-slate-100">
+                  <Image src={service.gallery[1]} fill alt={`${service.title} View 2`} className="object-cover group-hover:scale-105 transition-transform duration-[1500ms] ease-out" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]"></div>
+                </div>
+                
+                <div className="relative aspect-[4/3] md:aspect-auto md:h-[350px] rounded-[2rem] overflow-hidden shadow-xl border border-slate-200/60 group bg-slate-100">
+                  <Image src={service.gallery[2]} fill alt={`${service.title} View 3`} className="object-cover group-hover:scale-105 transition-transform duration-[1500ms] ease-out" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]"></div>
+                </div>
+                
+                <div className="relative aspect-[4/3] md:aspect-auto md:h-[350px] rounded-[2rem] overflow-hidden shadow-xl border border-slate-200/60 group bg-slate-100">
+                  <Image src={service.gallery[3]} fill alt={`${service.title} View 4`} className="object-cover group-hover:scale-105 transition-transform duration-[1500ms] ease-out" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]"></div>
                 </div>
               </div>
-            </ScrollReveal>
+            </div>
+          </ScrollReveal>
 
-            <ScrollReveal animation="fade-in-up" delay={400}>
-              <div className="relative w-full aspect-[4/3] md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                <Image 
-                  src={service.image} 
-                  alt={`${service.title} Detail`} 
-                  fill 
-                  className="object-cover object-center"
-                />
-              </div>
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 
-      {/* SECTION 3: Capabilities / Features Cards */}
-      <section className="py-20 md:py-32 bg-slate-50 border-t border-slate-100">
+      {/* SECTION 3: Capabilities (Modern Premium UI) */}
+      <section className="pt-8 md:pt-12 pb-16 md:pb-20 bg-white">
         <div className="page-shell max-w-7xl mx-auto px-4">
           <ScrollReveal animation="fade-in-up" delay={0}>
             <div className="text-center mb-16 md:mb-24">
-              <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-sm mb-4 block">
-                What We Deliver
+              <span className="inline-block px-4 py-1.5 rounded-full bg-maroon-50 text-maroon-800 font-sans font-bold tracking-[0.2em] uppercase text-xs mb-6 border border-maroon-100">
+                Our Capabilities
               </span>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900">
-                Core Capabilities
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-slate-900 leading-tight">
+                What We Deliver
               </h2>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {service.features.map((feat, idx) => (
               <ScrollReveal key={idx} animation="fade-in-up" delay={idx * 100}>
-                <div className="bg-white p-8 md:p-10 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-maroon-100 transition-all duration-300 h-full group">
-                  <div className="w-12 h-12 bg-maroon-50 rounded-full flex items-center justify-center mb-8 group-hover:bg-maroon-800 transition-colors duration-300">
-                    <span className="text-theme-gradient group-hover:text-white font-serif font-bold text-xl transition-colors duration-300">
-                      0{idx + 1}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-serif font-bold text-slate-900 group-hover:text-theme-gradient transition-colors">
+                <div className="group bg-white p-8 md:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:border-maroon-100 hover:shadow-[0_20px_40px_-15px_rgba(128,0,0,0.1)] hover:-translate-y-1 transition-all duration-500 h-full">
+                  {/* Title */}
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-4 group-hover:text-maroon-800 transition-colors duration-500 leading-snug">
                     {feat}
                   </h3>
-                  <p className="mt-4 text-slate-700 font-light text-sm leading-relaxed">
-                    Expertly executed to elevate the final outcome of your project.
+                  
+                  {/* Description */}
+                  <p className="text-slate-500 font-light text-sm leading-relaxed">
+                    Expertly executed to elevate the final outcome of your project with uncompromising precision.
                   </p>
                 </div>
               </ScrollReveal>
@@ -128,23 +136,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
       
       {/* SECTION 4: Final CTA */}
-      <section className="relative py-24 md:py-32 bg-white overflow-hidden border-t border-slate-100">
-        <div className="page-shell relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal animation="fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6">
-              Ready to begin your {service.title.toLowerCase()} project?
-            </h2>
-            <p className="text-slate-700 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto">
-              Partner with Sreeveda to bring your vision to life with uncompromising quality and precision.
-            </p>
-            <a 
-              href={`/contact?service=${service.slug}`}
-              className="inline-flex items-center justify-center px-10 py-5 bg-theme-gradient text-white rounded-full font-bold uppercase tracking-widest text-sm hover:bg-maroon-800 transition-colors shadow-xl hover:-translate-y-1"
-            >
-              Book A Consultation
-            </a>
-          </ScrollReveal>
-        </div>
+      <section className="relative pt-16 md:pt-20 pb-24 md:pb-32 bg-white overflow-hidden text-center px-4">
+        <ScrollReveal animation="fade-in-up" className="page-shell max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 mb-6">
+            Ready to build your <br className="hidden md:block"/> {service.title.toLowerCase()}?
+          </h2>
+          <p className="text-slate-600 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+            Partner with Sreeveda to bring your vision to life with uncompromising quality, rigorous discipline, and breathtaking design.
+          </p>
+          <a 
+            href={`/contact?service=${service.slug}`}
+            className="inline-flex items-center justify-center px-10 py-5 bg-theme-gradient text-white rounded-full font-bold uppercase tracking-widest text-xs md:text-sm hover:opacity-90 transition-all shadow-[0_10px_30px_rgba(128,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(128,0,0,0.35)] hover:-translate-y-1"
+          >
+            Schedule a Consultation
+          </a>
+        </ScrollReveal>
       </section>
 
     </main>
