@@ -80,7 +80,7 @@ export function ServicesSection({ images = [] }: { images?: string[] }) {
   ];
 
   return (
-    <section className="py-24 bg-white relative z-20 overflow-hidden">
+    <section id="services" className="py-24 bg-white relative z-20 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         
         {/* Top Section: Text and Small Cards Side-by-Side */}

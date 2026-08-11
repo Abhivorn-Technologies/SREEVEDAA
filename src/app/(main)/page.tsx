@@ -81,7 +81,7 @@ export default async function Home() {
             <Link href="/contact" className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-[#7a1515] to-[#d84315] text-white overflow-hidden flex items-center justify-center rounded-full shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:brightness-110">
               <span className="font-sans font-bold tracking-widest uppercase text-[11px] md:text-xs">Start Your Project</span>
             </Link>
-            <Link href="/services" className="w-full sm:w-auto px-10 py-4 border border-white/70 text-white hover:bg-white hover:text-[#7a1515] font-sans font-bold tracking-widest uppercase text-[11px] md:text-xs flex items-center justify-center rounded-full transition-all duration-300 backdrop-blur-sm hover:-translate-y-1">
+            <Link href="/service" className="w-full sm:w-auto px-10 py-4 border border-white/70 text-white hover:bg-white hover:text-[#7a1515] font-sans font-bold tracking-widest uppercase text-[11px] md:text-xs flex items-center justify-center rounded-full transition-all duration-300 backdrop-blur-sm hover:-translate-y-1">
               <span>View Services</span>
             </Link>
           </div>
