@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { FloatingActions } from "@/components/FloatingActions";
 
 const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
@@ -56,10 +53,7 @@ export default function RootLayout({
       <body
         className={`${hanken.variable} ${playfair.variable} font-sans antialiased text-slate-800 bg-white`}
       >
-        <Header />
         {children}
-        <Footer />
-        <FloatingActions />
       </body>
     </html>
   );

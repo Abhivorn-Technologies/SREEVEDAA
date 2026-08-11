@@ -1,0 +1,17 @@
+diff a/src/data/siteContent.ts b/src/data/siteContent.ts	(rejected hunks)
+@@ -265,9 +265,12 @@ export const blogs: BlogPost[] = [
+ ];
+ 
+ export const contactChannels = {
+-  phone: "+91 70365 92351",
+-  email: "contact@sreevedaa.com",
+-  address: "India ΓÇö Serving High-End Residential & Commercial Projects Nationwide.",
++  phone: "+91 63035 72745",
++  secondaryPhone: "+91 90306 02745",
++  email: "info@sreevedaa.com",
++  address: "201, Second Floor, Shree Plaza, Plot No 1&2, Opposite Bobbili Empire, Ruby Block, Kompally, Hyderabad-500100",
++  googleMaps: "https://maps.app.goo.gl/m6HUnCk5pc3qTJtm9",
++  instagram: "https://www.instagram.com/sreevedaainteriors?igsh=cTN1ZnRoNDdtNjJo&utm_source=qr"
+ };
+ 
+ export function getExcerpt(html: string, words = 32) {

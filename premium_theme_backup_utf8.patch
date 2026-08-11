@@ -1,0 +1,1634 @@
+﻿diff --git a/src/app/about/page.tsx b/src/app/about/page.tsx
+index bb15b58..00c1f00 100644
+--- a/src/app/about/page.tsx
++++ b/src/app/about/page.tsx
+@@ -102,51 +102,95 @@ export default function AboutPage() {
+         </div>
+       </section>
+ 
+-      {/* 4. Classic Meet the Founder (100vh) */}
+-      {/* 4. Modern Meet the Founder */}
+-      <section className="relative pt-12 pb-12 lg:pt-16 lg:pb-16 bg-white overflow-hidden">
+-        {/* Abstract Background Shapes mimicking the reference */}
+-        <div className="absolute top-0 right-0 w-[40vw] h-[60vh] bg-[#E8F2F6] rounded-bl-[200px] -z-10 translate-x-10 -translate-y-10"></div>
+-        <div className="absolute bottom-10 left-0 w-[500px] h-[500px] border-[1px] border-[#E8F2F6] rounded-full -z-10 -translate-x-1/2"></div>
++      {/* 4. Meet the Founders */}
++      <section className="relative pt-16 pb-16 lg:pt-24 lg:pb-24 bg-white overflow-hidden">
++        {/* Abstract Background Shapes */}
++        <div className="absolute top-0 right-0 w-[40vw] h-[60vh] bg-slate-50 rounded-bl-[200px] -z-10 translate-x-10 -translate-y-10"></div>
++        <div className="absolute bottom-10 left-0 w-[500px] h-[500px] border-[1px] border-slate-100 rounded-full -z-10 -translate-x-1/2"></div>
+ 
+         <div className="page-shell relative z-10 max-w-6xl mx-auto px-4">
+-          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
++          <ScrollReveal animation="fade-in-up" className="text-center mb-16 lg:mb-20">
++            <span className="inline-block mb-4 text-theme-gradient font-sans font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs">
++              Leadership
++            </span>
++            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-slate-950 mb-6 leading-[1.1]">
++              <SlowText text="Meet the Founders" />
++            </h2>
++            <div className="w-16 h-[2px] bg-theme-gradient mx-auto"></div>
++          </ScrollReveal>
++
++          <div className="flex flex-col gap-16 lg:gap-24">
+             
+-            {/* Left: Content */}
+-            <ScrollReveal animation="fade-in-up" className="w-full lg:w-5/12 flex flex-col justify-center text-center lg:text-left">
+-              <h2 className="text-4xl md:text-5xl lg:text-[5rem] font-sans font-bold text-[#1a2b3c] mb-6 md:mb-12 leading-[1.1]">
+-                <SlowText text="Meet the founder" />
+-              </h2>
++            {/* Founder 1 */}
++            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
++              <ScrollReveal animation="scale-up" className="w-full lg:w-5/12 relative">
++                <div className="relative w-full max-w-[400px] mx-auto aspect-[4/5] rounded-sm overflow-hidden shadow-xl border-8 border-white bg-white z-10 group">
++                  <Image 
++                    src="/images/founder_ai.png" 
++                    alt="Nithin Satya Chadalavada" 
++                    fill 
++                    className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700" 
++                  />
++                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-700"></div>
++                </div>
++              </ScrollReveal>
+               
+-              <h3 className="text-xl md:text-2xl font-sans font-semibold text-[#1a2b3c] mb-1">
+-                G.V.A Sai Nikhil
+-              </h3>
+-              <p className="text-sm md:text-base font-sans text-slate-700 mb-6">
+-                Founder & Principal Designer
+-              </p>
++              <ScrollReveal animation="fade-in-up" delay={200} className="w-full lg:w-7/12 flex flex-col justify-center text-center lg:text-left">
++                <h3 className="text-2xl md:text-4xl font-serif font-bold text-slate-950 mb-2">
++                  Nithin Satya Chadalavada
++                </h3>
++                <p className="text-sm md:text-base font-sans font-semibold tracking-widest uppercase text-theme-gradient mb-2">
++                  Founder - Design Operations
++                </p>
++                <p className="text-xs text-slate-500 font-mono tracking-widest uppercase mb-6 border-b border-slate-100 pb-2 inline-block">
++                  B.Arch, 10+ years of experience
++                </p>
++                <div className="text-sm md:text-base text-slate-700 font-light leading-relaxed space-y-4 max-w-xl mx-auto lg:mx-0">
++                  <p>
++                    Passionate Interior Designer known for attention to detail and thoughtful design solutions. Skilled in understanding client needs, managing project execution, and delivering spaces that reflect both style and functionality.
++                  </p>
++                  <p>
++                    With a strong foundation in architecture and over a decade of experience, Nithin ensures that every project marries aesthetic ambition with functional precision.
++                  </p>
++                </div>
++              </ScrollReveal>
++            </div>
++
++            {/* Founder 2 */}
++            <div className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16">
++              <ScrollReveal animation="scale-up" delay={100} className="w-full lg:w-5/12 relative">
++                <div className="relative w-full max-w-[400px] mx-auto aspect-[4/5] rounded-sm overflow-hidden shadow-xl border-8 border-white bg-white z-10 group">
++                  <Image 
++                    src="/images/founder_ai.png" 
++                    alt="Katta Shiva Sagar" 
++                    fill 
++                    className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700" 
++                  />
++                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-700"></div>
++                </div>
++              </ScrollReveal>
+               
+-              <div className="text-sm text-slate-700 font-light leading-relaxed space-y-4 max-w-md">
+-                <p>
+-                  With over a decade of experience in architectural harmony, Nikhil founded Sreeveda to bridge the gap between extravagant desires and functional reality.
++              <ScrollReveal animation="fade-in-up" delay={300} className="w-full lg:w-7/12 flex flex-col justify-center text-center lg:text-left">
++                <h3 className="text-2xl md:text-4xl font-serif font-bold text-slate-950 mb-2">
++                  Katta Shiva Sagar
++                </h3>
++                <p className="text-sm md:text-base font-sans font-semibold tracking-widest uppercase text-theme-gradient mb-2">
++                  Co-Founder - Project Head
+                 </p>
+-                <p>
+-                  He believes every structure possesses a latent soul, and the architect's ultimate job is to give that soul a breathtaking voice. True luxury is never loud; it is found in the seamless integration of design into everyday life.
++                <p className="text-xs text-slate-500 font-mono tracking-widest uppercase mb-6 border-b border-slate-100 pb-2 inline-block">
++                  M.C.A, 10+ years of experience
+                 </p>
+-              </div>
+-            </ScrollReveal>
++                <div className="text-sm md:text-base text-slate-700 font-light leading-relaxed space-y-4 max-w-xl mx-auto lg:mx-0">
++                  <p>
++                    Experienced Interior Project Head dedicated to delivering exceptional spaces through strategic planning and efficient execution. Passionate about transforming design concepts into reality while maintaining quality, timelines, and client satisfaction.
++                  </p>
++                  <p>
++                    Shiva's extensive background in project management guarantees that the journey from blueprint to reality is seamless, structured, and entirely stress-free for the client.
++                  </p>
++                </div>
++              </ScrollReveal>
++            </div>
+ 
+-            {/* Right: Modern Portrait */}
+-            <ScrollReveal animation="scale-up" delay={300} className="w-full lg:w-6/12 relative">
+-              <div className="relative w-full max-w-[500px] ml-auto aspect-[4/5] rounded-[3rem] overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border-[12px] border-white bg-white z-10">
+-                <Image 
+-                  src="/images/founder_ai.png" 
+-                  alt="G.V.A SAI NIKHIL" 
+-                  fill 
+-                  className="object-cover object-center" 
+-                />
+-              </div>
+-            </ScrollReveal>
+-            
+           </div>
+         </div>
+       </section>
+diff --git a/src/app/contact/page.tsx b/src/app/contact/page.tsx
+index 9e0d9e9..fc7808e 100644
+--- a/src/app/contact/page.tsx
++++ b/src/app/contact/page.tsx
+@@ -56,39 +56,42 @@ export default function ContactPage() {
+               {/* Details */}
+               <div className="space-y-3 mb-5">
+                 <div className="flex items-start gap-2">
+-                  <svg className="w-3.5 h-3.5 text-orange-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
++                  <svg className="w-3.5 h-3.5 text-theme-gradient shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                   </svg>
+                   <div>
+-                    <p className="text-[10px] text-slate-700 mb-0.5">Address:</p>
+-                    <p className="text-xs text-slate-800 font-medium leading-tight">
+-                      Pan-India Operations, India
++                    <p className="text-[10px] text-slate-500 mb-0.5 uppercase tracking-wider font-mono">Office Address</p>
++                    <p className="text-xs text-slate-900 font-medium leading-tight">
++                      201, Second Floor, Shree Plaza,<br />
++                      Plot No 1&2, Opp Bobbili Empire,<br />
++                      Ruby Block, Kompally,<br />
++                      Hyderabad-500100
+                     </p>
+                   </div>
+                 </div>
+                 
+                 <div className="flex items-center gap-2">
+-                  <svg className="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
++                  <svg className="w-3.5 h-3.5 text-theme-gradient shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.89-1.29-5.28-3.68-6.57-6.57l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                   </svg>
+-                  <p className="text-[11px] text-slate-700">Phone: <span className="text-slate-800 font-medium">+91 70365 92351</span></p>
++                  <p className="text-[11px] text-slate-700">Phone: <span className="text-slate-950 font-medium">+91 63035 72745</span></p>
+                 </div>
+                 
+                 <div className="flex items-center gap-2">
+-                  <svg className="w-3.5 h-3.5 text-orange-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
++                  <svg className="w-3.5 h-3.5 text-theme-gradient shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                   </svg>
+-                  <p className="text-[11px] text-slate-700 truncate">Email: <span className="text-slate-800 font-medium truncate">contact@sreevedaa.com</span></p>
++                  <p className="text-[11px] text-slate-700 truncate">Email: <span className="text-slate-950 font-medium truncate">info@sreevedaa.com</span></p>
+                 </div>
+               </div>
+ 
+               {/* Action Button */}
+               <a 
+-                href="https://maps.google.com/?q=India" 
++                href="https://maps.app.goo.gl/m6HUnCk5pc3qTJtm9" 
+                 target="_blank"
+                 rel="noopener noreferrer"
+-                className="w-full bg-theme-gradient text-white px-4 py-3 rounded-xl font-semibold hover:bg-maroon-800 transition-all flex items-center justify-center gap-2 text-[11px] uppercase tracking-widest shadow-md shadow-maroon-900/20"
++                className="w-full bg-slate-900 text-white px-4 py-3 rounded-sm font-semibold hover:bg-theme-gradient transition-all flex items-center justify-center gap-2 text-[11px] uppercase tracking-widest shadow-md"
+               >
+                 Get Directions
+                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+@@ -108,41 +111,41 @@ export default function ContactPage() {
+         {/* Bottom Section: Contact Cards Row-Wise */}
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full animate-fade-in-up delay-300">
+           {/* Email Card */}
+-          <a href="mailto:contact@sreevedaa.com" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
+-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
++          <a href="mailto:info@sreevedaa.com" className="bg-white p-6 rounded-sm shadow-sm border border-slate-100 hover:border-orange-200 transition-all group flex items-center gap-5">
++            <div className="w-14 h-14 bg-slate-50 rounded-sm flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
+               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+               </svg>
+             </div>
+             <div className="overflow-hidden">
+-              <h3 className="font-bold text-slate-900 mb-1 text-base">Email</h3>
+-              <p className="text-xs text-slate-700 font-light truncate">contact@sreevedaa.com</p>
++              <h3 className="font-bold text-slate-950 mb-1 text-base font-serif">Email Us</h3>
++              <p className="text-xs text-slate-700 font-light truncate">info@sreevedaa.com</p>
+             </div>
+           </a>
+ 
+           {/* Phone Card */}
+-          <a href="tel:+917036592351" className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
+-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
++          <a href="tel:+916303572745" className="bg-white p-6 rounded-sm shadow-sm border border-slate-100 hover:border-orange-200 transition-all group flex items-center gap-5">
++            <div className="w-14 h-14 bg-slate-50 rounded-sm flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
+               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+               </svg>
+             </div>
+             <div className="overflow-hidden">
+-              <h3 className="font-bold text-slate-900 mb-1 text-base">Phone</h3>
+-              <p className="text-xs text-slate-700 font-light truncate">+91 70365 92351</p>
++              <h3 className="font-bold text-slate-950 mb-1 text-base font-serif">Call Us</h3>
++              <p className="text-xs text-slate-700 font-light truncate">+91 63035 72745</p>
+             </div>
+           </a>
+ 
+           {/* WhatsApp Card */}
+-          <a href="https://wa.me/917036592351?text=Hello%20Sreevedaa%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20your%20design%20services." className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-all group flex items-center gap-5">
+-            <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
++          <a href="https://wa.me/916303572745?text=Hello%20Sreevedaa%20Interiors%2C%20I%20would%20like%20to%20inquire%20about%20your%20design%20services." className="bg-white p-6 rounded-sm shadow-sm border border-slate-100 hover:border-orange-200 transition-all group flex items-center gap-5">
++            <div className="w-14 h-14 bg-slate-50 rounded-sm flex items-center justify-center text-theme-gradient shrink-0 group-hover:scale-110 transition-transform">
+               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+               </svg>
+             </div>
+             <div className="overflow-hidden">
+-              <h3 className="font-bold text-slate-900 mb-1 text-base">WhatsApp</h3>
+-              <p className="text-xs text-slate-700 font-light truncate">+91 70365 92351</p>
++              <h3 className="font-bold text-slate-950 mb-1 text-base font-serif">WhatsApp Us</h3>
++              <p className="text-xs text-slate-700 font-light truncate">+91 63035 72745</p>
+             </div>
+           </a>
+         </div>
+diff --git a/src/app/faq/page.tsx b/src/app/faq/page.tsx
+index 51c2d5f..7dcec8c 100644
+--- a/src/app/faq/page.tsx
++++ b/src/app/faq/page.tsx
+@@ -7,44 +7,76 @@ import { SlowText } from "@/components/SlowText";
+ 
+ const faqs = [
+   {
+-    question: "What services does your interior design firm offer?",
+-    answer: "We offer comprehensive architectural and interior design solutions including space planning, turnkey execution, 3D visualization, custom furniture design, lighting automation, and project management for residential and commercial spaces."
++    question: "What services do you offer?",
++    answer: "We provide end-to-end interior design and turnkey execution services for residential, commercial, and office spaces. Our services include design consultation, 3D visualization, custom furniture, project execution, and final handover."
+   },
+   {
+-    question: "How do you measure the success of a design project?",
+-    answer: "Success is measured through customized metrics: flawless execution, adherence to budget and timelines, premium material quality, and ultimately, how perfectly the finished space aligns with your lifestyle and vision."
++    question: "What is a turnkey interior solution?",
++    answer: "A turnkey interior solution means we manage the entire projectΓÇöfrom design and material selection to execution, installation, and final handoverΓÇöso you can enjoy a hassle-free experience."
+   },
+   {
+-    question: "What makes your firm different from other contractors?",
+-    answer: "We offer an integrated approach combining cutting-edge design technology (like VR and 3D modeling) with deep execution expertise. We handle everything from the first sketch to the final coat of paint, ensuring a hassle-free experience."
++    question: "Do you provide both design and execution?",
++    answer: "Yes. We handle everything from concept development and 3D designs to complete on-site execution, ensuring a seamless process from start to finish."
+   },
+   {
+-    question: "How long does a typical interior project take?",
+-    answer: "Timelines vary based on scope: Initial 3D designs and layouts typically take 2-4 weeks. Full turnkey execution for residential spaces generally ranges from 3 to 6 months depending on the size and complexity."
++    question: "How long does an interior project take?",
++    answer: "Project timelines depend on the size and complexity of the project. Most residential interiors are completed within 6ΓÇô12 weeks after design approval."
+   },
+   {
+-    question: "Do you work with projects of all sizes?",
+-    answer: "Yes, we serve a wide range of projects. Whether it is a single luxury room renovation, a full 4BHK villa, or a large corporate office, we have scalable solutions and flexible engagement models to fit your needs."
++    question: "Can I customize the design according to my preferences?",
++    answer: "Absolutely. Every project is customized to reflect your lifestyle, functional requirements, design preferences, and budget."
+   },
+   {
+-    question: "Can you help us design commercial or retail spaces?",
+-    answer: "Absolutely. We specialize in commercial expansion services including retail store layouts, hospitality design, and corporate office optimization that reflects your brand identity."
++    question: "Do you provide 3D designs before execution?",
++    answer: "Yes. We create detailed 3D visualizations so you can review and approve the design before execution begins."
+   },
+   {
+-    question: "What is your pricing structure?",
+-    answer: "We offer custom pricing based on your requirements. This can be a comprehensive turnkey package (design + execution), a design-only consultancy, or a project management retainer. We provide transparent material and labor breakdowns."
++    question: "How do you determine the project cost?",
++    answer: "The cost is based on factors such as space size, materials, finishes, furniture requirements, and project scope. We provide a detailed and transparent quotation before work begins."
+   },
+   {
+-    question: "Who will manage my project on a daily basis?",
+-    answer: "Every project is assigned a dedicated Lead Designer and a Site Manager. They work in tandem to ensure the design vision is executed flawlessly on-site, providing you with regular progress updates."
++    question: "Do you use branded materials?",
++    answer: "Yes. We source high-quality materials and work with trusted brands to ensure durability, functionality, and premium finishes."
+   },
+   {
+-    question: "Do I need to visit the site regularly?",
+-    answer: "No, you do not. Our turnkey service is designed to be completely hands-off for the client if they prefer. We provide transparent weekly updates, photos, and milestones digitally."
++    question: "Will I have a dedicated project manager?",
++    answer: "Yes. A dedicated project manager coordinates the entire project, keeps you informed, and ensures smooth execution from start to finish."
+   },
+   {
+-    question: "Do you incorporate smart home technology?",
+-    answer: "Yes. We are early adopters of smart home innovations, integrating automated lighting, climate control, and security systems seamlessly into the aesthetic of your home."
++    question: "How do you ensure quality?",
++    answer: "We follow strict quality standards, conduct regular site inspections, and perform detailed quality checks at every stage of the project."
++  },
++  {
++    question: "Do you offer renovation services?",
++    answer: "Yes. We undertake renovation and remodeling projects for homes, offices, retail spaces, and commercial properties."
++  },
++  {
++    question: "Can you work within my budget?",
++    answer: "Yes. We design solutions that maximize functionality and aesthetics while staying within your approved budget."
++  },
++  {
++    question: "Do you provide warranties?",
++    answer: "Yes. We offer warranties on selected products and workmanship. Warranty terms vary depending on the materials and products used."
++  },
++  {
++    question: "What areas do you serve?",
++    answer: "We undertake projects across multiple cities and regions. Please contact us to check service availability in your location."
++  },
++  {
++    question: "How do I get started?",
++    answer: "Simply contact us to schedule a consultation. Our team will understand your requirements, visit the site if needed, and guide you through the design and execution process."
++  },
++  {
++    question: "Can I make changes during the project?",
++    answer: "Yes. Design changes can be accommodated whenever possible. Any changes that affect the scope, cost, or timeline will be discussed and approved before implementation."
++  },
++  {
++    question: "Do you handle approvals and vendor coordination?",
++    answer: "Yes. We coordinate with vendors, suppliers, and contractors to ensure timely procurement and smooth project execution."
++  },
++  {
++    question: "Why should I choose your company?",
++    answer: "We combine creative design, quality craftsmanship, transparent pricing, timely delivery, and dedicated project management to create spaces that are functional, elegant, and built to last."
+   }
+ ];
+ 
+diff --git a/src/app/globals.css b/src/app/globals.css
+index a5d6d81..36a1bce 100644
+--- a/src/app/globals.css
++++ b/src/app/globals.css
+@@ -1,37 +1,42 @@
+ @import "tailwindcss";
+ 
+ @theme {
+-  --color-maroon-50: #fdf2f2;
+-  --color-maroon-100: #fce3e3;
+-  --color-maroon-200: #facaca;
+-  --color-maroon-300: #f5a4a4;
+-  --color-maroon-400: #ec7474;
+-  --color-maroon-500: #e04a4a;
+-  --color-maroon-600: #cc2e2e;
+-  --color-maroon-700: #ab2121;
+-  --color-maroon-800: #800000;
+-  --color-maroon-900: #741b1b;
+-  --color-maroon-950: #3f0b0b;
+-
+-  --color-orange-50: #fff8eb;
+-  --color-orange-100: #ffebc6;
+-  --color-orange-200: #ffd488;
+-  --color-orange-300: #ffb84a;
+-  --color-orange-400: #ff9d1a;
+-  --color-orange-500: #ff7a00;
+-  --color-orange-600: #ea5b00;
+-  --color-orange-700: #c24102;
+-  --color-orange-800: #99330a;
+-  --color-orange-900: #7a2b0d;
+-  --color-orange-950: #421204;
++  --color-charcoal-50: #f6f6f6;
++  --color-charcoal-100: #e7e7e7;
++  --color-charcoal-200: #d1d1d1;
++  --color-charcoal-300: #b0b0b0;
++  --color-charcoal-400: #888888;
++  --color-charcoal-500: #6d6d6d;
++  --color-charcoal-600: #5d5d5d;
++  --color-charcoal-700: #4f4f4f;
++  --color-charcoal-800: #454545;
++  --color-charcoal-900: #3d3d3d;
++  --color-charcoal-950: #1a1a1a;
++
++  --color-gold-50: #fbf9f4;
++  --color-gold-100: #f4eee2;
++  --color-gold-200: #e7dac0;
++  --color-gold-300: #d6c098;
++  --color-gold-400: #c4a169;
++  --color-gold-500: #b58847;
++  --color-gold-600: #a4733b;
++  --color-gold-700: #845932;
++  --color-gold-800: #6f4a2f;
++  --color-gold-900: #5a3c28;
++  --color-gold-950: #332015;
++
++  --color-navy-900: #0a192f;
++  
++  --font-serif: var(--font-playfair), "Georgia", serif;
++  --font-sans: var(--font-hanken), "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+ }
+ 
+ :root {
+   --bg: #ffffff;
+   --panel: #fcfcfc;
+   --muted: #64748b;
+-  --accent: #ff7a00;
+-  --accent-2: #800000;
++  --accent: #b58847; /* Gold */
++  --accent-2: #1a1a1a; /* Charcoal */
+   --border: rgba(0, 0, 0, 0.08);
+   --text-main: #1e293b;
+ }
+@@ -44,12 +49,13 @@ body {
+   min-height: 100vh;
+   background: var(--bg);
+   color: var(--text-main);
+-  font-family: var(--font-hanken), "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
++  font-family: var(--font-sans);
+   line-height: 1.6;
+ }
+ 
+ h1, h2, h3, h4, h5, h6, .headline {
+-  font-family: var(--font-playfair), "Georgia", serif;
++  font-family: var(--font-serif);
++  font-weight: 500;
+ }
+ 
+ 
+@@ -73,24 +79,24 @@ img {
+ }
+ 
+ .glass {
+-  background: rgba(255, 255, 255, 0.85);
++  background: rgba(255, 255, 255, 0.95);
+   border: 1px solid var(--border);
+   backdrop-filter: blur(12px);
+-  border-radius: 18px;
++  border-radius: 4px;
+ }
+ 
+ .card {
+   border: 1px solid var(--border);
+-  border-radius: 18px;
++  border-radius: 4px;
+   background: #ffffff;
+-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
++  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
++  transition: transform 500ms ease, box-shadow 500ms ease;
+ }
+ 
+ .card:hover {
+   transform: translateY(-4px);
+-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+-  border-color: rgba(128, 0, 0, 0.15);
++  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
++  border-color: rgba(181, 136, 71, 0.3);
+ }
+ 
+ .pill {
+@@ -98,13 +104,13 @@ img {
+   align-items: center;
+   gap: 0.35rem;
+   padding: 0.45rem 0.9rem;
+-  border-radius: 999px;
+-  background: rgba(255, 122, 0, 0.08);
+-  border: 1px solid rgba(255, 122, 0, 0.15);
+-  color: var(--accent);
+-  font-size: 0.9rem;
+-  font-weight: 700;
+-  letter-spacing: 0.02em;
++  border-radius: 4px;
++  background: rgba(26, 26, 26, 0.03);
++  border: 1px solid rgba(26, 26, 26, 0.1);
++  color: var(--text-main);
++  font-size: 0.8rem;
++  font-weight: 600;
++  letter-spacing: 0.05em;
+   text-transform: uppercase;
+ }
+ 
+@@ -113,42 +119,47 @@ img {
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+-  padding: 0.85rem 1.75rem;
+-  border-radius: 999px;
+-  background: linear-gradient(135deg, var(--color-orange-500) 0%, var(--color-maroon-800) 100%);
++  padding: 1rem 2rem;
++  border-radius: 2px;
++  background: var(--color-charcoal-950);
+   color: #ffffff;
+-  font-weight: 600;
+-  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1), background 200ms ease;
+-  box-shadow: 0 4px 14px rgba(128, 0, 0, 0.3);
++  font-weight: 500;
++  text-transform: uppercase;
++  letter-spacing: 0.1em;
++  font-size: 0.85rem;
++  transition: all 400ms ease;
++  border: 1px solid var(--color-charcoal-950);
+ }
+ 
+ .btn-primary:hover {
+-  transform: translateY(-2px);
+-  box-shadow: 0 8px 24px rgba(128, 0, 0, 0.4);
+-  background: linear-gradient(135deg, var(--color-orange-600) 0%, var(--color-maroon-900) 100%);
++  background: #ffffff;
++  color: var(--color-charcoal-950);
+ }
+ 
+ .btn-ghost {
+   display: inline-flex;
+   align-items: center;
++  justify-content: center;
+   gap: 0.35rem;
+-  padding: 0.75rem 1.25rem;
+-  border-radius: 999px;
++  padding: 0.85rem 1.75rem;
++  border-radius: 2px;
+   border: 1px solid var(--border);
+-  color: var(--accent-2);
++  color: var(--color-charcoal-950);
+   background: transparent;
+-  font-weight: 600;
+-  transition: background 160ms ease, transform 180ms ease;
++  font-weight: 500;
++  text-transform: uppercase;
++  letter-spacing: 0.1em;
++  font-size: 0.85rem;
++  transition: all 400ms ease;
+ }
+ 
+ .btn-ghost:hover {
+-  background: rgba(128, 0, 0, 0.04);
+-  border-color: rgba(128, 0, 0, 0.2);
+-  transform: translateY(-1px);
++  border-color: var(--color-charcoal-950);
++  background: rgba(26, 26, 26, 0.02);
+ }
+ 
+ .headline {
+-  font-weight: 700;
++  font-weight: 500;
+   letter-spacing: -0.01em;
+ }
+ 
+@@ -171,12 +182,13 @@ img {
+ .hero-overlay {
+   position: absolute;
+   inset: 0;
+-  background: radial-gradient(circle at 50% 50%, rgba(255, 122, 0, 0.03), transparent 70%);
++  background: rgba(0, 0, 0, 0.4);
+ }
+ 
+ .prose {
+   color: var(--text-main);
+   line-height: 1.8;
++  font-weight: 300;
+ }
+ 
+ .prose p {
+@@ -185,26 +197,17 @@ img {
+ }
+ 
+ .prose strong {
+-  color: var(--accent-2);
++  color: var(--color-charcoal-950);
++  font-weight: 500;
+ }
+ 
+ .prose a {
+   color: var(--accent);
+   text-decoration: underline;
++  transition: color 300ms ease;
+ }
+-
+-@keyframes vibrate {
+-  0% { transform: rotate(0deg) scale(1); }
+-  5% { transform: rotate(-10deg) scale(1.1); }
+-  10% { transform: rotate(10deg) scale(1.1); }
+-  15% { transform: rotate(-10deg) scale(1.1); }
+-  20% { transform: rotate(10deg) scale(1.1); }
+-  25% { transform: rotate(0deg) scale(1); }
+-  100% { transform: rotate(0deg) scale(1); }
+-}
+-
+-.animate-vibrate {
+-  animation: vibrate 2s ease-in-out infinite;
++.prose a:hover {
++  color: var(--color-charcoal-950);
+ }
+ 
+ @keyframes fadeInUp {
+@@ -230,21 +233,17 @@ img {
+ .delay-1000 { animation-delay: 1000ms; }
+ 
+ @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
+-.animate-marquee { animation: marquee 30s linear infinite; }
+-
++.animate-marquee { animation: marquee 40s linear infinite; }
+ 
+ @keyframes marquee-reverse { 0% { transform: translateX(-50%); } 100% { transform: translateX(0%); } }
+-.animate-marquee-reverse { animation: marquee-reverse 30s linear infinite; }
++.animate-marquee-reverse { animation: marquee-reverse 40s linear infinite; }
+ 
++/* Elegant solid color fallback for legacy theme gradient classes */
+ .bg-theme-gradient {
+-  background: linear-gradient(135deg, var(--color-orange-500) 0%, var(--color-maroon-800) 100%);
++  background: var(--color-charcoal-950);
+ }
+ 
+ .text-theme-gradient {
+-  background: linear-gradient(135deg, var(--color-orange-500) 0%, var(--color-maroon-800) 100%);
+-  -webkit-background-clip: text;
+-  -webkit-text-fill-color: transparent;
+-  background-clip: text;
+-  color: transparent;
++  color: var(--color-charcoal-950);
+ }
+ 
+diff --git a/src/app/packages/page.tsx b/src/app/packages/page.tsx
+index 25c4774..c48ded4 100644
+--- a/src/app/packages/page.tsx
++++ b/src/app/packages/page.tsx
+@@ -3,171 +3,137 @@
+ import React, { useState } from "react";
+ import Link from "next/link";
+ import { ScrollReveal } from "@/components/ScrollReveal";
++import { SlowText } from "@/components/SlowText";
+ 
+ const packages = [
+   {
+     id: "essential",
+-    name: "Essential Plan",
+-    priceStandard: "Γé╣45,000",
+-    pricePremium: "Γé╣55,000",
+-    suffix: "/ room",
+-    description: "Perfect for a single room makeover with basic 3D designs and furniture layout.",
++    name: "Essential",
++    price: "4,00,000/-",
++    suffix: "starts from (2BHK)",
++    description: "Perfect for essential interiors with quality finishing and functional layout.",
+     features: [
+-      "2D Furniture Layout",
+-      "Basic 3D Renderings (2 Views)",
+-      "Color Consultation",
+-      "Material Selection Board",
+-      "1 Revision Included"
++      "Customised 2D Layouts",
++      "Essential Material Selection",
++      "Standard Fixtures & Fittings",
++      "Dedicated Execution Team",
++      "Quality Assurance"
+     ],
+     isPopular: false
+   },
+   {
+-    id: "growth",
+-    name: "Growth Plan",
+-    priceStandard: "Γé╣85,000",
+-    pricePremium: "Γé╣95,000",
+-    suffix: "/ room",
+-    description: "Our most popular package offering comprehensive design and execution details.",
++    id: "standard",
++    name: "Standard",
++    price: "5,50,000/-",
++    suffix: "starts from (2BHK)",
++    description: "Our most popular package offering comprehensive design and premium execution.",
+     features: [
+       "Detailed 2D & 3D Layouts",
+-      "Photorealistic Renderings (4 Views)",
+-      "False Ceiling & Lighting Design",
++      "Premium Material Sourcing",
++      "False Ceiling & Lighting",
+       "Custom Furniture Design",
+-      "3 Revisions Included"
++      "Dedicated Project Manager"
+     ],
+     isPopular: true
+   },
+   {
+-    id: "ultimate",
+-    name: "Ultimate Plan",
+-    priceStandard: "Γé╣1,50,000",
+-    pricePremium: "Γé╣1,80,000",
+-    suffix: "/ room",
+-    description: "The complete turnkey experience for luxury homes and large-scale projects.",
++    id: "premium",
++    name: "Premium",
++    price: "7,00,000/-",
++    suffix: "starts from (2BHK)",
++    description: "The complete luxury turnkey experience with high-end finishes and automation.",
+     features: [
+-      "Full Home Virtual Walkthrough",
+-      "Premium Material Sourcing",
+-      "Dedicated Project Manager",
+-      "End-to-End Execution Support",
+-      "Unlimited Revisions"
++      "Full Home 3D Walkthrough",
++      "Ultra-Premium Materials",
++      "Smart Home Automation Integration",
++      "Luxury Bespoke Furniture",
++      "Priority Turnkey Execution"
+     ],
+     isPopular: false
+   }
+ ];
+ 
+ export default function PackagesPage() {
+-  const [isPremiumToggle, setIsPremiumToggle] = useState(false);
+-  const [selectedPlan, setSelectedPlan] = useState<string>("growth");
+-
+-  const selectedPackage = packages.find(p => p.id === selectedPlan) || packages[1];
++  const [selectedPlan, setSelectedPlan] = useState<string>("standard");
+ 
+   return (
+-    <main className="min-h-screen bg-[#FAFAFA]">
++    <main className="min-h-screen bg-slate-50">
+       {/* Header Section */}
+-      <section className="relative w-full pt-6 pb-8 md:pt-12 md:pb-12 flex flex-col items-center justify-center bg-white border-b border-slate-200 overflow-hidden">
++      <section className="relative w-full pt-16 pb-12 md:pt-24 md:pb-16 flex flex-col items-center justify-center bg-white border-b border-slate-100 overflow-hidden">
+         {/* Subtle Background Pattern */}
+         <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white pointer-events-none"></div>
+ 
+         <div className="relative z-10 container mx-auto px-4 flex flex-col items-center text-center max-w-4xl">
+           <ScrollReveal animation="fade-in-up">
+-            <span className="inline-block py-1 px-4 rounded-full bg-slate-50 text-slate-500 text-[10px] font-bold tracking-[0.3em] uppercase mb-4 border border-slate-200 shadow-sm">
++            <span className="inline-block py-1 px-4 rounded-full bg-orange-50 text-theme-gradient text-[10px] font-bold tracking-[0.3em] uppercase mb-4 border border-orange-200 shadow-sm">
+               Transparent Pricing
+             </span>
+           </ScrollReveal>
+ 
+           <ScrollReveal animation="fade-in-up" delay={100}>
+-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-4 leading-tight max-w-3xl mx-auto bg-gradient-to-r from-slate-900 via-maroon-900 to-slate-900 bg-clip-text text-transparent pb-1 tracking-tight">
+-              Design packages for every scale.
++            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-4 leading-tight max-w-3xl mx-auto text-slate-950 pb-1 tracking-tight">
++              <SlowText text="Design packages for every scale." />
+             </h1>
+           </ScrollReveal>
+ 
+           <ScrollReveal animation="fade-in-up" delay={200}>
+-            <p className="text-base md:text-lg text-slate-600 font-light max-w-2xl mx-auto leading-relaxed mb-6">
+-              From single-room refreshes to complete home transformations, choose a plan that fits your vision and budget.
++            <p className="text-base md:text-lg text-slate-700 font-light max-w-2xl mx-auto leading-relaxed mb-6">
++              From essential refreshes to complete luxury home transformations, choose a plan that fits your vision and budget. We provide package details to customers personally upon connection.
+             </p>
+           </ScrollReveal>
+-
+-          {/* Toggle Switch */}
+-          <ScrollReveal animation="fade-in" delay={300}>
+-            <div className="inline-flex items-center p-1.5 rounded-full border border-slate-200 bg-white shadow-sm">
+-              <button
+-                onClick={() => setIsPremiumToggle(false)}
+-                className={`relative px-8 py-3 rounded-full text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase transition-all duration-500 ${
+-                  !isPremiumToggle 
+-                    ? "bg-slate-900 text-white shadow-md" 
+-                    : "text-slate-400 hover:text-slate-900 bg-transparent"
+-                }`}
+-              >
+-                Standard Finish
+-              </button>
+-              <button
+-                onClick={() => setIsPremiumToggle(true)}
+-                className={`relative px-8 py-3 rounded-full text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase transition-all duration-500 ${
+-                  isPremiumToggle 
+-                    ? "bg-theme-gradient text-white shadow-md" 
+-                    : "text-slate-400 hover:text-slate-900 bg-transparent"
+-                }`}
+-              >
+-                Premium Finish
+-              </button>
+-            </div>
+-          </ScrollReveal>
+         </div>
+       </section>
+ 
+-      <div className="relative z-20 mt-6 md:mt-12">
++      <div className="relative z-20 mt-12 md:mt-16">
+         {/* Pricing Cards */}
+-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16 md:mb-24 max-w-5xl mx-auto px-4 items-center">
++        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16 md:mb-24 max-w-6xl mx-auto px-4 items-center">
+           {packages.map((pkg) => {
+-            const isDark = pkg.isPopular;
+             const isSelected = selectedPlan === pkg.id;
+             
++            const message = `Hi Sreevedaa team, I am interested in the ${pkg.name} priced at Γé╣${pkg.price}. Please share more details.`;
++            const whatsappUrl = `https://wa.me/916303572745?text=${encodeURIComponent(message)}`;
++            
+             return (
+-            <ScrollReveal key={pkg.id} animation="fade-in-up" delay={pkg.id === 'growth' ? 100 : 0}>
++            <ScrollReveal key={pkg.id} animation="fade-in-up" delay={pkg.id === 'standard' ? 100 : 0}>
+               <div 
+                 onClick={() => setSelectedPlan(pkg.id)}
+-                className={`group relative flex flex-col h-full rounded-2xl p-6 md:p-7 cursor-pointer transition-all duration-500 bg-white border border-slate-200 shadow-sm hover:border-transparent hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-2`}
++                className={`group relative flex flex-col h-full rounded-sm p-6 md:p-8 cursor-default transition-all duration-500 bg-white border border-slate-200 shadow-sm hover:border-maroon-800 hover:shadow-xl hover:-translate-y-2`}
+               >
+-                {/* Hover Gradient Background */}
+-                <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} style={{ background: 'radial-gradient(120% 120% at top left, #94a3b8 0%, #334155 40%, #020617 100%)' }}></div>
+                 
+                 {pkg.isPopular && (
+                   <div className="absolute z-10 -top-3.5 left-1/2 -translate-x-1/2 bg-theme-gradient text-white text-[9px] font-bold uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md whitespace-nowrap">
+-                    Best Seller
++                    Most Popular
+                   </div>
+                 )}
+                 
+-                <div className="relative z-10 mb-6">
+-                  <h3 className={`text-lg font-bold font-serif mb-1 text-slate-900 group-hover:text-white transition-colors duration-500`}>{pkg.name}</h3>
+-                  <div className="flex items-baseline gap-1">
+-                    <span className={`text-3xl md:text-4xl font-bold tracking-tight text-slate-900 group-hover:text-white transition-colors duration-500`}>
+-                      {isPremiumToggle ? pkg.pricePremium : pkg.priceStandard}
++                <div className="relative z-10 mb-6 border-b border-slate-100 pb-6">
++                  <h3 className={`text-2xl font-bold font-serif mb-2 text-slate-950 transition-colors duration-500`}>{pkg.name}</h3>
++                  <div className="flex flex-col gap-1 mt-4">
++                    <span className={`text-xs text-slate-500 uppercase tracking-widest font-mono`}>{pkg.suffix}</span>
++                    <span className={`text-4xl font-bold tracking-tight text-theme-gradient transition-colors duration-500`}>
++                      Γé╣{pkg.price}
+                     </span>
+-                    <span className={`text-xs text-slate-500 group-hover:text-slate-400 transition-colors duration-500`}>{pkg.suffix}</span>
+                   </div>
+-                  <p className={`text-xs mt-3 font-light leading-relaxed text-slate-600 group-hover:text-slate-300 transition-colors duration-500`}>{pkg.description}</p>
++                  <p className={`text-sm mt-4 font-light leading-relaxed text-slate-700 transition-colors duration-500`}>{pkg.description}</p>
+                 </div>
+ 
+                 <div className="relative z-10 flex-1">
+-                  <ul className="space-y-3">
++                  <ul className="space-y-4">
+                     {pkg.features.map((feature, idx) => (
+-                      <li key={idx} className="flex items-start gap-2.5">
+-                        <svg className={`w-4 h-4 shrink-0 mt-0.5 text-maroon-800 group-hover:text-orange-400 transition-colors duration-500`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
++                      <li key={idx} className="flex items-start gap-3">
++                        <svg className={`w-5 h-5 shrink-0 text-theme-gradient`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                         </svg>
+-                        <span className={`text-xs font-light text-slate-700 group-hover:text-slate-200 transition-colors duration-500`}>{feature}</span>
++                        <span className={`text-sm font-light text-slate-800`}>{feature}</span>
+                       </li>
+                     ))}
+                   </ul>
+                 </div>
+ 
+-                <div className="relative z-10 mt-6 pt-6 border-t border-slate-200 transition-colors duration-500 group-hover:border-slate-500/50">
+-                  <button className="relative overflow-hidden w-full py-3 rounded-full text-sm font-semibold transition-all duration-500 border border-slate-200 group-hover:border-transparent group-hover:shadow-[0_8px_20px_rgba(234,88,12,0.3)]">
+-                    <div className="absolute inset-0 bg-slate-50 transition-opacity duration-500 group-hover:opacity-0"></div>
+-                    <div className="absolute inset-0 bg-theme-gradient opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+-                    <span className="relative z-10 text-slate-700 transition-colors duration-500 group-hover:text-white">Get Started</span>
+-                  </button>
++                <div className="relative z-10 mt-8 pt-6 border-t border-slate-100">
++                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="relative flex items-center justify-center overflow-hidden w-full py-4 bg-slate-900 text-white text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:bg-theme-gradient">
++                    CONNECT
++                  </a>
+                 </div>
+               </div>
+             </ScrollReveal>
+@@ -175,23 +141,17 @@ export default function PackagesPage() {
+           })}
+         </div>
+ 
+-
+-
+         {/* Support CTA */}
+-        <ScrollReveal animation="fade-in-up" className="max-w-4xl mx-auto text-center bg-white border border-slate-100 rounded-3xl p-10 md:p-14 shadow-sm mx-4 lg:mx-auto mb-16 md:mb-24">
+-          <h2 className="text-2xl md:text-3xl font-bold font-serif text-slate-900 mb-3">Still have questions?</h2>
+-          <p className="text-slate-600 font-light mb-10 max-w-lg mx-auto leading-relaxed">
++        <ScrollReveal animation="fade-in-up" className="max-w-4xl mx-auto text-center bg-white border border-slate-100 rounded-sm p-10 md:p-14 shadow-sm mx-4 lg:mx-auto mb-16 md:mb-24">
++          <h2 className="text-2xl md:text-3xl font-bold font-serif text-slate-950 mb-3">Still have questions?</h2>
++          <p className="text-slate-700 font-light mb-10 max-w-lg mx-auto leading-relaxed">
+             Talk to our team about pricing, process, or finding the right plan for your property.
+           </p>
+           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+-            <Link href="/contact" className="w-full sm:w-auto px-8 py-3.5 bg-white text-maroon-800 border border-maroon-800 hover:bg-maroon-800 hover:text-white hover:border-transparent shadow-sm hover:shadow-md rounded-xl font-medium text-sm transition-all flex items-center justify-center gap-2">
+-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
++            <Link href="/contact" className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white hover:bg-theme-gradient hover:text-white shadow-sm hover:shadow-md font-bold tracking-widest uppercase text-xs transition-all flex items-center justify-center gap-2">
++              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+               Contact Support
+             </Link>
+-            <Link href="https://wa.me/910000000000" target="_blank" className="w-full sm:w-auto px-8 py-3.5 bg-white text-green-600 border border-green-600 hover:bg-green-600 hover:text-white hover:border-transparent shadow-sm hover:shadow-md rounded-xl font-medium text-sm transition-all flex items-center justify-center gap-2">
+-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+-              Chat on WhatsApp
+-            </Link>
+           </div>
+         </ScrollReveal>
+       </div>
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index 21989d9..4a9fc28 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -9,52 +9,50 @@ import { SlowText } from "@/components/SlowText";
+ export default function Home() {
+   return (
+     <div className="flex flex-col min-h-screen bg-white">
+-      {/* 1. HERO SECTION - Ultra Modern Editorial */}
+-      <section className="relative min-h-[calc(100vh-80px)] lg:h-[calc(100vh-80px)] flex items-center pt-24 pb-12 lg:py-0 overflow-hidden bg-[#FAFAFA]">
+-        <div className="absolute inset-0 bg-white/40 z-0"></div>
+-        <div className="page-shell relative z-10 w-full h-full flex flex-col justify-center">
+-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 h-full">
+-            <div className="flex-1 text-center lg:text-left z-20 flex flex-col justify-center px-4 md:px-0">
+-              <ScrollReveal animation="fade-in-up" delay={0}>
+-                <div className="inline-flex items-center gap-4 mb-4 mx-auto lg:mx-0">
+-                  <div className="w-8 h-[1px] bg-maroon-800"></div>
+-                  <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs">
+-                    Inspired Interiors
+-                  </span>
+-                </div>
+-              </ScrollReveal>
+-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-slate-900 leading-[1.1] font-serif tracking-tight">
+-                <SlowText text="Designing your dream spaces, one room at a time." />
+-              </h1>
+-              <ScrollReveal animation="fade-in-up" delay={800}>
+-                <p className="text-sm md:text-lg mb-8 max-w-lg text-slate-700 font-light mx-auto lg:mx-0 leading-relaxed">
+-                  Transform your spaces into physical masterpieces with our bespoke interior design and architectural services.
+-                </p>
+-              </ScrollReveal>
+-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6">
+-                <Link href="/contact" className="group relative px-6 md:px-8 py-3 md:py-4 bg-theme-gradient text-white overflow-hidden flex items-center rounded-sm">
+-                  <div className="absolute inset-0 w-0 bg-slate-900 transition-all duration-[600ms] ease-out group-hover:w-full"></div>
+-                  <span className="relative z-10 font-sans font-medium tracking-widest uppercase text-[10px] md:text-xs">Book Consultation</span>
+-                </Link>
+-                <Link href="/service" className="group px-4 md:px-6 py-3 md:py-4 text-theme-gradient font-sans font-medium tracking-widest uppercase text-[10px] md:text-xs flex items-center gap-2">
+-                  <span className="border-b border-transparent group-hover:border-maroon-900 transition-colors duration-300">View Services</span>
+-                  <svg className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+-                </Link>
+-              </div>
++      {/* 1. HERO SECTION - Classic Premium */}
++      <section className="relative min-h-[calc(100vh-80px)] lg:h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
++        {/* Background Image */}
++        <div className="absolute inset-0 z-0">
++          <Image
++            src="/images/hero_luxury_interior.png"
++            alt="Luxury Interior Design"
++            fill
++            className="object-cover"
++            priority
++          />
++          {/* Overlay for better text readability */}
++          <div className="absolute inset-0 bg-black/40 lg:bg-black/30 z-10"></div>
++        </div>
++
++        <div className="page-shell relative z-20 w-full h-full flex flex-col items-center justify-center text-center px-4 md:px-0 mt-16 lg:mt-0">
++          <ScrollReveal animation="fade-in-up" delay={0}>
++            <div className="inline-flex items-center justify-center gap-4 mb-6">
++              <div className="w-12 h-[1px] bg-white/70"></div>
++              <span className="text-white/90 font-sans font-bold tracking-[0.25em] uppercase text-xs md:text-sm">
++                Inspired Interiors
++              </span>
++              <div className="w-12 h-[1px] bg-white/70"></div>
+             </div>
+-            
+-            <ScrollReveal animation="blur-in" delay={1200} className="w-full lg:flex-1 relative aspect-[4/3] md:aspect-video lg:aspect-auto lg:h-[80%] mt-8 lg:mt-0 flex items-center justify-center px-4 md:px-0">
+-              <div className="relative w-full h-full max-w-[600px] ml-auto rounded-xl lg:rounded-sm overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] group">
+-                <div className="absolute inset-0 bg-black/5 z-10 transition-opacity duration-500 group-hover:opacity-0"></div>
+-                <Image
+-                  src="/images/hero_luxury_interior.png"
+-                  alt="Luxury Interior Design"
+-                  fill
+-                  className="object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+-                  priority
+-                />
+-              </div>
+-            </ScrollReveal>
++          </ScrollReveal>
++          
++          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-[1.1] font-serif tracking-tight max-w-4xl drop-shadow-lg">
++            <SlowText text="Designing Your Dream Space" />
++          </h1>
++          
++          <ScrollReveal animation="fade-in-up" delay={800}>
++            <p className="text-base md:text-xl mb-10 max-w-2xl text-white/90 font-light mx-auto leading-relaxed drop-shadow-md">
++              Transform your spaces into physical masterpieces with our bespoke interior design and architectural services.
++            </p>
++          </ScrollReveal>
++          
++          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
++            <Link href="/contact" className="group relative px-8 md:px-10 py-4 bg-white text-slate-900 overflow-hidden flex items-center rounded-sm shadow-lg transition-transform hover:scale-105">
++              <div className="absolute inset-0 w-0 bg-slate-100 transition-all duration-[600ms] ease-out group-hover:w-full"></div>
++              <span className="relative z-10 font-sans font-bold tracking-widest uppercase text-xs md:text-sm">Plan Your Dream Space With Our Experts</span>
++            </Link>
++            <Link href="/service" className="group px-8 md:px-10 py-4 border border-white/50 text-white hover:bg-white/10 font-sans font-bold tracking-widest uppercase text-xs md:text-sm flex items-center gap-2 rounded-sm transition-all duration-300">
++              <span>View Services</span>
++            </Link>
+           </div>
+         </div>
+       </section>
+@@ -63,44 +61,44 @@ export default function Home() {
+ 
+       <ServicesSection />
+ 
+-      {/* 4. STRATEGY SECTION - Modern Clean Image */}
+-      <section className="py-10 lg:py-32 bg-slate-50 overflow-hidden">
++      {/* 2. HIGHLIGHT SECTION */}
++      <section className="py-16 lg:py-32 bg-slate-50 overflow-hidden">
+         <div className="page-shell">
+           <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center">
+             <div className="hidden lg:block flex-1 order-2 lg:order-1">
+               <div className="relative">
+-                <div className="absolute top-6 -left-6 md:top-10 md:-left-10 w-full h-full bg-slate-200 rounded-sm z-0"></div>
++                <div className="absolute top-6 -left-6 md:top-10 md:-left-10 w-full h-full bg-slate-100 rounded-sm z-0"></div>
+                 <div className="relative z-10 w-full h-[350px] md:h-[600px] rounded-sm overflow-hidden group">
+                   <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500 z-10"></div>
+-                  <Image src="/images/design_strategy.png" alt="Strategy" fill className="object-cover transition-transform duration-[2000ms] group-hover:scale-110" />
++                  <Image src="/images/design_strategy.png" alt="Highlight" fill className="object-cover transition-transform duration-[2000ms] group-hover:scale-105" />
+                 </div>
+               </div>
+             </div>
+             
+             <ScrollReveal animation="fade-in-up" delay={200} className="flex-1 order-1 lg:order-2 px-4 md:px-0 w-full">
+-              <span className="text-theme-gradient font-sans font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 md:mb-6 inline-block border-b border-orange-500 pb-1">Our Philosophy</span>
+-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-slate-900 font-serif leading-tight">
+-                <SlowText text="Data-Backed Design Strategy" />
++              <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4 md:mb-6 inline-block border-b border-maroon-800 pb-1">
++                Your Vision, Our Design, Perfectly Executed
++              </span>
++              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-slate-950 font-serif leading-tight">
++                <SlowText text="We Bring Every Design to Life" />
+               </h2>
+-              <p className="text-slate-700 text-sm md:text-lg mb-8 md:mb-12 font-light leading-relaxed max-w-lg">
+-                We do not just decorate rooms; we conduct comprehensive space audits, ergonomic analyses, and lifestyle roadmaps. By blending classic architecture with behavioral science, we create layouts that dramatically improve how you live and work.
++              <p className="text-slate-700 text-sm md:text-lg mb-8 font-light leading-relaxed max-w-lg">
++                We ensure every design is brought to life with exceptional quality and seamless execution. From planning to completion, we deliver spaces that reflect your vision and our expertise.
+               </p>
+               
+-              <div className="space-y-8 md:space-y-12">
+-                <div className="flex gap-6 md:gap-8 items-start group">
+-                  <div className="w-10 h-10 md:w-12 md:h-12 border border-slate-300 group-hover:border-orange-500 text-slate-400 group-hover:text-theme-gradient flex items-center justify-center shrink-0 font-serif text-lg md:text-xl transition-colors duration-500 rounded-sm">I</div>
+-                  <div>
+-                    <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2 font-serif">Space Growth Audits</h4>
+-                    <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed max-w-md">In-depth analysis of your floor plan, natural lighting, and daily workflow ecosystem.</p>
+-                  </div>
++              <div className="space-y-8 mt-12">
++                <div className="flex gap-6 items-start">
++                  <div className="w-2 h-2 mt-2 rounded-full bg-theme-gradient shrink-0"></div>
++                  <p className="text-slate-700 font-light text-sm md:text-base leading-relaxed">
++                    <strong>Exceptional Quality:</strong> Our commitment to premium materials and superior craftsmanship guarantees a timeless finish.
++                  </p>
++                </div>
++                <div className="flex gap-6 items-start">
++                  <div className="w-2 h-2 mt-2 rounded-full bg-theme-gradient shrink-0"></div>
++                  <p className="text-slate-700 font-light text-sm md:text-base leading-relaxed">
++                    <strong>Seamless Execution:</strong> A structured approach from concept to handover ensures your project is completed flawlessly and on time.
++                  </p>
+                 </div>
+-                <ScrollReveal animation="fade-in-up" delay={200} className="flex gap-6 md:gap-8 items-start group">
+-                  <div className="w-10 h-10 md:w-12 md:h-12 border border-slate-300 group-hover:border-orange-500 text-slate-400 group-hover:text-theme-gradient flex items-center justify-center shrink-0 font-serif text-lg md:text-xl transition-colors duration-500 rounded-sm">II</div>
+-                  <div>
+-                    <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-2 font-serif">Material Roadmaps</h4>
+-                    <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed max-w-md">Tailored material sourcing strategies balancing extreme durability with timeless aesthetics.</p>
+-                  </div>
+-                </ScrollReveal>
+               </div>
+             </ScrollReveal>
+           </div>
+@@ -108,31 +106,33 @@ export default function Home() {
+       </section>
+ 
+       {/* 5. METHODOLOGY */}
+-      <section className="py-12 lg:py-20 bg-white px-4">
++      <section className="py-16 lg:py-24 bg-white px-4">
+         <div className="page-shell">
+-          <ScrollReveal animation="fade-in-up" className="text-center mb-12 md:mb-24">
+-            <span className="text-theme-gradient font-sans font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs mb-4 block">The Process</span>
+-            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-slate-900 font-serif">
++          <ScrollReveal animation="fade-in-up" className="text-center mb-16 md:mb-20">
++            <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4 block">The Process</span>
++            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-slate-950 font-serif">
+               <SlowText text="From Vision to Reality" />
+             </h2>
+             <p className="text-slate-700 max-w-2xl mx-auto text-sm md:text-lg font-light">A proven, classic framework that turns conceptual sketches into physical spaces with unmatched execution speed.</p>
+           </ScrollReveal>
+           
+-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
++          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+             {[
+-              { num: '01', title: 'Strategy', desc: 'Deep dive, layout analysis, goal setting, material framework.' },
+-              { num: '02', title: 'Execution', desc: 'Civil work, carpentry, ceiling installation, and coordination.' },
+-              { num: '03', title: 'Refinement', desc: 'Real-time site tracking, quality checks, and detail polishing.' },
+-              { num: '04', title: 'Handover', desc: 'Flawless presentation, lifestyle metrics, and move-in ready spaces.' }
++              { num: '01', title: 'Consult', desc: 'We understand your vision, needs, and budget.' },
++              { num: '02', title: 'Design', desc: 'We create customized layouts and realistic 3D designs.' },
++              { num: '03', title: 'Approve', desc: 'Review and finalize the design, materials, and quotation.' },
++              { num: '04', title: 'Build', desc: 'Our experts execute the project with premium craftsmanship.' },
++              { num: '05', title: 'Inspect', desc: 'Every detail is quality-checked before completion.' },
++              { num: '06', title: 'Deliver', desc: 'Step into your dream space, completed on time and ready to enjoy.' }
+             ].map((step, i) => (
+-              <ScrollReveal key={i} animation="fade-in-up" delay={i * 200}>
+-                <div className="h-full relative group cursor-default p-6 md:p-8 border border-slate-100 hover:border-maroon-100 transition-all duration-[800ms] overflow-hidden bg-slate-50 hover:bg-white shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(128,0,0,0.15)] rounded-xl hover:-translate-y-3">
+-                  <div className="absolute -bottom-2 md:-bottom-4 -right-2 md:-right-4 text-[6rem] md:text-[8rem] font-serif font-bold text-slate-100/50 group-hover:text-maroon-50/50 transition-colors duration-[800ms] leading-none pointer-events-none select-none z-0">
++              <ScrollReveal key={i} animation="fade-in-up" delay={i * 100}>
++                <div className="h-full relative group cursor-default p-8 border border-slate-100 hover:border-orange-200 transition-all duration-500 bg-slate-50 hover:bg-white rounded-sm shadow-sm hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.05)]">
++                  <div className="absolute top-6 right-6 text-4xl font-serif font-bold text-slate-200 group-hover:text-theme-gradient transition-colors duration-500 select-none">
+                     {step.num}
+                   </div>
+-                  <div className="relative z-10">
+-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4 font-serif group-hover:text-theme-gradient transition-colors">{step.title}</h3>
+-                    <p className="text-slate-700 font-light text-xs md:text-sm leading-relaxed">{step.desc}</p>
++                  <div className="relative z-10 pt-4">
++                    <h3 className="text-xl md:text-2xl font-bold text-slate-950 mb-3 font-serif transition-colors">{step.title}</h3>
++                    <p className="text-slate-700 font-light text-sm leading-relaxed">{step.desc}</p>
+                   </div>
+                 </div>
+               </ScrollReveal>
+@@ -142,57 +142,175 @@ export default function Home() {
+       </section>
+ 
+       {/* 5.5. TEAM SECTION */}
+-      <section className="py-14 lg:py-24 bg-white px-4 border-t border-slate-100">
++      <section className="py-14 lg:py-24 bg-white px-4 border-t border-slate-50">
+         <div className="page-shell">
+           <ScrollReveal animation="fade-in-up" className="text-center mb-12 md:mb-16">
+             <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-3 flex items-center justify-center gap-2">
+-              <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" /></svg>
+-              OUR TEAM
++              <svg className="w-4 h-4 text-theme-gradient" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" /></svg>
++              MEET THE EXPERTS
+             </span>
+-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 font-sans tracking-tight">
++            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-950 font-sans tracking-tight">
+               Meet the <span className="text-theme-gradient italic font-serif">Team</span>
+             </h2>
+-            <p className="text-slate-600 max-w-2xl mx-auto text-sm md:text-base font-light">
++            <p className="text-slate-700 max-w-2xl mx-auto text-sm md:text-base font-light">
+               The visionary minds dedicated to transforming your spaces with design-driven excellence.
+             </p>
+           </ScrollReveal>
+ 
+-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
++          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+             {[
+               {
+-                name: "Sreekanth Varma",
+-                role: "Founder & Principal Architect",
+-                image: "/images/team_1.png",
+-              },
+-              {
+-                name: "Ananya Sharma",
+-                role: "Head of Interior Design",
+-                image: "/images/team_2.png",
++                name: "Nithin Satya Chadalavada",
++                role: "Founder - Design Operations",
++                qualifications: "B.Arch, 10+ years of experience",
++                bio: "Passionate Interior Designer known for attention to detail and thoughtful design solutions. Skilled in understanding client needs, managing project execution, and delivering spaces that reflect both style and functionality.",
++                image: "/images/founder_ai.png", 
+               },
+               {
+-                name: "Vikramaditya Rao",
+-                role: "Director of Execution",
+-                image: "/images/team_3.png",
++                name: "Katta Shiva Sagar",
++                role: "Co-Founder - Project Head",
++                qualifications: "M.C.A, 10+ years of experience",
++                bio: "Experienced Interior Project Head dedicated to delivering exceptional spaces through strategic planning and efficient execution. Passionate about transforming design concepts into reality while maintaining quality, timelines, and client satisfaction.",
++                image: "/images/founder_ai.png", 
+               },
+             ].map((member, i) => (
+               <ScrollReveal key={i} animation="fade-in-up" delay={i * 150} className="flex flex-col items-center text-center group">
+-                {/* Decreased Avatar Circle Size */}
+-                <div className="w-36 h-36 md:w-44 md:h-44 rounded-full p-1.5 bg-gradient-to-tr from-orange-400 via-amber-500 to-red-600 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-500 mb-6 cursor-pointer">
+-                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 relative border-2 border-white">
+-                    <img
++                <div className="w-40 h-40 md:w-48 md:h-48 rounded-full p-1 border border-slate-200 shadow-md hover:shadow-xl hover:border-orange-200 transition-all duration-500 mb-6 cursor-pointer">
++                  <div className="w-full h-full rounded-full overflow-hidden bg-slate-50 relative border-2 border-white">
++                    <Image
+                       src={member.image}
+                       alt={member.name}
+-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
++                      fill
++                      className="object-cover group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
+                     />
+                   </div>
+                 </div>
+-                {/* Classic Typography Names & Roles */}
+-                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 mb-1 tracking-tight group-hover:text-theme-gradient transition-colors">
++                <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-950 mb-1 tracking-tight group-hover:text-theme-gradient transition-colors">
+                   {member.name}
+                 </h3>
+-                <p className="text-xs md:text-sm font-semibold tracking-widest text-slate-500 uppercase font-sans">
++                <p className="text-xs md:text-sm font-semibold tracking-widest text-theme-gradient uppercase font-sans mb-2">
+                   {member.role}
+                 </p>
++                <p className="text-xs text-slate-500 font-mono tracking-widest uppercase mb-4 border-b border-slate-100 pb-2 inline-block">
++                  {member.qualifications}
++                </p>
++                <p className="text-sm text-slate-700 font-light leading-relaxed max-w-sm">
++                  {member.bio}
++                </p>
++              </ScrollReveal>
++            ))}
++          </div>
++        </div>
++      </section>
++
++      {/* 5.5b. FAQ SECTION (Home Page) */}
++      <section className="py-16 lg:py-24 bg-white px-4 border-t border-slate-50">
++        <div className="page-shell">
++          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
++            <div className="lg:w-1/3">
++              <ScrollReveal animation="fade-in-up">
++                <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-3 flex items-center gap-2">
++                  <svg className="w-4 h-4 text-theme-gradient" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>
++                  FAQ
++                </span>
++                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-950 font-serif tracking-tight">
++                  Common <span className="text-theme-gradient italic">Questions</span>
++                </h2>
++                <p className="text-slate-700 text-sm md:text-base font-light mb-8">
++                  Everything you need to know about our interior design services, timelines, and execution process.
++                </p>
++                <Link href="/faq" className="inline-flex items-center gap-2 text-theme-gradient font-bold font-sans uppercase tracking-widest text-xs hover:text-theme-gradient transition-colors group">
++                  View All FAQs
++                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
++                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
++                  </svg>
++                </Link>
++              </ScrollReveal>
++            </div>
++            
++            <div className="lg:w-2/3 space-y-4">
++              {[
++                {
++                  q: "What services does your interior design firm offer?",
++                  a: "We offer comprehensive architectural and interior design solutions including space planning, turnkey execution, 3D visualization, custom furniture design, and project management for residential and commercial spaces."
++                },
++                {
++                  q: "How long does a typical interior project take?",
++                  a: "Timelines vary based on scope: Initial 3D designs and layouts typically take 2-4 weeks. Full turnkey execution for residential spaces generally ranges from 3 to 6 months depending on the size and complexity."
++                },
++                {
++                  q: "Do you work with projects of all sizes?",
++                  a: "Yes, we serve a wide range of projects. Whether it is a single luxury room renovation, a full 4BHK villa, or a large corporate office, we have scalable solutions and flexible engagement models to fit your needs."
++                },
++                {
++                  q: "What is your pricing structure?",
++                  a: "We offer custom pricing based on your requirements. This can be a comprehensive turnkey package (design + execution), a design-only consultancy, or a project management retainer. We provide transparent material and labor breakdowns."
++                }
++              ].map((faq, i) => (
++                <ScrollReveal key={i} animation="fade-in-up" delay={i * 100}>
++                  <div className="bg-slate-50 p-6 rounded-sm border border-slate-100 hover:border-orange-200 transition-colors duration-300">
++                    <h4 className="text-slate-950 font-serif font-bold text-lg mb-2">{faq.q}</h4>
++                    <p className="text-slate-700 font-light text-sm leading-relaxed">{faq.a}</p>
++                  </div>
++                </ScrollReveal>
++              ))}
++            </div>
++          </div>
++        </div>
++      </section>
++
++      {/* 5.6. TESTIMONIALS SECTION */}
++      <section className="py-16 lg:py-24 bg-slate-950 text-white px-4">
++        <div className="page-shell">
++          <ScrollReveal animation="fade-in-up" className="text-center mb-16 md:mb-20">
++            <span className="text-theme-gradient font-sans font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-3 flex items-center justify-center gap-2">
++              <svg className="w-4 h-4 text-theme-gradient" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>
++              CLIENT EXPERIENCES
++            </span>
++            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white font-serif tracking-tight">
++              Words from our <span className="text-theme-gradient italic">Clients</span>
++            </h2>
++          </ScrollReveal>
++
++          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
++            {[
++              {
++                name: "Narsimha Reddy",
++                location: "Villa in Aparna Gardenia, Chandanagar",
++                quote: "Sreevedaa completely transformed our villa into a masterpiece. Their attention to detail and premium finish exceeded our expectations. Truly a hassle-free and luxurious experience.",
++              },
++              {
++                name: "Srinivas Reddy",
++                location: "Villa in Aparna Gardenia, Chandanagar",
++                quote: "From the initial 3D designs to the final handover, the team was professional and dedicated. The quality of materials and the elegant execution made our home perfect.",
++              },
++              {
++                name: "Karunakar Rao",
++                location: "3BHK in Hima Sai Srinidhm, Attapur",
++                quote: "We wanted a classic yet modern look for our 3BHK, and Sreevedaa delivered exactly that. Their project management is top-notch, ensuring everything was on time.",
++              },
++              {
++                name: "Uday",
++                location: "3BHK in Aditya Empress Towers",
++                quote: "The seamless turnkey execution took all the stress away. The design strategy was thoughtful and the craftsmanship is evident in every corner of our home.",
++              },
++              {
++                name: "Yamini",
++                location: "3BHK in NCC Urban One",
++                quote: "Absolutely thrilled with our new interiors! The team listened to our requirements and executed them with perfection. A premium service I highly recommend.",
++              },
++            ].map((testimonial, i) => (
++              <ScrollReveal key={i} animation="fade-in-up" delay={i * 150} className="bg-slate-900 p-8 rounded-sm border border-slate-800 hover:border-maroon-800 transition-colors duration-300 flex flex-col h-full">
++                <div className="text-theme-gradient mb-6">
++                  <svg className="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
++                </div>
++                <p className="text-white/80 font-light leading-relaxed mb-8 flex-1 italic">
++                  "{testimonial.quote}"
++                </p>
++                <div>
++                  <h4 className="text-white font-serif font-bold text-lg">{testimonial.name}</h4>
++                  <p className="text-theme-gradient text-xs tracking-wide uppercase mt-1">{testimonial.location}</p>
++                </div>
+               </ScrollReveal>
+             ))}
+           </div>
+@@ -200,49 +318,43 @@ export default function Home() {
+       </section>
+ 
+       {/* 6. CLIENTS SECTION - Single Marquee */}
+-      <section className="py-20 bg-[#FAFAFA] border-t border-slate-100 overflow-hidden relative flex flex-col justify-center">
++      <section className="py-20 bg-slate-50 border-t border-slate-100 overflow-hidden relative flex flex-col justify-center">
+         <ScrollReveal animation="fade-in-up" className="text-center mb-10 md:mb-12 px-4">
+-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-slate-900 mb-3 md:mb-4 tracking-tight">
+-            <SlowText text="Our notable clients" />
++          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-slate-950 mb-3 md:mb-4 tracking-tight">
++            <SlowText text="Our Notable Brand Trust" />
+           </h3>
+-          <p className="text-slate-700 text-sm md:text-base font-light max-w-2xl mx-auto">Industry leaders, properties, and developers we are proud to serve.</p>
++          <p className="text-slate-700 text-sm md:text-base font-light max-w-2xl mx-auto">Successfully executed ventures with industry leaders.</p>
+         </ScrollReveal>
+         
+         {/* Single Row - Scrolling Left */}
+         <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-3">
+           {[
+-            { name: 'Lodha Group', desc: 'Luxury Real Estate', initial: 'L' },
+-            { name: 'Prestige Estates', desc: 'Commercial & Residential', initial: 'P' },
+-            { name: 'Abhivorn Technologies', desc: 'Digital Partner', initial: 'A' },
+-            { name: 'Godrej Properties', desc: 'Sustainable Development', initial: 'G' },
+-            { name: 'DLF', desc: 'Urban Infrastructure', initial: 'D' },
+-            { name: 'Sreeveda', desc: 'Architecture', initial: 'S' },
+-            { name: 'Brigade Group', desc: 'Property Development', initial: 'B' },
+-            { name: 'Sobha Limited', desc: 'Premium Housing', initial: 'S' },
+-            { name: 'Oberoi Realty', desc: 'High-End Residential', initial: 'O' },
+-            { name: 'Mahindra Lifespaces', desc: 'Sustainable Cities', initial: 'M' },
+-            { name: 'Puravankara', desc: 'Urban Developers', initial: 'P' },
+-            { name: 'Tata Housing', desc: 'Real Estate Projects', initial: 'T' },
++            { name: 'Candeur', desc: 'Real Estate Developer', initial: 'C' },
++            { name: 'Aparna', desc: 'Premium Housing', initial: 'A' },
++            { name: 'Lodha', desc: 'Luxury Real Estate', initial: 'L' },
++            { name: 'NCC', desc: 'Infrastructure', initial: 'N' },
++            { name: 'Cybercity Developers', desc: 'Urban Infrastructure', initial: 'C' },
++            { name: 'Rajapushpa', desc: 'Property Development', initial: 'R' },
++            { name: 'My Home', desc: 'Residential & Commercial', initial: 'M' },
++            { name: 'Prestige Group', desc: 'Premium Housing', initial: 'P' },
++            { name: 'Casagrand', desc: 'High-End Residential', initial: 'C' },
+             // Duplicate for seamless loop
+-            { name: 'Lodha Group', desc: 'Luxury Real Estate', initial: 'L' },
+-            { name: 'Prestige Estates', desc: 'Commercial & Residential', initial: 'P' },
+-            { name: 'Abhivorn Technologies', desc: 'Digital Partner', initial: 'A' },
+-            { name: 'Godrej Properties', desc: 'Sustainable Development', initial: 'G' },
+-            { name: 'DLF', desc: 'Urban Infrastructure', initial: 'D' },
+-            { name: 'Sreeveda', desc: 'Architecture', initial: 'S' },
+-            { name: 'Brigade Group', desc: 'Property Development', initial: 'B' },
+-            { name: 'Sobha Limited', desc: 'Premium Housing', initial: 'S' },
+-            { name: 'Oberoi Realty', desc: 'High-End Residential', initial: 'O' },
+-            { name: 'Mahindra Lifespaces', desc: 'Sustainable Cities', initial: 'M' },
+-            { name: 'Puravankara', desc: 'Urban Developers', initial: 'P' },
+-            { name: 'Tata Housing', desc: 'Real Estate Projects', initial: 'T' }
++            { name: 'Candeur', desc: 'Real Estate Developer', initial: 'C' },
++            { name: 'Aparna', desc: 'Premium Housing', initial: 'A' },
++            { name: 'Lodha', desc: 'Luxury Real Estate', initial: 'L' },
++            { name: 'NCC', desc: 'Infrastructure', initial: 'N' },
++            { name: 'Cybercity Developers', desc: 'Urban Infrastructure', initial: 'C' },
++            { name: 'Rajapushpa', desc: 'Property Development', initial: 'R' },
++            { name: 'My Home', desc: 'Residential & Commercial', initial: 'M' },
++            { name: 'Prestige Group', desc: 'Premium Housing', initial: 'P' },
++            { name: 'Casagrand', desc: 'High-End Residential', initial: 'C' }
+           ].map((client, i) => (
+-            <div key={i} className="flex items-center gap-4 bg-white px-6 py-5 rounded-xl border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] w-[320px] shrink-0 group hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.1)] hover:border-maroon-100 transition-all cursor-pointer">
+-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xl font-bold font-serif text-theme-gradient shrink-0 group-hover:bg-maroon-50 group-hover:scale-110 transition-all duration-300">
++            <div key={i} className="flex items-center gap-4 bg-white px-6 py-5 rounded-sm border border-slate-100 shadow-sm w-[320px] shrink-0 group hover:shadow-md transition-all cursor-pointer">
++              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-xl font-bold font-serif text-slate-900 shrink-0 group-hover:bg-orange-50 group-hover:text-theme-gradient transition-colors duration-300">
+                 {client.initial}
+               </div>
+               <div>
+-                <h4 className="font-bold text-slate-800 font-serif text-[16px] group-hover:text-theme-gradient transition-colors leading-tight mb-1">{client.name}</h4>
++                <h4 className="font-bold text-slate-950 font-serif text-[16px] group-hover:text-theme-gradient transition-colors leading-tight mb-1">{client.name}</h4>
+                 <p className="text-xs text-slate-700 font-light leading-tight">{client.desc}</p>
+               </div>
+             </div>
+diff --git a/src/app/service/page.tsx b/src/app/service/page.tsx
+index 806275a..8002120 100644
+--- a/src/app/service/page.tsx
++++ b/src/app/service/page.tsx
+@@ -25,41 +25,64 @@ export default function ServicesPage() {
+         </div>
+       </section>
+ 
+-      {/* Services Grid Index */}
++      {/* Services List Grid */}
+       <section className="relative z-20 py-16 lg:py-24 bg-white" id="services-grid">
+-        <div className="page-shell max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+-            {services.map((service, i) => (
++        <div className="page-shell max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
++          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
++            {[
++              "Residential Interiors",
++              "Commercial Interiors",
++              "Office Interiors",
++              "Modular Kitchens",
++              "Custom Furniture",
++              "Civil & Renovation Works",
++              "Electrical & Plumbing",
++              "False Ceiling & Lighting",
++              "Flooring & Wall Finishes",
++              "Painting & Decorative Finishes",
++              "Smart Home Solutions",
++              "Turnkey Project Management"
++            ].map((service, i) => (
+               <ScrollReveal key={i} animation="fade-in-up" delay={i * 50}>
+-                <a href={`/service/${service.slug}`} className="group block h-full">
+-                  <div className="relative w-full h-[300px] md:h-[350px] rounded-3xl overflow-hidden mb-6 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
+-                    <Image 
+-                      src={service.image} 
+-                      alt={service.title} 
+-                      fill 
+-                      className="object-cover group-hover:scale-105 transition-transform duration-[1500ms] ease-out" 
+-                    />
+-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500"></div>
+-                  </div>
+-                  <h2 className="text-2xl font-serif font-bold text-slate-900 mb-3 group-hover:text-theme-gradient transition-colors">
+-                    {service.title}
+-                  </h2>
+-                  <p className="text-slate-600 font-light leading-relaxed line-clamp-2">
+-                    {service.desc}
+-                  </p>
+-                  <div className="mt-4 flex items-center gap-2 text-theme-gradient font-medium text-sm tracking-wide group-hover:translate-x-2 transition-transform duration-300">
+-                    <span>Explore Service</span>
+-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
++                <div className="group border-b border-slate-100 pb-4 hover:border-maroon-800 transition-colors duration-300">
++                  <h3 className="text-xl md:text-2xl font-serif font-bold text-slate-900 group-hover:text-theme-gradient transition-colors flex items-center justify-between">
++                    {service}
++                    <svg className="w-5 h-5 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-theme-gradient" fill="none" viewBox="0 0 24 24" stroke="currentColor">
++                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                     </svg>
+-                  </div>
+-                </a>
++                  </h3>
++                </div>
+               </ScrollReveal>
+             ))}
+           </div>
+         </div>
+       </section>
+ 
++      {/* 6 Running Images */}
++      <section className="py-12 bg-slate-50 overflow-hidden relative">
++        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] gap-6 px-3">
++          {[
++            "/images/hero_luxury_interior.png",
++            "/images/design_strategy.png",
++            "/images/about_hero.png",
++            "/images/contact_hero.png",
++            "/images/hero_luxury_interior.png",
++            "/images/design_strategy.png",
++            "/images/about_hero.png",
++            "/images/contact_hero.png"
++          ].map((src, i) => (
++            <div key={i} className="relative w-[300px] md:w-[400px] h-[200px] md:h-[250px] rounded-sm overflow-hidden shrink-0 group">
++              <Image 
++                src={src} 
++                alt="Sreevedaa Interiors Showcase" 
++                fill 
++                className="object-cover group-hover:scale-105 transition-transform duration-700" 
++              />
++            </div>
++          ))}
++        </div>
++      </section>
++
+       {/* CTA Section */}
+       <section className="py-12 md:py-16 bg-white border-t border-slate-100 text-center px-4">
+         <ScrollReveal animation="fade-in-up" className="page-shell">
+diff --git a/src/components/Footer.tsx b/src/components/Footer.tsx
+index 7cbe652..3761782 100644
+--- a/src/components/Footer.tsx
++++ b/src/components/Footer.tsx
+@@ -17,45 +17,54 @@ const footerLinks = [
+   {
+     heading: "Services",
+     items: [
+-      { href: "/service/master-planning-strategy", label: "Master Planning & Strategy" },
+-      { href: "/service/turnkey-execution", label: "Turnkey Execution" },
+-      { href: "/service/space-planning-layouts", label: "Space Planning & Layouts" },
+-      { href: "/service/3d-visualization-vr", label: "3D Visualization & VR" },
+-      { href: "/service/custom-furniture-design", label: "Custom Furniture Design" },
++      { href: "/service", label: "Residential Interiors" },
++      { href: "/service", label: "Commercial Interiors" },
++      { href: "/service", label: "Office Interiors" },
++      { href: "/service", label: "Modular Kitchens" },
++      { href: "/service", label: "Custom Furniture" },
++      { href: "/service", label: "Civil & Renovation Works" },
+     ],
+   },
+   {
+-    heading: "More Services",
++    heading: "Legal",
+     items: [
+-      { href: "/service/lighting-design", label: "Lighting Design" },
+-      { href: "/service/material-selection", label: "Material Selection" },
+-      { href: "/service/false-ceilings-paneling", label: "False Ceilings & Paneling" },
+-      { href: "/service/commercial-retail", label: "Commercial & Retail" },
++      { href: "/privacy-policy", label: "Privacy Policy" },
++      { href: "/terms", label: "Terms & Conditions" },
+     ],
+   },
+ ];
+ 
+ export function Footer() {
+   return (
+-    <footer className="bg-[#0a0a0a] pt-10 pb-6 relative overflow-hidden text-white/70">
++    <footer className="bg-slate-950 pt-16 pb-6 relative overflow-hidden text-white/80 border-t border-slate-800">
+       <div className="page-shell">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+           
+           {/* Brand & Mission Column */}
+           <div className="lg:col-span-4 flex flex-col">
+             <div className="mb-6">
+-              <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={160} height={82} className="w-32 md:w-40 h-auto object-contain" />
++              <div className="inline-block bg-white/95 p-3 rounded-xl shadow-lg border border-slate-100/10">
++                <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={160} height={82} className="w-32 md:w-40 h-auto object-contain" />
++              </div>
+             </div>
+-            <p className="text-base text-white/70 font-light leading-relaxed max-w-sm">
+-              Homes, workplaces, and hospitality spaces crafted with equal parts creativity and engineering discipline. We architect lifestyles, not just spaces.
++            <h3 className="font-serif text-lg text-white mb-2 font-medium">Sreevedaa Interiors</h3>
++            <p className="text-[15px] text-white/70 font-light leading-relaxed max-w-sm">
++              Designing elegant spaces through creativity, quality craftsmanship, and seamless turnkey execution.
+             </p>
++            <div className="mt-6 flex gap-4">
++              <a href={contactChannels.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Instagram">
++                <svg className="w-5 h-5 text-white/90" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
++                  <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
++                </svg>
++              </a>
++            </div>
+           </div>
+ 
+           {/* Links Columns */}
+           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+             {footerLinks.map((group) => (
+               <div key={group.heading} className="space-y-6">
+-                <h4 className="text-sm uppercase tracking-widest text-white font-semibold">{group.heading}</h4>
++                <h4 className="text-sm uppercase tracking-widest text-white font-medium">{group.heading}</h4>
+                 <ul className="space-y-4 text-[15px] text-white/70 font-light">
+                   {group.items.map((item) => (
+                     <li key={item.label}>
+@@ -69,17 +78,27 @@ export function Footer() {
+             ))}
+ 
+             <div className="space-y-6 sm:col-span-2 md:col-span-1">
+-              <h4 className="text-sm uppercase tracking-widest text-white font-semibold">Contact Us</h4>
++              <h4 className="text-sm uppercase tracking-widest text-white font-medium">Contact Us</h4>
+               <div className="text-[15px] text-white/70 font-light space-y-4">
+                 <p className="leading-relaxed">
+-                  {contactChannels.address}
++                  <a href={contactChannels.googleMaps} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
++                    {contactChannels.address}
++                  </a>
+                 </p>
+                 <p>
++                  <span className="block text-white/50 text-xs mb-1">Primary</span>
+                   <a className="hover:text-white transition-colors block" href={`tel:${contactChannels.phone.replace(/\s+/g, "")}`}>
+                     {contactChannels.phone}
+                   </a>
+                 </p>
+                 <p>
++                  <span className="block text-white/50 text-xs mb-1">Secondary</span>
++                  <a className="hover:text-white transition-colors block" href={`tel:${contactChannels.secondaryPhone.replace(/\s+/g, "")}`}>
++                    {contactChannels.secondaryPhone}
++                  </a>
++                </p>
++                <p>
++                  <span className="block text-white/50 text-xs mb-1">Email</span>
+                   <a className="hover:text-white transition-colors block whitespace-nowrap" href={`mailto:${contactChannels.email}`}>
+                     {contactChannels.email}
+                   </a>
+@@ -92,11 +111,11 @@ export function Footer() {
+         {/* Bottom Bar */}
+         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50 font-light pb-4">
+           <div className="text-center md:text-left">
+-            <span>&copy; {new Date().getFullYear()} Sreeveda. All rights reserved.</span>
++            <span>&copy; {new Date().getFullYear()} Sreevedaa Interiors. All rights reserved.</span>
+           </div>
+-          <div className="text-center md:text-right text-white/50">
++          <div className="text-center md:text-right text-white/40">
+             <span>
+-              Developed by <a href="https://www.abhivorn.com/" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-white transition-colors">Abhivorn Technologies</a> & <a href="https://www.digilevelup.in/" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-white transition-colors">Digi Level Up</a>
++              Developed by <a href="https://www.abhivorn.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Abhivorn Technologies</a> & <a href="https://www.digilevelup.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Digi Level Up</a>
+             </span>
+           </div>
+         </div>
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index a586956..178d595 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -117,7 +117,7 @@ export function Header() {
+               <Link
+                 href="/contact"
+                 onClick={() => setOpen(false)}
+-                className="w-full flex items-center justify-center bg-theme-gradient text-white font-medium py-4 rounded-xl text-sm hover:bg-maroon-800 transition-colors shadow-md"
++                className="w-full flex items-center justify-center btn-primary py-4 text-sm shadow-md"
+               >
+                 Book a Consultation
+               </Link>
+diff --git a/src/data/siteContent.ts b/src/data/siteContent.ts
+index ddca4eb..dc4f5c7 100644
+--- a/src/data/siteContent.ts
++++ b/src/data/siteContent.ts
+@@ -265,9 +265,12 @@ export const blogs: BlogPost[] = [
+ ];
+ 
+ export const contactChannels = {
+-  phone: "+91 70365 92351",
+-  email: "contact@sreevedaa.com",
+-  address: "India ΓÇö Serving High-End Residential & Commercial Projects Nationwide.",
++  phone: "+91 63035 72745",
++  secondaryPhone: "+91 90306 02745",
++  email: "info@sreevedaa.com",
++  address: "201, Second Floor, Shree Plaza, Plot No 1&2, Opposite Bobbili Empire, Ruby Block, Kompally, Hyderabad-500100",
++  googleMaps: "https://maps.app.goo.gl/m6HUnCk5pc3qTJtm9",
++  instagram: "https://www.instagram.com/sreevedaainteriors?igsh=cTN1ZnRoNDdtNjJo&utm_source=qr"
+ };
+ 
+ export function getExcerpt(html: string, words = 32) {

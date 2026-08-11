@@ -1,0 +1,101 @@
+diff a/src/components/Footer.tsx b/src/components/Footer.tsx	(rejected hunks)
+@@ -17,45 +17,54 @@ const footerLinks = [
+   {
+     heading: "Services",
+     items: [
+-      { href: "/service/master-planning-strategy", label: "Master Planning & Strategy" },
+-      { href: "/service/turnkey-execution", label: "Turnkey Execution" },
+-      { href: "/service/space-planning-layouts", label: "Space Planning & Layouts" },
+-      { href: "/service/3d-visualization-vr", label: "3D Visualization & VR" },
+-      { href: "/service/custom-furniture-design", label: "Custom Furniture Design" },
++      { href: "/service", label: "Residential Interiors" },
++      { href: "/service", label: "Commercial Interiors" },
++      { href: "/service", label: "Office Interiors" },
++      { href: "/service", label: "Modular Kitchens" },
++      { href: "/service", label: "Custom Furniture" },
++      { href: "/service", label: "Civil & Renovation Works" },
+     ],
+   },
+   {
+-    heading: "More Services",
++    heading: "Legal",
+     items: [
+-      { href: "/service/lighting-design", label: "Lighting Design" },
+-      { href: "/service/material-selection", label: "Material Selection" },
+-      { href: "/service/false-ceilings-paneling", label: "False Ceilings & Paneling" },
+-      { href: "/service/commercial-retail", label: "Commercial & Retail" },
++      { href: "/privacy-policy", label: "Privacy Policy" },
++      { href: "/terms", label: "Terms & Conditions" },
+     ],
+   },
+ ];
+ 
+ export function Footer() {
+   return (
+-    <footer className="bg-[#0a0a0a] pt-10 pb-6 relative overflow-hidden text-white/70">
++    <footer className="bg-slate-950 pt-16 pb-6 relative overflow-hidden text-white/80 border-t border-slate-800">
+       <div className="page-shell">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+           
+           {/* Brand & Mission Column */}
+           <div className="lg:col-span-4 flex flex-col">
+             <div className="mb-6">
+-              <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={160} height={82} className="w-32 md:w-40 h-auto object-contain" />
++              <div className="inline-block bg-white/95 p-3 rounded-xl shadow-lg border border-slate-100/10">
++                <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={160} height={82} className="w-32 md:w-40 h-auto object-contain" />
++              </div>
+             </div>
+-            <p className="text-base text-white/70 font-light leading-relaxed max-w-sm">
+-              Homes, workplaces, and hospitality spaces crafted with equal parts creativity and engineering discipline. We architect lifestyles, not just spaces.
++            <h3 className="font-serif text-lg text-white mb-2 font-medium">Sreevedaa Interiors</h3>
++            <p className="text-[15px] text-white/70 font-light leading-relaxed max-w-sm">
++              Designing elegant spaces through creativity, quality craftsmanship, and seamless turnkey execution.
+             </p>
++            <div className="mt-6 flex gap-4">
++              <a href={contactChannels.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Instagram">
++                <svg className="w-5 h-5 text-white/90" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
++                  <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
++                </svg>
++              </a>
++            </div>
+           </div>
+ 
+           {/* Links Columns */}
+           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+             {footerLinks.map((group) => (
+               <div key={group.heading} className="space-y-6">
+-                <h4 className="text-sm uppercase tracking-widest text-white font-semibold">{group.heading}</h4>
++                <h4 className="text-sm uppercase tracking-widest text-white font-medium">{group.heading}</h4>
+                 <ul className="space-y-4 text-[15px] text-white/70 font-light">
+                   {group.items.map((item) => (
+                     <li key={item.label}>
+@@ -69,17 +78,27 @@ export function Footer() {
+             ))}
+ 
+             <div className="space-y-6 sm:col-span-2 md:col-span-1">
+-              <h4 className="text-sm uppercase tracking-widest text-white font-semibold">Contact Us</h4>
++              <h4 className="text-sm uppercase tracking-widest text-white font-medium">Contact Us</h4>
+               <div className="text-[15px] text-white/70 font-light space-y-4">
+                 <p className="leading-relaxed">
+-                  {contactChannels.address}
++                  <a href={contactChannels.googleMaps} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
++                    {contactChannels.address}
++                  </a>
+                 </p>
+                 <p>
++                  <span className="block text-white/50 text-xs mb-1">Primary</span>
+                   <a className="hover:text-white transition-colors block" href={`tel:${contactChannels.phone.replace(/\s+/g, "")}`}>
+                     {contactChannels.phone}
+                   </a>
+                 </p>
+                 <p>
++                  <span className="block text-white/50 text-xs mb-1">Secondary</span>
++                  <a className="hover:text-white transition-colors block" href={`tel:${contactChannels.secondaryPhone.replace(/\s+/g, "")}`}>
++                    {contactChannels.secondaryPhone}
++                  </a>
++                </p>
++                <p>
++                  <span className="block text-white/50 text-xs mb-1">Email</span>
+                   <a className="hover:text-white transition-colors block whitespace-nowrap" href={`mailto:${contactChannels.email}`}>
+                     {contactChannels.email}
+                   </a>
