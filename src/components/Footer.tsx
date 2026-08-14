@@ -48,13 +48,15 @@ export function Footer() {
           <div className="lg:col-span-3 flex flex-col justify-between">
             <div>
               <div className="mb-6">
-                <Image 
-                  src="/images/favicon_cropped.png" 
-                  alt="Sreevedaa Interiors" 
-                  width={180} 
-                  height={90} 
-                  className="w-36 md:w-44 h-auto object-contain brightness-110 drop-shadow-[0_4px_12px_rgba(255,255,255,0.15)]" 
-                />
+                <Link href="/" className="inline-block">
+                  <Image 
+                    src="/images/logo.png" 
+                    alt="Sreevedaa Interiors" 
+                    width={124} 
+                    height={112} 
+                    className="object-contain brightness-110 drop-shadow-[0_4px_12px_rgba(255,255,255,0.15)]" 
+                  />
+                </Link>
               </div>
               <p className="text-sm text-slate-300 font-light leading-relaxed max-w-sm mb-6">
                 Designing elegant spaces through creativity, quality craftsmanship, and seamless turnkey execution.

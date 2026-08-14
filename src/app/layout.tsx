@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
+import { CustomCursor } from "@/components/CustomCursor";
 import "./globals.css";
 
 const hanken = Hanken_Grotesk({
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body
         className={`${hanken.variable} ${playfair.variable} font-sans antialiased text-slate-800 bg-white`}
       >
+        <CustomCursor />
         {children}
       </body>
     </html>

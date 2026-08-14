@@ -58,11 +58,15 @@ export default function LoginPage() {
         </Link>
 
         <div className="text-center mb-6">
-          <img 
-            src="/images/favicon_cropped.png" 
-            alt="Sreevedaa Logo" 
-            className="w-24 h-auto mx-auto mb-4 object-contain" 
-          />
+          <Link href="/" className="inline-block">
+            <img 
+              src="/images/logo.png" 
+              alt="Sreevedaa Interiors Logo" 
+              width={124}
+              height={112}
+              className="mx-auto mb-4 object-contain" 
+            />
+          </Link>
           <h2 className="text-2xl font-semibold text-gray-800 font-playfair mb-1">
             Welcome Back
           </h2>

@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/service", label: "Services" },
+  { href: "/projects", label: "Projects" },
   { href: "/gallery", label: "Gallery" },
   { href: "/packages", label: "Packages" },
   { href: "/faq", label: "Q/A" },
@@ -27,7 +28,7 @@ export function Header() {
         <div className="page-shell w-full flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-              <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={180} height={92} className="w-28 md:w-32 lg:w-36 h-auto object-contain" priority />
+              <Image src="/images/logo.png" alt="Sreevedaa Interiors" width={124} height={112} className="object-contain" priority />
             </Link>
           </div>
 
@@ -91,7 +92,7 @@ export function Header() {
               {/* Drawer Header */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
                 <Link href="/" onClick={() => setOpen(false)} className="block shrink-0">
-                  <Image src="/images/favicon_cropped.png" alt="Sreeveda" width={120} height={60} className="w-24 h-auto object-contain" />
+                  <Image src="/images/logo.png" alt="Sreevedaa Interiors" width={124} height={112} className="object-contain" />
                 </Link>
                 <button
                   onClick={() => setOpen(false)}

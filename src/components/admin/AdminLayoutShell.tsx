@@ -19,11 +19,13 @@ export function AdminLayoutShell({
       <header className="bg-white border-b border-gray-200 h-16 md:h-20 flex items-center justify-between px-4 md:px-6 shadow-sm z-30 fixed top-0 w-full">
         {/* Logo Section */}
         <div className="w-auto md:w-64 shrink-0 md:border-r border-transparent flex items-center md:pl-2 lg:pl-8">
-          <Link href="/admin" className="block">
+          <Link href="/" className="block">
             <img 
-              src="/images/favicon_cropped.png" 
-              alt="Sreevedaa Logo" 
-              className="w-20 md:w-24 h-auto object-contain" 
+              src="/images/logo.png" 
+              alt="Sreevedaa Interiors Logo" 
+              width={124}
+              height={112}
+              className="object-contain" 
             />
           </Link>
         </div>

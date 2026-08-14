@@ -4,6 +4,8 @@ import { SlowText } from "@/components/SlowText";
 import dbConnect from "@/lib/mongodb";
 import SiteImage from "@/models/SiteImage";
 
+export const revalidate = 60; // Cache for 60s for instant page loads
+
 export default async function AboutPage() {
   await dbConnect();
   
@@ -19,7 +21,7 @@ export default async function AboutPage() {
   const storyImage = getImageUrl("story", "/images/about-img-1.jpg");
   const teamImages = [
     getImageUrl("team", "/images/founder_portrait_clean.jpg", 0),
-    getImageUrl("team", "/images/founder_portrait_clean.jpg", 1),
+    getImageUrl("team", "/images/founder_portrait.jpg", 1),
   ];
 
   return (

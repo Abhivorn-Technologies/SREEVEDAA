@@ -2,6 +2,8 @@ import dbConnect from "@/lib/mongodb";
 import SiteImage from "@/models/SiteImage";
 import { FAQClient } from "./FAQClient";
 
+export const revalidate = 60;
+
 export default async function FAQPage() {
   await dbConnect();
   
