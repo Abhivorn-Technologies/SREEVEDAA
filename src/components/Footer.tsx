@@ -40,14 +40,14 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#2D0808] pt-16 pb-8 relative overflow-hidden text-slate-100 font-sans border-t border-amber-900/40">
+    <footer className="bg-[#2D0808] pt-10 md:pt-16 pb-8 relative overflow-hidden text-slate-100 font-sans border-t border-amber-900/40">
       <div className="page-shell">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-8 pb-12">
           
           {/* Brand & Mission Column */}
-          <div className="lg:col-span-3 flex flex-col justify-between">
-            <div>
-              <div className="mb-6">
+          <div className="lg:col-span-3 flex flex-col gap-6 lg:gap-0 lg:justify-between items-start lg:h-full">
+            <div className="-mt-3 md:-mt-5">
+              <div className="-mb-2 md:-mb-4">
                 <Link href="/" className="inline-block">
                   <Image 
                     src="/images/logo.png" 
@@ -58,7 +58,7 @@ export function Footer() {
                   />
                 </Link>
               </div>
-              <p className="text-sm text-slate-300 font-light leading-relaxed max-w-sm mb-6">
+              <p className="text-sm text-slate-300 font-light leading-relaxed max-w-sm relative z-10">
                 Designing elegant spaces through creativity, quality craftsmanship, and seamless turnkey execution.
               </p>
             </div>
