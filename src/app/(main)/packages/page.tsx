@@ -10,7 +10,7 @@ const packages = [
     name: "Essential",
     price: "₹4,00,000",
     suffix: "/-",
-    description: "We will directly provide the package details to the customers personally.",
+    description: "Please connect for the package details.",
     isPopular: false
   },
   {
@@ -18,7 +18,7 @@ const packages = [
     name: "Standard",
     price: "₹5,50,000",
     suffix: "/-",
-    description: "We will directly provide the package details to the customers personally.",
+    description: "Please connect for the package details.",
     isPopular: true
   },
   {
@@ -26,7 +26,7 @@ const packages = [
     name: "Premium",
     price: "₹7,00,000",
     suffix: "/-",
-    description: "We will directly provide the package details to the customers personally.",
+    description: "Please connect for the package details.",
     isPopular: false
   }
 ];
