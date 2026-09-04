@@ -86,7 +86,7 @@ export function FAQClient({ heroImage }: { heroImage: string }) {
   return (
     <main className="min-h-screen bg-slate-50">
       {/* Elegant Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex flex-col justify-center overflow-hidden bg-[#1a1515]">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-[#1a1515] pb-24 md:pb-32">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage}
@@ -98,7 +98,7 @@ export function FAQClient({ heroImage }: { heroImage: string }) {
           <div className="absolute inset-0 bg-black/60 z-10"></div>
         </div>
 
-        <div className="page-shell relative z-10 w-full text-center px-4 pt-32 pb-40 md:pt-40 md:pb-56">
+        <div className="page-shell relative z-10 w-full text-center py-16 md:py-20 mt-10 md:mt-12 px-4">
           <ScrollReveal animation="fade-in-up" delay={0}>
             <span className="inline-block mb-4 md:mb-6 text-orange-100 font-bold tracking-[0.3em] uppercase text-[10px] md:text-sm drop-shadow-lg">
               Knowledge Base
