@@ -105,7 +105,7 @@ export function FAQClient({ heroImage }: { heroImage: string }) {
             </span>
           </ScrollReveal>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-[1.1] font-serif shadow-black drop-shadow-2xl">
-            <SlowText text="Frequently Asked Questions" delay={200} />
+            <SlowText text="Frequently Asked Question" delay={200} />
           </h1>
           <ScrollReveal animation="fade-in-up" delay={800}>
             <p className="text-sm md:text-xl max-w-3xl text-white font-medium mx-auto leading-relaxed shadow-black drop-shadow-xl">
@@ -121,7 +121,7 @@ export function FAQClient({ heroImage }: { heroImage: string }) {
           <div className="space-y-4 md:space-y-6">
             {faqs.map((faq, idx) => (
               <ScrollReveal key={idx} animation="fade-in-up" delay={idx * 100}>
-                <div 
+                <div
                   className={`bg-white border transition-all duration-[600ms] ease-out rounded-2xl overflow-hidden ${openIndex === idx ? 'border-maroon-200 shadow-[0_20px_50px_-15px_rgba(128,0,0,0.15)] -translate-y-1' : 'border-slate-100 shadow-[0_5px_15px_-5px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.08)] hover:border-maroon-100 hover:-translate-y-1'}`}
                 >
                   <button
@@ -137,8 +137,8 @@ export function FAQClient({ heroImage }: { heroImage: string }) {
                       </svg>
                     </span>
                   </button>
-                  
-                  <div 
+
+                  <div
                     className={`px-6 md:px-8 overflow-hidden transition-all duration-[600ms] ease-in-out ${openIndex === idx ? 'max-h-[500px] pb-6 md:pb-8 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-4'}`}
                   >
                     <p className="text-slate-700 font-light leading-relaxed text-[0.95rem] md:text-[1.1rem]">
