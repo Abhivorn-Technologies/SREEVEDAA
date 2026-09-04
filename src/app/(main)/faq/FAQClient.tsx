@@ -105,7 +105,7 @@ export function FAQClient({ heroImage }: { heroImage: string }) {
             </span>
           </ScrollReveal>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 text-white leading-[1.1] font-serif shadow-black drop-shadow-2xl">
-            <SlowText text="Frequently Asked Question" delay={200} />
+            <SlowText text="Frequently Asked Questions" delay={200} />
           </h1>
           <ScrollReveal animation="fade-in-up" delay={800}>
             <p className="text-sm md:text-xl max-w-3xl text-white font-medium mx-auto leading-relaxed shadow-black drop-shadow-xl">
